@@ -204,6 +204,8 @@ class PagesTableSeeder extends Seeder
             $data['banner'] = null;
         }
 
+        $data['section_title'] = $data['title'];
+
         $page = $factory->create($data);
 
         if ($parent) {

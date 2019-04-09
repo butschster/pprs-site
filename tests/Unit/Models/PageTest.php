@@ -63,8 +63,8 @@ class PageTest extends TestCase
         $child = factory(Page::class)->create();
         $page->appendNode($child);
 
-        $this->assertTrue($page->hasBanner());
-        $this->assertTrue($child->hasBanner());
+        $this->assertTrue($page->has_banner);
+        $this->assertTrue($child->has_banner);
 
         $page = factory(Page::class)->create([
             'banner' => null,
@@ -74,8 +74,8 @@ class PageTest extends TestCase
         ]);
         $page->appendNode($child);
 
-        $this->assertFalse($page->hasBanner());
-        $this->assertFalse($child->hasBanner());
+        $this->assertFalse($page->has_banner);
+        $this->assertFalse($child->has_banner);
 
         $page = factory(Page::class)->create([
             'banner' => null,
@@ -83,8 +83,8 @@ class PageTest extends TestCase
         $child = factory(Page::class)->create();
         $page->appendNode($child);
 
-        $this->assertFalse($page->hasBanner());
-        $this->assertTrue($child->hasBanner());
+        $this->assertFalse($page->has_banner);
+        $this->assertTrue($child->has_banner);
 
         $page = factory(Page::class)->create();
         $child = factory(Page::class)->create([
@@ -92,15 +92,15 @@ class PageTest extends TestCase
         ]);
         $page->appendNode($child);
 
-        $this->assertTrue($page->hasBanner());
-        $this->assertTrue($child->hasBanner());
+        $this->assertTrue($page->has_banner);
+        $this->assertTrue($child->has_banner);
     }
 
     function test_it_can_have_top_banner()
     {
         $page = factory(Page::class)->create();
 
-        $this->assertNotNull($page->bannerUrl());
+        $this->assertNotNull($page->banner_url);
     }
 
     function test_if_it_does_not_have_banner_it_should_get_from_parent_page()
@@ -111,50 +111,29 @@ class PageTest extends TestCase
         ]);
         $page->appendNode($child);
 
-        $this->assertEquals($page->bannerUrl(), $child->bannerUrl());
-    }
-
-    function test_check_if_page_is_article()
-    {
-        $page = factory(Page::class)->create();
-        $child = factory(Page::class)->create();
-        $subChild = factory(Page::class)->create();
-        $page->appendNode($child);
-        $child->appendNode($subChild);
-
-
-        $page1 = factory(Page::class)->create();
-        $child1 = factory(Page::class)->create();
-        $page1->appendNode($child1);
-
-        $this->assertTrue($subChild->isArticle());
-        $this->assertFalse($page->isArticle());
-        $this->assertFalse($child->isArticle());
-
-        $this->assertFalse($page1->isArticle());
-        $this->assertTrue($child1->isArticle());
+        $this->assertEquals($page->banner_url, $child->banner_url);
     }
 
     function test_check_if_it_has_section_image()
     {
         $page = factory(Page::class)->create();
-        $this->assertTrue($page->hasSectionImage());
+        $this->assertTrue($page->has_section_image);
 
         $page = factory(Page::class)->create([
             'section_image' => null,
         ]);
 
-        $this->assertFalse($page->hasSectionImage());
+        $this->assertFalse($page->has_section_image);
     }
 
     function test_it_has_section_image_url()
     {
         $page = factory(Page::class)->create();
-        $this->assertNotNull($page->sectionImageUrl());
+        $this->assertNotNull($page->section_image_url);
 
         $page = factory(Page::class)->create([
             'section_image' => null,
         ]);
-        $this->assertNull($page->sectionImageUrl());
+        $this->assertNull($page->section_image_ur);
     }
 }

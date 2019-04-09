@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use Kalnoy\Nestedset\NestedSet;
 
-class CreatePagesTable extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,21 +13,15 @@ class CreatePagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->string('slug')->unique();
+            $table->text('description');
+            $table->text('text');
+
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
-            $table->string('color', 7)->nullable();
-            $table->string('banner')->nullable();
-            $table->string('section_image')->nullable();
-            $table->string('section_title')->nullable();
-            $table->text('section_text')->nullable();
-            $table->text('text')->nullable();
-
-            NestedSet::columns($table);
 
             $table->timestamps();
         });
@@ -41,6 +34,6 @@ class CreatePagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pages');
+        Schema::dropIfExists('news');
     }
 }

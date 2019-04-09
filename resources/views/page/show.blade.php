@@ -1,29 +1,25 @@
 @extends('layout.app')
 
-@section('content')
+@section('breadcrumbs')
     {{ Breadcrumbs::render('page', $page) }}
+@endsection
 
-
-    @if($page->hasBanner())
+@section('banner')
+    @if($page->has_banner)
         <div class="card">
-            <img src="{{ $page->bannerUrl() }}" class="card-img-top">
+            <img src="{{ $page->banner_url }}" class="card-img-top">
             <div class="card-body">
                 <h1>{{ $page->title }}</h1>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
     @endif
+@endsection
 
-   <div class="row">
-       <div class="col-8">
-           @if(!$page->isArticle())
-               @include('page._partials.subpages', ['pages' => $page->descendants])
-           @else
-
-           @endif
-       </div>
-       <div class="col-4">
-           News
-       </div>
-   </div>
+@section('content')
+    @if(!$page->isArticle())
+        @include('page._partials.subpages', ['pages' => $page->getChildren()])
+    @else
+        {!! $page->text !!}
+    @endif
 @endsection

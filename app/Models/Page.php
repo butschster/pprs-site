@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use Hemp\Presenter\Presentable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
+use Kalnoy\Nestedset\NodeTrait as NestedSet;
 
 class Page extends Model
 {
-    use \Kalnoy\Nestedset\NodeTrait;
+    use NestedSet, Presentable;
 
     /**
      * Поиск страницы по пути
@@ -60,13 +62,29 @@ class Page extends Model
     }
 
     /**
-     * @return string|null
+     * @return bool
      */
-    public function bannerUrl(): ?string
+    public function getHasBannerAttribute(): bool
     {
         if (empty($this->banner)) {
-            if ($this->parent) {
-                return $this->parent->bannerUrl();
+            if ($parent = $this->parent) {
+                return $parent->has_banner;
+            }
+
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getBannerUrlAttribute(): ?string
+    {
+        if (empty($this->banner)) {
+            if ($parent = $this->parent) {
+                return $parent->banner_url;
             }
 
             return null;
@@ -78,31 +96,7 @@ class Page extends Model
     /**
      * @return bool
      */
-    public function hasBanner(): bool
-    {
-        if (empty($this->banner)) {
-            if ($this->parent) {
-                return $this->parent->hasBanner();
-            }
-
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isArticle(): bool
-    {
-        return $this->isLeaf();
-    }
-
-    /**
-     * @return bool
-     */
-    public function hasSectionImage(): bool
+    public function getHasSectionImageAttribute(): bool
     {
         return !empty($this->section_image);
     }
@@ -110,9 +104,9 @@ class Page extends Model
     /**
      * @return string|null
      */
-    public function sectionImageUrl(): ?string
+    public function getSectionImageUrlAttribute(): ?string
     {
-        if ($this->hasSectionImage()) {
+        if ($this->has_section_image) {
             return Storage::url($this->section_image);
         }
 

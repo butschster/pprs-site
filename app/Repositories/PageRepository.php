@@ -7,8 +7,19 @@ use Illuminate\Support\Collection;
 
 class PageRepository
 {
+    /**
+     * @return Collection
+     */
     public function getMenu(): Collection
     {
         return Page::whereIsRoot()->with('children', 'children.ancestors', 'ancestors')->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getRandomArticles(): Collection
+    {
+        return Page::with('parent', 'ancestors')->whereIsLeaf()->inRandomOrder()->take(3)->get();
     }
 }
