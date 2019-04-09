@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Page;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -23,7 +24,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Route::pattern('page', '.*');
+
+        Route::bind('page', function ($value) {
+            return Page::findByPathOrFail($value);
+        });
 
         parent::boot();
     }
@@ -35,7 +40,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapApiRoutes();
+        //$this->mapApiRoutes();
 
         $this->mapWebRoutes();
 
