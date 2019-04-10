@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Page;
 use Faker\Generator as Faker;
 
-$factory->define(App\Models\Page::class, function (Faker $faker) {
+$factory->define(Page::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
         'slug' => $faker->slug,
@@ -18,13 +19,13 @@ $factory->define(App\Models\Page::class, function (Faker $faker) {
     ];
 });
 
-$factory->state(App\Models\Page::class, 'banner', function ($faker) {
+$factory->state(Page::class, 'banner', function ($faker) {
     return [
         'banner' => 'page/banners/' . $faker->image(storage_path('app/public/page/banners'), 800, 300, null, false),
     ];
 });
 
-$factory->state(App\Models\Page::class, 'section_image', function ($faker) {
+$factory->state(Page::class, 'section_image', function ($faker) {
     return [
         'section_image' => 'page/images/' . $faker->image(storage_path('app/public/page/images'), 600, 200, null, false),
     ];
