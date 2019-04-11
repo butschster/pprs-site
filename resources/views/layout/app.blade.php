@@ -36,6 +36,7 @@
                             <a href="{{ route('subscribe.form') }}" class="btn py-3 btn-block btn-lg rounded-pill btn-warning mb-5">
                                 Подписаться на рассылку
                             </a>
+                             @endif
                             @include('layout._partials.last_news')
                         </aside>
                     </div>
