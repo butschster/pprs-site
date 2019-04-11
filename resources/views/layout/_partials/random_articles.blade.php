@@ -1,18 +1,15 @@
-<div class="card-deck mt-5">
+<div class="article-card card-deck mx-lg-n3 px-lg-4">
     @foreach($pages as $page)
-
-        <div class="card">
+        <div class="banner card mx-0 px-lg-3">
             @if($page->parent)
-                <div class="card-header">
-                    <a class="card-text" href="{{ $page->parent->url() }}">{{ $page->parent->section_title }}</a>
-                </div>
+                <h3 class="card-header bg-white banner__name-page main-container px-0">
+                    <a class="banner__name-page" href="{{ $page->parent->url() }}">{{ $page->parent->section_title }}</a>
+                </h3>
             @endif
-            <div class="card-body text-white" style="background: url('{{ $page->section_image_url }};'">
-                <a href="{{ $page->url() }}" class='w-100'>
-                    <h3 style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_title }}</h3>
-                    <p class="card-text">{{ $page->section_text }}</p>
-                </a>
-            </div>
+            <a href="{{ $page->url() }}" style="background: url('{{ $page->section_image_url }};'" class='banner__container card-body'>
+                <h3 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_title }}</h3>
+                <p class="banner__text-preview card-text main-container px-lg-0">{{ $page->section_text }}</p>
+            </a>
         </div>
     @endforeach
 </div>

@@ -2,5 +2,27 @@
 @include font-face("Trebuchet", "../fonts/trebuchet-bold", 700, normal);
 
 body {
-  font-family: "Trebuchet", "Arial", sans-serif;
+    font-family: "Trebuchet", "Arial", sans-serif;
+}
+
+html {
+    font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1.1rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 1.6rem;
+    }
 }

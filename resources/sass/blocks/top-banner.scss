@@ -1,19 +1,11 @@
 .top-banner {
     background-color: $gray-100;
     color: $gray-900;
-    padding: 3rem 0;
+    padding: 2rem 0;
     margin-bottom: 2rem;
 
-    &--main {
-        background-color: $yellow;
-        &__title {
-            font-size: 32px;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-        }
-        &__text {
-            font-size: 17px;
-        }
+    & strong {
+        font-size: 1.7rem;
     }
 
     &__text {
@@ -22,51 +14,72 @@
         text-transform: uppercase;
         font-size: 12px;
     }
-}
 
-@include  media-breakpoint-up(sm) {
-    .top-banner--main__title {
-        font-size: 52px;
+    &--main {
+        background-color: $yellow;
+
+        &__title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        &__text {
+            font-size: 17px;
+        }
     }
 }
+
 @include  media-breakpoint-up(md) {
     .top-banner {
-        width: map-get($container, ml);
-        margin: $center;
-        padding: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
+
+        &__title {
+            font-size: 4.7rem;
+        }
 
         &--main__title {
             margin-bottom: 2rem;
-            margin-top: 3.8rem;
+            margin-top: 2rem;
             font-size: 62px;
         }
-    }
-
-    .top-banner__container {
-        width: 100%;
-        padding: 4rem;
     }
 }
 
 @include  media-breakpoint-up(lg) {
     .top-banner {
         width: map-get($container, xl);
-        &--main {
-            &__title {
-                width: 80%;
-            }
+        margin: $center;
+        margin-bottom: 2.6rem;
+
+        &__text,
+        & strong {
+            width: 80%;
         }
 
+        &__title {
+            width: 80%;
+            font-size: 4rem;
+        }
+
+        &--main__title {
+            font-size: 62px;
+        }
+    }
+
+    .top-banner__container {
+        width: 100%;
+        padding: 2rem;
     }
 }
+
 @include  media-breakpoint-up(xl) {
     .top-banner {
-        &--main {
-            &__title {
-                width: 65%;
-                max-width: 790px;
-            }
+
+        &__title,
+        &__text,
+        & strong {
+            width: 65%;
+            max-width: 790px;
         }
     }
 }

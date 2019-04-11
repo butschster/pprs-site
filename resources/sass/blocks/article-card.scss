@@ -1,0 +1,19 @@
+.article-card {
+    order: 2;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+}
+
+@include  media-breakpoint-up(lg) {
+    .article-card {
+        order: 3;
+        flex-direction: row;
+
+        & .banner__text-preview {
+            font-size: 0.95rem;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.main-sidebar {
+    margin: $center;
+    width: map-get($container, xs);
+}
+
+@include  media-breakpoint-up(md) {
+    .main-sidebar {
+        width: map-get($container, ml);
+    }
+}
+
+@include  media-breakpoint-up(lg) {
+    .main-sidebar {
+        width: 100%;
+    }
+
+    .main-sidebar__title {
+        font-size: 0.8rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+}

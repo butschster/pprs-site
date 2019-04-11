@@ -1,0 +1,25 @@
+.news__link {
+    color: $black;
+}
+
+.news__date {
+    color: $gray-700;
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+}
+
+.news__description {
+    font-size: 1.2rem;
+}
+
+@include  media-breakpoint-up(lg) {
+    .news__link {
+        font-size: 1.1rem;
+    }
+
+    .news__description {
+        font-size: 0.71rem;
+    }
+}

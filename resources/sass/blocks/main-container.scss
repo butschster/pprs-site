@@ -1,16 +1,28 @@
 .main-container {
-  margin: $center;
-  width: map-get($container, xs);
+    margin: $center;
+    width: map-get($container, xs);
+
+    &--main-content {
+        width: 100%;
+    }
 }
 
-   @include  media-breakpoint-up(md) {
-     .main-container {
-     width: map-get($container, ml);
-   }
+@include  media-breakpoint-up(md) {
+    .main-container {
+        width: map-get($container, ml);
+
+        &--main-content {
+            width: 100%;
+        }
+    }
 }
 
-   @include  media-breakpoint-up(lg) {
-     .main-container {
-     width: map-get($container, xl);
-   }
+@include  media-breakpoint-up(lg) {
+    .main-container {
+        width: map-get($container, xl);
+
+        &--main-content {
+            width: map-get($container, xl);
+        }
+    }
 }
