@@ -24,7 +24,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Route::pattern('page', '.*');
+        Route::pattern('page', '^(?!admin(/.*)?$).*$');
 
         Route::bind('page', function ($value) {
             return Page::findByPathOrFail($value);

@@ -12,6 +12,47 @@
 
 namespace App\Models{
 /**
+ * App\Models\Subscription
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Subscription newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Subscription newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Subscription query()
+ */
+	class Subscription extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\News
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $description
+ * @property string $text
+ * @property string|null $meta_title
+ * @property string|null $meta_description
+ * @property string|null $meta_keywords
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $formatted_date
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereMetaDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereMetaKeywords($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereMetaTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\News whereUpdatedAt($value)
+ */
+	class News extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Page
  *
  * @property int $id
@@ -25,6 +66,7 @@ namespace App\Models{
  * @property string|null $section_image
  * @property string|null $section_title
  * @property string|null $section_text
+ * @property string|null $text
  * @property int $_lft
  * @property int $_rgt
  * @property int|null $parent_id
@@ -54,10 +96,35 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Page whereSectionText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Page whereSectionTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Page whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Page whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Page whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Page whereUpdatedAt($value)
  */
 	class Page extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Quote
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $text
+ * @property string $image
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read string $image_url
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Quote whereUpdatedAt($value)
+ */
+	class Quote extends \Eloquent {}
 }
 
 namespace App\Models{

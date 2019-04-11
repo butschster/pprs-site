@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Cocur\Slugify\Slugify;
 use Hemp\Presenter\Presentable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -11,6 +12,19 @@ use Kalnoy\Nestedset\NodeTrait as NestedSet;
 class Page extends Model
 {
     use NestedSet, Presentable;
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function (Page $page) {
+            if (empty($page->slug)) {
+                $page->slug = $page->title;
+            }
+
+            $page->slug = (new Slugify())->slugify($page->slug);
+        });
+    }
 
     /**
      * Поиск страницы по пути

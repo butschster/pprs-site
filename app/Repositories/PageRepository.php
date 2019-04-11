@@ -12,7 +12,7 @@ class PageRepository
      */
     public function getMenu(): Collection
     {
-        return Page::whereIsRoot()->with('children', 'children.ancestors', 'ancestors')->get();
+        return Page::whereIsRoot()->with('children', 'children.ancestors', 'ancestors')->defaultOrder()->get();
     }
 
     /**
