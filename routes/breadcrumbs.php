@@ -25,3 +25,8 @@ Breadcrumbs::for('news.show', function ($trail, $news) {
     $trail->parent('news');
     $trail->push($news->title, $news->url());
 });
+
+Breadcrumbs::for('subscribe', function ($trail) {
+    $trail->parent('news');
+    $trail->push('Подписка', route('subscribe.form'));
+});

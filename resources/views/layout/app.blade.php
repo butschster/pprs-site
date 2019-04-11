@@ -32,7 +32,10 @@
                             @yield('content')
                         </section>
                         <aside class="col-12 px-0 px-md-4 col-md-4 col-lg-3 bg-light sidebar">
-                            <a  href="№" class="btn btn-subscribe">Подписаться на рассылку</a>
+                            @if(!request()->routeIs('subscribe.form'))
+                            <a href="{{ route('subscribe.form') }}" class="btn py-3 btn-block btn-lg rounded-pill btn-warning mb-5">
+                                Подписаться на рассылку
+                            </a>
                             @include('layout._partials.last_news')
                         </aside>
                     </div>

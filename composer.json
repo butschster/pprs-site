@@ -18,7 +18,8 @@
         "laravel/tinker": "^1.0",
         "nesbot/carbon": "^2.16",
         "spatie/laravel-responsecache": "^5.0",
-        "tightenco/ziggy": "^0.6.9"
+        "tightenco/ziggy": "^0.6.9",
+        "unisender/api-wrapper": "^1.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
