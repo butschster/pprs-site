@@ -24,6 +24,12 @@
                         @yield('content')
                     </div>
                     <div class="col-4">
+                        @if(!request()->routeIs('subscribe.form'))
+                        <a href="{{ route('subscribe.form') }}" class="btn py-3 btn-block btn-lg rounded-pill btn-warning mb-5">
+                            Подписаться на рассылку
+                        </a>
+                        @endif
+
                         @include('layout._partials.last_news')
                     </div>
                 </div>

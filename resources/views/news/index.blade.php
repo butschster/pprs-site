@@ -4,6 +4,12 @@
     {{ Breadcrumbs::render('news') }}
 @endsection
 
+@section('banner')
+    <div class="card">
+        <img src="https://dummyimage.com/800x200/666/fff&text=News" class="card-img-top">
+    </div>
+@endsection
+
 @section('content')
     <div class="mt-5">
         @foreach($news as $item)
