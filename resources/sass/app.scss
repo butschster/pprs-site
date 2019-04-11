@@ -1,9 +1,16 @@
 // Variables
 @import 'variables';
+@import 'mixin';
+@import 'base';
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.breadcrumb {
-  margin-bottom: 0 !important;
-}
+// Components
+ @import "blocks/main-container";
+ @import "blocks/main-header";
+ @import "blocks/breadcrumb";
+ @import "blocks/main-navbar";
+ @import "blocks/top-banner";
+ @import "blocks/banner";

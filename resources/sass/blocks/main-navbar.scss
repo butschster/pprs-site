@@ -1,0 +1,22 @@
+.main-navbar {
+    background-color: $white;
+    padding: 0;
+    min-height: $height-navbar-sm;
+}
+
+.main-navbar__link {
+    display: flex;
+    color: $gray-900;
+}
+
+.main-navbar__toggler {
+    border: none;
+    margin-left: auto;
+}
+
+@include  media-breakpoint-up(md) {
+    .main-navbar {
+        padding: 2.8rem 0;
+        min-height: $height-navbar-md;
+    }
+}

@@ -9,7 +9,7 @@
         @foreach($news as $item)
             <div class="media mb-5">
                 <div class="media-body">
-                    <h5 class="mt-0"><strong>{{ $item->title }}</strong></h5>
+                    <h3 class="mt-0"><strong>{{ $item->title }}</strong></h3>
                     <div class="my-2"><small class="text-muted">{{ $item->formatted_date }}</small></div>
                     {!! $item->description !!}
 
@@ -22,4 +22,5 @@
 
         {!! $news->render() !!}
     </div>
+    @include('layout._partials.random_articles')
 @endsection

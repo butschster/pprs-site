@@ -1,0 +1,16 @@
+.main-container {
+  margin: $center;
+  width: map-get($container, xs);
+}
+
+   @include  media-breakpoint-up(md) {
+     .main-container {
+     width: map-get($container, ml);
+   }
+}
+
+   @include  media-breakpoint-up(lg) {
+     .main-container {
+     width: map-get($container, xl);
+   }
+}

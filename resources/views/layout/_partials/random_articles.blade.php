@@ -8,9 +8,10 @@
                 </div>
             @endif
             <div class="card-body text-white" style="background: url('{{ $page->section_image_url }};'">
-                <a href="{{ $page->url() }}" style="color: white; background: {{ $page->color }}; display: block">
-                    <h4>{{ $page->section_title }}</h4></a>
-                <p class="card-text">{{ $page->section_text }}</p>
+                <a href="{{ $page->url() }}" class='w-100'>
+                    <h3 style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_title }}</h3>
+                    <p class="card-text">{{ $page->section_text }}</p>
+                </a>
             </div>
         </div>
     @endforeach

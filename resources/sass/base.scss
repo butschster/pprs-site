@@ -1,0 +1,6 @@
+@include font-face("Trebuchet", "../fonts/trebuchet", 400, normal);
+@include font-face("Trebuchet", "../fonts/trebuchet-bold", 700, normal);
+
+body {
+  font-family: "Trebuchet", "Arial", sans-serif;
+}

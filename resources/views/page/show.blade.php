@@ -6,11 +6,11 @@
 
 @section('banner')
     @if($page->has_banner)
-        <div class="card">
-            <img src="{{ $page->banner_url }}" class="card-img-top">
-            <div class="card-body">
-                <h1>{{ $page->title }}</h1>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="jumbotron jumbotron-fluid top-banner" style="background: url('{{ $page->section_image_url }};'">
+            <div class="top-banner__container main-container">
+                <strong>Первично-прогрессирующий рассеянный склероз</strong>
+                <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
+                <h1 class="display-4"><a href="#">{{ $page->title }}</a></h1>
             </div>
         </div>
     @endif
@@ -22,4 +22,5 @@
     @else
         {!! $page->text !!}
     @endif
+    @include('layout._partials.random_articles')
 @endsection
