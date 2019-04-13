@@ -20,9 +20,11 @@
 @include  media-breakpoint-up(lg) {
     .main-container {
         width: map-get($container, xl);
+        max-width: 1710px;
 
         &--main-content {
             width: map-get($container, xl);
+            max-width: 1710px;
         }
     }
 }

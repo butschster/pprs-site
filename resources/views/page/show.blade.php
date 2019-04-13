@@ -6,7 +6,7 @@
 
 @section('banner')
     @if($page->has_banner)
-        <div class="jumbotron jumbotron-fluid top-banner" style="background: url('{{ $page->section_image_url }};'">
+        <div class="jumbotron jumbotron-fluid top-banner">
             <div class="top-banner__container main-container">
                 <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
                 <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>

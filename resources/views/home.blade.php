@@ -14,35 +14,35 @@
     <li class="list-group-item banner">
         <h2 class="banner__name-page main-container">РС- это</h2>
         <a href="#" class="banner__container">
-            <h3 class="banner__title">Магнитно-резонансная томография (МРТ)</h3>
+            <h3 class="banner__title">Что такое рассеянный склероз?</h3>
             <p class="banner__text-preview main-container">Для чего используется контрастное вещество и как с его помощью отслеживают эффективность проводимой терапии</p>
         </a>
     </li>
     <li class="list-group-item banner">
         <h2 class="banner__name-page main-container">Диагностика</h2>
         <a href="#" class="banner__container">
-            <h3 class="banner__title">Упражнения в удовольствие</h3>
+            <h3 class="banner__title">Как диагностируют рассеянный склероз?</h3>
             <p class="banner__text-preview main-container">Рассеянный склероз — не повод оставаться на обочине активной жизни. Спектр возможной физической нагрузки очень широк, практически каждый может найти для себя что-то подходящее и вдохновляющее</p>
         </a>
     </li>
     <li class="list-group-item banner">
         <h2 class="banner__name-page main-container">Лечение</h2>
         <a href="#" class="banner__container">
-            <h3 class="banner__title">Лекарственные препараты</h3>
+            <h3 class="banner__title">Как лечат ППРС?</h3>
             <p class="banner__text-preview main-container">Существует особая группа лекарств — препараты, изменяющие течение рассеянного склероза (ПИТРС). Они позволяют замедлить прогрессирование заболевания и продлить время, в течение которого человек остается трудоспособным</p>
         </a>
     </li>
     <li class="list-group-item banner">
         <h2 class="banner__name-page main-container">Жизнь с ППРС</h2>
         <a href="#" class="banner__container">
-            <h3 class="banner__title">Магнитно-резонансная томография (МРТ)</h3>
+            <h3 class="banner__title">Как жить с ППРС?</h3>
             <p class="banner__text-preview main-container">Для чего используется контрастное вещество и как с его помощью отслеживают эффективность проводимой терапии</p>
         </a>
     </li>
     <li class="list-group-item banner">
         <h2 class="banner__name-page main-container">Правовая информация</h2>
         <a href="#" class="banner__container">
-            <h3 class="banner__title">Магнитно-резонансная томография (МРТ)</h3>
+            <h3 class="banner__title">Какие у меня права?</h3>
             <p class="banner__text-preview main-container">Для чего используется контрастное вещество и как с его помощью отслеживают эффективность проводимой терапии</p>
         </a>
     </li>

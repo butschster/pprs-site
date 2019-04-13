@@ -5,6 +5,7 @@
     padding-left: 0;
     padding-right: 0;
     flex-direction: column;
+    margin-bottom: 3rem;
 }
 
 @include  media-breakpoint-up(lg) {
@@ -14,6 +15,7 @@
 
         & .banner__text-preview {
             font-size: 0.95rem;
+            width: 100%;
         }
     }
 }

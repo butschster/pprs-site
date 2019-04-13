@@ -10,6 +10,9 @@
     background-color: $gray-100;
     color: $black;
     transition: all $duration $transition-style;
+    background-image: url("../images/bg-menu-banner.png");
+    background-size: cover;
+    background-position: center;
 
     &:focus,
     &:hover {
@@ -32,9 +35,10 @@
 
 .banner__title {
     color: $white;
+    background-color: $blue;
     font-size: 1.15rem;
     padding: 0.5rem 0;
-    padding-left: 4%;
+    padding-left: (100% - map-get($container, xs))/2;
     padding-right: 1rem;
     margin-bottom: 3.6rem;
     display: inline-flex;
@@ -50,16 +54,36 @@
 
 @include media-breakpoint-up(md) {
     .banner__title {
-        padding-left: 7%;
+        padding-left: (100% - map-get($container, ml))/2;;
     }
 }
 
 @include  media-breakpoint-up(lg) {
+    .banners-group {
+
+        @for $i from 1 through 5 {
+            .banner:nth-child(#{$i}) .banner__container {
+                background-image:  url("../images/banners-main-#{$i}.png");
+                background-size:  cover;
+                background-position: 50% 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
     .banner__container {
-        padding: 2rem 0;
+        padding: 2.5rem 0;
 
         & .main-container {
             width: 100%;
+        }
+
+        .banner__text-preview {
+            margin: 0;
+            font-size: 1.2rem;
+            padding-left: 2rem;
+            width: 70%;
+            max-width: 870px;
         }
     }
 
@@ -72,14 +96,6 @@
     .banner__title {
         font-size: 0.71rem;
         margin-bottom: 2rem;
-        padding-left: 2rem;
-        width: 70%;
-        max-width: 870px;
-    }
-
-    .banner__text-preview {
-        margin: 0;
-        font-size: 1.2rem;
         padding-left: 2rem;
         width: 70%;
         max-width: 870px;

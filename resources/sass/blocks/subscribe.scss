@@ -1,0 +1,10 @@
+.subscribe__text {
+    font-size: 0.95rem;
+    line-height: 1rem;
+}
+
+@include  media-breakpoint-up(lg) {
+    .subscribe {
+        width: 100%;
+    }
+}

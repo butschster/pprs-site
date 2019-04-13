@@ -5,7 +5,7 @@
 @endsection
 
 @section('banner')
-    <div class="jumbotron jumbotron-fluid top-banner">
+    <div class="jumbotron jumbotron-fluid top-banner top-banner--news">
         <div class="top-banner__container main-container">
             <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
             <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
@@ -30,6 +30,8 @@
             </div>
         @endforeach
     </div>
+    <div class="pagination-banners">
         {!! $news->render() !!}
+    </div>
     @include('layout._partials.random_articles')
 @endsection

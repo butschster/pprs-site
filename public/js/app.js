@@ -33570,8 +33570,8 @@ if (typeof window.Ziggy !== 'undefined') {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\Users\hp\Downloads\OSPanel\domains\pprs-site\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\Users\hp\Downloads\OSPanel\domains\pprs-site\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\hp\Downloads\OSPanel\domains\pprs-site\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\hp\Downloads\OSPanel\domains\pprs-site\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

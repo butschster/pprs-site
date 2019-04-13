@@ -9,7 +9,7 @@
         @foreach($pages as $page)
             @if($page->hasChildren())
             <li class="nav-item dropdown">
-                <a class="nav-link main-navbar__link px-0" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link main-navbar__link px-0 mr-1" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-angle-right mr-1" style="color: {{ $page->color }}"></i>
                     <b>{{ $page->title }}</b>

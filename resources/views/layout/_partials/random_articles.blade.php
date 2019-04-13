@@ -6,9 +6,9 @@
                     <a class="banner__name-page" href="{{ $page->parent->url() }}">{{ $page->parent->section_title }}</a>
                 </h3>
             @endif
-            <a href="{{ $page->url() }}" style="background: url('{{ $page->section_image_url }};'" class='banner__container card-body'>
-                <h3 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_title }}</h3>
-                <p class="banner__text-preview card-text main-container px-lg-0">{{ $page->section_text }}</p>
+            <a href="{{ $page->url() }}" class='banner__container card-body'>
+                <h3 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }};">{{ $page->section_title }}</h3>
+                <p class="banner__text-preview card-text main-container px-lg-3">{{ $page->section_text }}</p>
             </a>
         </div>
     @endforeach

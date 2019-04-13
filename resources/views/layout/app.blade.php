@@ -31,7 +31,7 @@
                         <section class="px-0 px-lg-4 col-lg-8  order-1">
                             @yield('content')
                         </section>
-                        <aside class=" px-0 px-lg-4 col-lg-4 sidebar main-sidebar  order-3 order-lg-2">
+                        <aside class=" px-0 px-lg-4 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
 
                             @if(!request()->routeIs('subscribe.form'))
                                 <a href="{{ route('subscribe.form') }}" class="btn btn-block btn-lg btn-warning btn-subscribe">
@@ -51,30 +51,9 @@
                 </div>
             </div>
         </main>
-        <footer class="main-footer bg-dark text-white">
+        <footer class="main-footer">
             <div class="main-container">
-                <div class="row">
-                    <ol class="col-6 col-lg-8">
-                        <a href="{{ route('news.index') }}">Новости</a>
-                        <a href="#" class="d-none d-md-block">Карта сайта</a>
-                    </ol>
-                    <ul class="col-6 col-lg-4 social__list">
-                        <li class="social__item">
-                            <a class="social__link social__link--twitter" href="https://twitter.com">
-                                <img width="17.5px" height="14.663px">
-                                <span class="visually-hidden">Twitter</span>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link social__link--facebook" href="https://www.facebook.com">
-                                <img width="8.673px" height="18.944px">
-                                <span class="visually-hidden">Facebook</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <p class="col-12 col-lg-8">При поддержке ЗАО «Рош-Москва»</p>
-                <p class="col-12 col-lg-8">Информация, представленная на портале, не должна использоваться для самодиагностики и лечения, а так же не может служить заменой консультации врача.</p>
+                @include('layout._partials.footer')
             </div>
         </footer>
     </div>
