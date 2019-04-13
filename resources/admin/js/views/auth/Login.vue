@@ -10,11 +10,11 @@
                     @input="$v.loginData.email.$touch()"
             >
             <span v-if="!$v.loginData.email.required" class="invalid-feedback">
-        Email is required
-      </span>
+                Необходимо указать Email адрес
+            </span>
             <span v-if="!$v.loginData.email.email" class="invalid-feedback">
-        Email is invalid
-      </span>
+                Введите корректный Email адрес
+            </span>
         </div>
         <div :class="['form-group', {'is-invalid': $v.loginData.password.$error}]">
             <input
@@ -26,33 +26,13 @@
                     @input="$v.loginData.password.$touch()"
             >
             <span v-if="!$v.loginData.password.required" class="invalid-feedback">
-        Password is required
-      </span>
+                Необходимо указать пароль
+            </span>
             <span v-if="!$v.loginData.password.minLength" class="invalid-feedback">
-        Password must have at least {{ $v.loginData.password.$params.minLength.min }} letters.
-      </span>
+                Пароль должен содержать как минимум {{ $v.loginData.password.$params.minLength.min }} символов.
+            </span>
         </div>
-        <div class="other-actions row">
-            <div class="col-sm-6">
-                <div class="checkbox">
-                    <label class="c-input c-checkbox">
-                        <input
-                                v-model="loginData.remember"
-                                type="checkbox"
-                                name="remember"
-                        >
-                        <span class="c-indicator"/>
-                        Remember Me
-                    </label>
-                </div>
-            </div>
-            <div class="col-sm-6 text-sm-right">
-                <a href="#" class="forgot-link">
-                    Forgot Password?
-                </a>
-            </div>
-        </div>
-        <button class="btn btn-theme btn-full">Login</button>
+        <button class="btn btn-theme">Войти</button>
     </form>
 </template>
 
@@ -64,8 +44,8 @@
         data() {
             return {
                 loginData: {
-                    email: 'admin@laraspace.in',
-                    password: 'admin@123',
+                    email: 'admin@site.com',
+                    password: 'secret',
                     remember: ''
                 }
             }
@@ -87,11 +67,7 @@
                 this.$v.$touch()
 
                 if (!this.$v.$error) {
-                    Auth.login(this.loginData).then((res) => {
-                        if (res) {
-                            this.$router.push('/backend/dashboard')
-                        }
-                    })
+                    Auth.login(this.loginData).then(res => res && this.$router.push({name: 'dashboard'}))
                 }
             }
         }

@@ -7,10 +7,41 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Kalnoy\Nestedset\NodeTrait as NestedSet;
+use Cocur\Slugify\Slugify;
 
 class Page extends Model
 {
     use NestedSet, Presentable;
+
+    /**
+     * @var array
+     */
+    protected $appends = ['label'];
+
+    /**
+     * @var array
+     */
+    protected $guarded = ['_lft', '_rgt'];
+
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('ordering', function ($builder) {
+            $builder->defaultOrder();
+        });
+
+        static::saving(function (Page $page) {
+            if (empty($page->slug)) {
+                $page->slug = (new Slugify())->slugify($page->title);
+            }
+        });
+    }
 
     /**
      * Поиск страницы по пути
@@ -111,5 +142,13 @@ class Page extends Model
         }
 
         return null;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLabelAttribute(): string
+    {
+        return $this->title;
     }
 }

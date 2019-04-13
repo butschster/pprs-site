@@ -1,5 +1,4 @@
 import VueRouter from 'vue-router'
-import VeeValidate from 'vee-validate'
 import Vuelidate from 'vuelidate'
 // import VuePrism from 'vue-prism'
 // import VTooltip from 'v-tooltip'
@@ -33,6 +32,8 @@ global._ = require('lodash')
 
 global.Vue = require('vue')
 
+Vue.prototype.$validationErrors = {};
+
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
  * the outgoing requests issued by this application. The CSRF middleware
@@ -42,39 +43,25 @@ global.Vue = require('vue')
 global.axios = require('axios')
 
 global.axios.defaults.headers.common = {
-  'X-Requested-With': 'XMLHttpRequest'
+    'X-Requested-With': 'XMLHttpRequest'
 }
 
 /**
  * Global Axios Request Interceptor
  */
 
-global.axios.interceptors.request.use(function (config) {
-  // Do something before request is sent
-  const AUTH_TOKEN = Ls.get('auth.token')
+global.axios.interceptors.request.use((config) => {
+    // Do something before request is sent
+    const AUTH_TOKEN = Ls.get('auth.token')
 
-  if (AUTH_TOKEN) {
-    config.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`
-  }
+    if (AUTH_TOKEN) {
+        config.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`
+    }
 
-  return config
-}, function (error) {
-  // Do something with request error
-  return Promise.reject(error)
+    return config
+}, error => {
+    return Promise.reject(error)
 })
-
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-
-// import Echo from "laravel-echo"
-
-// global.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// })
 
 /**
  * Custom Directives
@@ -91,7 +78,5 @@ Vue.component('v-collapse', VCollapse)
 Vue.component('v-collapse-item', VCollapseItem)
 
 Vue.use(VueRouter)
-// Vue.use(VuePrism)
 // Vue.use(VTooltip)
-Vue.use(VeeValidate)
 Vue.use(Vuelidate)

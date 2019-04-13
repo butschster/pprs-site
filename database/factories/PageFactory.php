@@ -12,6 +12,7 @@ $factory->define(Page::class, function (Faker $faker) {
         'meta_keywords' => implode(', ', $faker->words()),
         'color' => $faker->hexColor,
         'banner' => 'page/banners/banner.jpg',
+        'banner_text' => $faker->paragraph,
         'section_image' => 'page/images/banner.jpg',
         'section_title' => $faker->sentence,
         'section_text' => $faker->paragraph,

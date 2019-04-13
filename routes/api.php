@@ -10,8 +10,10 @@ Route::prefix('auth')->namespace('Admin\\')->group(function () {
 });
 
 // admin route
-Route::group(['prefix' => 'admin', 'middleware' => 'api.auth'], function () {
-
-
+Route::namespace('Api\\')->middleware('auth')->group(function () {
+    Route::get('page/{id}', 'PagesController@show')->name('page.show');
+    Route::post('page/{id}', 'PagesController@update')->name('page.update');
+    Route::get('pages', 'PagesController@index')->name('pages');
+    Route::post('pages/sort', 'PagesController@sort')->name('pages.sort');
 });
 

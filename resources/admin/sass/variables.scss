@@ -1,7 +1,3 @@
-//font-awesome
-$fa-css-prefix: icon-fa !default;
-
-
 // Colors
 // -------------------------
 
@@ -137,3 +133,9 @@ $card-cap-bg: #ffffff;
 
 $pace-loader-color: darken($ls-color-primary, 10%);
 
+$container: (
+        "xs": 92%,
+        "ml": 86%,
+        "xl": 90%
+);
+$center: 0 auto;

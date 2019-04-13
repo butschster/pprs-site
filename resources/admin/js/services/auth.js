@@ -20,18 +20,26 @@ export default {
 
     async logout() {
         try {
-            await axios.get('/api/auth/logout')
+            await axios.post('/api/auth/logout')
 
             Ls.remove('auth.token')
-            toastr['success']('Logged out!', 'Success')
         } catch (error) {
             console.log('Error', error.message)
         }
     },
 
     async check() {
-        let response = await axios.get('/api/auth/me')
+        try {
+            let response = await axios.get('/api/auth/me')
 
-        return !!response.data.id
+            return !!response.data.id
+        } catch (error) {
+            if (error.response.status === 401) {
+                return false
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                console.log('Error', error.message)
+            }
+        }
     }
 }
