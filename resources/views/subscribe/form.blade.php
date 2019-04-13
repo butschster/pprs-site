@@ -27,7 +27,7 @@
                 <input type="text" class="form-control col-sm-10 col-lg-6 {{ $errors->has('name') ? ' is-invalid' : '' }}" id="exampleInputName" placeholder="Ваше имя" name="name">
 
                 @if ($errors->has('name'))
-                    <span class="invalid-feedback" role="alert">
+                    <span class="invalid-feedback col-sm-10 col-lg-6 offset-sm-2" role="alert">
                         <strong>{{ $errors->first('name') }}</strong>
                     </span>
                 @endif
@@ -38,7 +38,7 @@
                 <input type="email" class="form-control col-sm-10 col-lg-6 {{ $errors->has('email') ? ' is-invalid' : '' }}" id="exampleInputEmail" placeholder="Ваш email" name="email">
 
                 @if ($errors->has('email'))
-                    <span class="invalid-feedback" role="alert">
+                    <span class="invalid-feedback col-sm-10 col-lg-6 offset-sm-2" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                     @endif
