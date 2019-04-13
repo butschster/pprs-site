@@ -32737,6 +32737,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/admin/sass/laraspace.scss":
+/*!*********************************************!*\
+  !*** ./resources/admin/sass/laraspace.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -33564,14 +33575,15 @@ if (typeof window.Ziggy !== 'undefined') {
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!***************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/admin/sass/laraspace.scss ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\Users\hp\Downloads\OSPanel\domains\pprs-site\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\Users\hp\Downloads\OSPanel\domains\pprs-site\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/bustchster/webserver/PPRS/www/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/bustchster/webserver/PPRS/www/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/bustchster/webserver/PPRS/www/resources/admin/sass/laraspace.scss */"./resources/admin/sass/laraspace.scss");
 
 
 /***/ })

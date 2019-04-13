@@ -20,6 +20,7 @@
         "spatie/laravel-responsecache": "^5.0",
         "spatie/laravel-sitemap": "^5.3",
         "tightenco/ziggy": "^0.6.9",
+        "tymon/jwt-auth": "1.0.0-rc.4.1",
         "unisender/api-wrapper": "^1.4"
     },
     "require-dev": {
