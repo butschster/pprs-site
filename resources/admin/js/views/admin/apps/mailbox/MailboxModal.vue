@@ -66,7 +66,7 @@ export default {
       messages: [
         {
           id: 1,
-          avatar: '/assets/img/avatars/avatar.png',
+          avatar: '/admin/img/avatars/avatar.png',
           name: 'John Deo',
           email: 'johndeo@gmail.com',
           time: '3 minutes ago',
@@ -80,7 +80,7 @@ export default {
         },
         {
           id: 2,
-          avatar: '/assets/img/avatars/avatar.png',
+          avatar: '/admin/img/avatars/avatar.png',
           name: 'John Deo',
           email: 'johndeo@gmail.com',
           time: '3 minutes ago',
@@ -94,7 +94,7 @@ export default {
         },
         {
           id: 3,
-          avatar: '/assets/img/avatars/avatar.png',
+          avatar: '/admin/img/avatars/avatar.png',
           name: 'John Deo',
           email: 'johndeo@gmail.com',
           time: '3 minutes ago',

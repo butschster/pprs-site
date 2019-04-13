@@ -4,7 +4,7 @@
       <div class="message-from">
         <a class="avatar">
           <img
-            src="/assets/img/avatars/avatar.png"
+            src="/admin/img/avatars/avatar.png"
             alt="avatar"
             class="avatar-img"
           >

@@ -1,19 +1,15 @@
 .top-banner {
-    background-color: $gray-100;
+    background-color: $blue;
     color: $gray-900;
-    padding: 3rem 0;
+    padding: 2rem 0;
     margin-bottom: 2rem;
+    background-image: url("../images/top-banners-articles.png");
+    background-size: cover;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
 
-    &--main {
-        background-color: $yellow;
-        &__title {
-            font-size: 32px;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-        }
-        &__text {
-            font-size: 17px;
-        }
+    & strong {
+        font-size: 1.7rem;
     }
 
     &__text {
@@ -22,51 +18,104 @@
         text-transform: uppercase;
         font-size: 12px;
     }
-}
 
-@include  media-breakpoint-up(sm) {
-    .top-banner--main__title {
-        font-size: 52px;
-    }
-}
-@include  media-breakpoint-up(md) {
-    .top-banner {
-        width: map-get($container, ml);
-        margin: $center;
-        padding: 0;
-        margin-bottom: 3rem;
+    &__title {
 
-        &--main__title {
-            margin-bottom: 2rem;
-            margin-top: 3.8rem;
-            font-size: 62px;
+        a {
+            color: $white;
+
+            &:focus,
+            &:hover {
+                color: $white;
+                text-decoration: none;
+                opacity: 0.7;
+            }
         }
     }
 
-    .top-banner__container {
-        width: 100%;
-        padding: 4rem;
+    &--main {
+        background-color: $yellow;
+        background-image: url("../images/top-banners-main.png");
+
+        &__title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        &__text {
+            font-size: 17px;
+        }
+    }
+
+    &--news {
+        background-color: $orange;
+        background-image: url("../images/top-banners-news.png");
+    }
+}
+
+@include  media-breakpoint-up(md) {
+    .top-banner {
+        margin-bottom: 2.5rem;
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &--main__title {
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            font-size: 62px;
+        }
     }
 }
 
 @include  media-breakpoint-up(lg) {
     .top-banner {
         width: map-get($container, xl);
-        &--main {
-            &__title {
-                width: 80%;
-            }
+        margin: $center;
+        margin-bottom: 2.6rem;
+        background-image: url("../images/top-banners-articles-xl.png");
+        max-width: 1710px;
+
+        &--news {
+            background-image: url("../images/top-banners-news-xl.png");
         }
 
+        &__text,
+        & strong {
+            width: 80%;
+        }
+
+        &__title {
+            width: 80%;
+            font-size: 3.8rem;
+            margin-top: 1rem;
+        }
+
+        &--main {
+            background-image: url("../images/top-banners-main-xl.png");
+        }
+
+        &--main__title {
+            font-size: 62px;
+        }
+
+        &__container {
+            width: 100%;
+            padding:  0 2rem;
+        }
     }
 }
+
 @include  media-breakpoint-up(xl) {
     .top-banner {
-        &--main {
-            &__title {
-                width: 65%;
-                max-width: 790px;
-            }
+
+        &__title,
+        &__text,
+        & strong {
+            width: 65%;
+            max-width: 790px;
         }
     }
 }

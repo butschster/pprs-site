@@ -3,13 +3,13 @@
     <a href="#" class="brand-main">
       <img
         id="logo-desk"
-        src="/assets/img/logo-desk.png"
+        src="/admin/img/logo-desk.png"
         alt="Laraspace Logo"
         class="d-none d-md-inline"
       >
       <img
         id="logo-mobile"
-        src="/assets/img/logo-mobile.png"
+        src="/admin/img/logo-mobile.png"
         alt="Laraspace Logo"
         class="d-md-none"
       >
@@ -87,7 +87,7 @@
             aria-expanded="false"
             class="avatar"
           >
-            <img src="/assets/img/avatars/avatar.png" alt="Avatar">
+            <img src="/admin/img/avatars/avatar.png" alt="Avatar">
           </a>
           <v-dropdown-item>
             <router-link class="dropdown-item" to="/admin/settings">

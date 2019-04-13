@@ -1,16 +1,26 @@
 // Variables
 @import 'variables';
 @import 'mixin';
-@import 'base';
-
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 // Components
- @import "blocks/main-container";
- @import "blocks/main-header";
- @import "blocks/breadcrumb";
- @import "blocks/main-navbar";
- @import "blocks/top-banner";
- @import "blocks/banner";
+@import 'base';
+@import "blocks/main-container";
+@import "blocks/main-header";
+@import "blocks/breadcrumb";
+@import "blocks/main-navbar";
+@import "blocks/top-banner";
+@import "blocks/banners-group";
+@import "blocks/banner";
+@import "blocks/pagination-banners";
+@import "blocks/main-sidebar";
+@import "blocks/btn-subscribe";
+@import "blocks/news";
+@import "blocks/article-card";
+@import "blocks/article-text";
+@import "blocks/news-container";
+@import "blocks/subscribe";
+@import "blocks/main-footer";
+@import "blocks/social";

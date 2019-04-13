@@ -1,11 +1,11 @@
 @foreach($pages as $page)
     @if($page->has_section_image)
-        <a href="{{ $page->url() }}" class="card mt-5 d-block" style="background: url('{{ $page->section_image_url }};'">
-            <!-- <img src="{{ $page->section_image_url }}" class="card-img-top"> -->
-            <div class="card-body  fa-fa-fa">
-                <h4 style="background: {{ $page->color }}">{{ $page->section_title }}</h4>
-                <p class="card-text">{{ $page->section_text }}</p>
-            </div>
-        </a>
+        <div class="banner">
+            <!-- <a href="{{ $page->url() }}" class="banner__container" style="background: url('{{ $page->section_image_url }};')"> -->
+            <a href="{{ $page->url() }}" class="banner__container">
+                <h2 class="banner__title" style="background: {{ $page->color }}">{{ $page->section_title }}</h2>
+                <p class="banner__text-preview main-container">{{ $page->section_text }}</p>
+            </a>
+        </div>
     @endif
 @endforeach

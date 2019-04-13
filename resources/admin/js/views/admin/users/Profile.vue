@@ -18,7 +18,7 @@
                   <div class="col-sm-3">
                     <div class="avatar-container">
                       <img
-                        src="/assets/img/avatars/avatar-lg.png"
+                        src="/admin/img/avatars/avatar-lg.png"
                         alt="Admin Avatar"
                         class="img-fluid"
                       >
@@ -40,7 +40,7 @@
                           <a href="#">
                             <img
                               class="media-object img-thumbnail"
-                              src="/assets/img/avatars/avatar1.png"
+                              src="/admin/img/avatars/avatar1.png"
                               alt="Generic placeholder image"
                             >
                           </a>
@@ -58,7 +58,7 @@
                           <a href="#">
                             <img
                               class="media-object img-thumbnail"
-                              src="/assets/img/avatars/avatar2.png"
+                              src="/admin/img/avatars/avatar2.png"
                               alt="Generic placeholder image"
                             >
                           </a>
@@ -81,7 +81,7 @@
                       <a href="#">
                         <img
                           class="media-object img-thumbnail"
-                          src="/assets/img/avatars/avatar1.png"
+                          src="/admin/img/avatars/avatar1.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -101,7 +101,7 @@
                       <a href="#">
                         <img
                           class="media-object img-thumbnail"
-                          src="/assets/img/avatars/avatar2.png"
+                          src="/admin/img/avatars/avatar2.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -123,7 +123,7 @@
                       <a href="#">
                         <img
                           class="media-object"
-                          src="/assets/img/avatars/avatar1.png"
+                          src="/admin/img/avatars/avatar1.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -138,7 +138,7 @@
                       <a href="#">
                         <img
                           class="media-object"
-                          src="/assets/img/avatars/avatar2.png"
+                          src="/admin/img/avatars/avatar2.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -153,7 +153,7 @@
                       <a href="#">
                         <img
                           class="media-object"
-                          src="/assets/img/avatars/avatar3.png"
+                          src="/admin/img/avatars/avatar3.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -168,7 +168,7 @@
                       <a href="#">
                         <img
                           class="media-object"
-                          src="/assets/img/avatars/avatar4.png"
+                          src="/admin/img/avatars/avatar4.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -183,7 +183,7 @@
                       <a href="#">
                         <img
                           class="media-object"
-                          src="/assets/img/avatars/avatar5.png"
+                          src="/admin/img/avatars/avatar5.png"
                           alt="Generic placeholder image"
                         >
                       </a>
@@ -198,7 +198,7 @@
                       <a href="#">
                         <img
                           class="media-object"
-                          src="/assets/img/avatars/avatar6.png"
+                          src="/admin/img/avatars/avatar6.png"
                           alt="Generic placeholder image"
                         >
                       </a>

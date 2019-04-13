@@ -1,0 +1,20 @@
+.btn-subscribe {
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 8rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    background-image: url("../images/btn-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+@include  media-breakpoint-up(lg) {
+    .btn-subscribe {
+        font-size: 1.05rem;
+        padding: 0.75rem 1rem;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+}

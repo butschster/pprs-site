@@ -155,16 +155,16 @@ export default {
   data () {
     return {
       mails: [
-        { 'id': '1', 'categories': ['inbox', 'trash'], 'from': { avatar: '/assets/img/avatars/avatar.png', name: 'Ashton White' }, 'title': 'Among going manor who did. Do ye is celebrated it sympathize considered..', favorite: false, read: false },
-        { 'id': '2', 'categories': ['inbox', 'important'], 'from': { avatar: '/assets/img/avatars/avatar1.png', name: 'Ben Solo' }, 'title': 'Did shy say mention enabled through elderly improve.', favorite: false, read: false },
-        { 'id': '3', 'categories': ['inbox', 'sent'], 'from': { avatar: '/assets/img/avatars/avatar2.png', name: 'Mark Futo' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
-        { 'id': '4', 'categories': ['inbox', 'sent'], 'from': { avatar: '/assets/img/avatars/avatar.png', name: 'Charlie Brown' }, 'title': 'Yet bed any for travelling assistance indulgence unpleasing.', favorite: false, read: true },
-        { 'id': '5', 'categories': ['inbox', 'trash'], 'from': { avatar: '/assets/img/avatars/avatar1.png', name: 'Evan Sharma' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
-        { 'id': '6', 'categories': ['inbox', 'trash'], 'from': { avatar: '/assets/img/avatars/avatar2.png', name: 'Mercy Joseph' }, 'title': 'At engage simple father of period others except. My giving do summer of though ...', favorite: false, read: true },
-        { 'id': '7', 'categories': ['inbox', 'important'], 'from': { avatar: '/assets/img/avatars/avatar.png', name: 'Shobha Thumpy' }, 'title': 'Whole front do of plate heard oh ought. His defective nor convinced residence own.', favorite: false, read: true },
-        { 'id': '8', 'categories': ['inbox', 'important'], 'from': { avatar: '/assets/img/avatars/avatar1.png', name: 'Phoebe Richard' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
-        { 'id': '9', 'categories': ['inbox', 'important'], 'from': { avatar: '/assets/img/avatars/avatar2.png', name: 'Mark Futo' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
-        { 'id': '10', 'categories': ['inbox'], 'from': { avatar: '/assets/img/avatars/avatar.png', name: 'Ben Solo' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true }
+        { 'id': '1', 'categories': ['inbox', 'trash'], 'from': { avatar: '/admin/img/avatars/avatar.png', name: 'Ashton White' }, 'title': 'Among going manor who did. Do ye is celebrated it sympathize considered..', favorite: false, read: false },
+        { 'id': '2', 'categories': ['inbox', 'important'], 'from': { avatar: '/admin/img/avatars/avatar1.png', name: 'Ben Solo' }, 'title': 'Did shy say mention enabled through elderly improve.', favorite: false, read: false },
+        { 'id': '3', 'categories': ['inbox', 'sent'], 'from': { avatar: '/admin/img/avatars/avatar2.png', name: 'Mark Futo' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
+        { 'id': '4', 'categories': ['inbox', 'sent'], 'from': { avatar: '/admin/img/avatars/avatar.png', name: 'Charlie Brown' }, 'title': 'Yet bed any for travelling assistance indulgence unpleasing.', favorite: false, read: true },
+        { 'id': '5', 'categories': ['inbox', 'trash'], 'from': { avatar: '/admin/img/avatars/avatar1.png', name: 'Evan Sharma' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
+        { 'id': '6', 'categories': ['inbox', 'trash'], 'from': { avatar: '/admin/img/avatars/avatar2.png', name: 'Mercy Joseph' }, 'title': 'At engage simple father of period others except. My giving do summer of though ...', favorite: false, read: true },
+        { 'id': '7', 'categories': ['inbox', 'important'], 'from': { avatar: '/admin/img/avatars/avatar.png', name: 'Shobha Thumpy' }, 'title': 'Whole front do of plate heard oh ought. His defective nor convinced residence own.', favorite: false, read: true },
+        { 'id': '8', 'categories': ['inbox', 'important'], 'from': { avatar: '/admin/img/avatars/avatar1.png', name: 'Phoebe Richard' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
+        { 'id': '9', 'categories': ['inbox', 'important'], 'from': { avatar: '/admin/img/avatars/avatar2.png', name: 'Mark Futo' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true },
+        { 'id': '10', 'categories': ['inbox'], 'from': { avatar: '/admin/img/avatars/avatar.png', name: 'Ben Solo' }, 'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', favorite: false, read: true }
       ],
       categories: [
         { id: 1, name: 'Inbox', slug: 'inbox', icon: 'icon-fa icon-fa-inbox' },

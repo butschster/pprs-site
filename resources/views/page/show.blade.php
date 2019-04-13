@@ -6,11 +6,11 @@
 
 @section('banner')
     @if($page->has_banner)
-        <div class="jumbotron jumbotron-fluid top-banner" style="background: url('{{ $page->section_image_url }};'">
+        <div class="jumbotron jumbotron-fluid top-banner">
             <div class="top-banner__container main-container">
-                <strong>Первично-прогрессирующий рассеянный склероз</strong>
+                <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
                 <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
-                <h1 class="display-4"><a href="#">{{ $page->title }}</a></h1>
+                <h1 class="top-banner__title"><a href="#">{{ $page->title }}</a></h1>
             </div>
         </div>
     @endif
@@ -20,7 +20,9 @@
     @if(!$page->isArticle())
         @include('page._partials.subpages', ['pages' => $page->getChildren()])
     @else
-        {!! $page->text !!}
+    <article class="article-text main-container mb-5">
+        <h2 class="article-text__title">{{ $page->title }}</h2>
+        <p class="article-text__description">{!! $page->text !!}</p>
+    </article>
     @endif
-    @include('layout._partials.random_articles')
 @endsection

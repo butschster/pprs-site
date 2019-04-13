@@ -89,7 +89,7 @@
                 if (!this.$v.$error) {
                     Auth.login(this.loginData).then((res) => {
                         if (res) {
-                            this.$router.push('/admin/dashboard/basic')
+                            this.$router.push('/backend/dashboard')
                         }
                     })
                 }

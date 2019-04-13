@@ -29,12 +29,12 @@ export default {
       isOpen: false,
       selectedSkin: 'default',
       skins: [
-        {title: 'Skin - Default', 'slug': 'default', 'img': '/assets/img/skins/skin-default.png', 'light': false},
-        {title: 'Skin - Tyrell', 'slug': 'tyrell', 'img': '/assets/img/skins/skin-tyrell.png', 'light': true},
-        {title: 'Skin - Arryn', 'slug': 'arryn', 'img': '/assets/img/skins/skin-arryn.png', 'light': true},
-        {title: 'Skin - Lannister', 'slug': 'lannister', 'img': '/assets/img/skins/skin-lannister.png', 'light': true},
-        {title: 'Skin - Stark', 'slug': 'stark', 'img': '/assets/img/skins/skin-stark.png', 'light': false},
-        {title: 'Skin - Targaryen', 'slug': 'targaryen', 'img': '/assets/img/skins/skin-targaryen.png', 'light': false}
+        {title: 'Skin - Default', 'slug': 'default', 'img': '/admin/img/skins/skin-default.png', 'light': false},
+        {title: 'Skin - Tyrell', 'slug': 'tyrell', 'img': '/admin/img/skins/skin-tyrell.png', 'light': true},
+        {title: 'Skin - Arryn', 'slug': 'arryn', 'img': '/admin/img/skins/skin-arryn.png', 'light': true},
+        {title: 'Skin - Lannister', 'slug': 'lannister', 'img': '/admin/img/skins/skin-lannister.png', 'light': true},
+        {title: 'Skin - Stark', 'slug': 'stark', 'img': '/admin/img/skins/skin-stark.png', 'light': false},
+        {title: 'Skin - Targaryen', 'slug': 'targaryen', 'img': '/admin/img/skins/skin-targaryen.png', 'light': false}
       ]
     }
   },
@@ -43,9 +43,9 @@ export default {
       this.selectedSkin = skin.slug
       this.$utils.setSkin(skin.slug)
       if (skin.light === true) {
-        this.$utils.setLogo('/assets/img/logo_white.png')
+        this.$utils.setLogo('/admin/img/logo_white.png')
       } else {
-        this.$utils.setLogo('/assets/img/logo-desk.png')
+        this.$utils.setLogo('/admin/img/logo-desk.png')
       }
     }
   }

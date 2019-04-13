@@ -15,34 +15,34 @@
             <h5 class="section-semi-title">Basic</h5>
             <carousel :min-swipe-distance="2" :per-page-custom="[[480, 2],[768, 3], [992, 4]]">
               <slide>
-                <img src="/assets/img/demo/gallery/1.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/1.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/2.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/2.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/3.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/3.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/4.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/4.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/5.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/5.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/6.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/6.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/7.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/7.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/8.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/8.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/9.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/9.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/10.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/10.jpg" class="img-fluid">
               </slide>
             </carousel>
           </div>
@@ -52,34 +52,34 @@
             <h5 class="section-semi-title">Responsive</h5>
             <carousel :scroll-per-page="true" :per-page-custom="[[320, 2],[768, 3],[992, 4]]">
               <slide>
-                <img src="/assets/img/demo/gallery/11.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/11.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/12.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/12.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/9.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/9.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/4.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/4.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/3.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/3.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/6.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/6.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/2.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/2.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/8.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/8.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/1.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/1.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/10.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/10.jpg" class="img-fluid">
               </slide>
             </carousel>
           </div>
@@ -93,34 +93,34 @@
               :per-page-custom="[[480, 2],[768, 3], [992, 4]]"
             >
               <slide>
-                <img src="/assets/img/demo/gallery/9.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/9.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/5.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/5.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/1.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/1.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/7.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/7.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/3.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/3.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/8.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/8.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/2.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/2.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/6.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/6.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/4.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/4.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/10.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/10.jpg" class="img-fluid">
               </slide>
             </carousel>
           </div>
@@ -135,34 +135,34 @@
               class="with-nav"
             >
               <slide>
-                <img src="/assets/img/demo/gallery/4.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/4.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/8.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/8.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/10.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/10.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/12.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/12.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/5.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/5.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/11.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/11.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/2.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/2.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/8.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/8.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/1.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/1.jpg" class="img-fluid">
               </slide>
               <slide>
-                <img src="/assets/img/demo/gallery/6.jpg" class="img-fluid">
+                <img src="/admin/img/demo/gallery/6.jpg" class="img-fluid">
               </slide>
             </carousel>
           </div>

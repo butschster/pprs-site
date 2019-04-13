@@ -5,15 +5,19 @@
 @endsection
 
 @section('banner')
-    <div class="card">
-        <img src="https://dummyimage.com/800x200/666/fff&text=News" class="card-img-top">
+    <div class="jumbotron jumbotron-fluid top-banner top-banner--news">
+        <div class="top-banner__container main-container">
+            <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
+            <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
+            <h1 class="top-banner__title"><a href="#">Новости</a></h1>
+        </div>
     </div>
 @endsection
 
 @section('content')
-    <h1>{{ $news->title }}</h1>
-    <div class="my-2"><small class="text-muted">{{ $news->formatted_date }}</small></div>
-    <div>
-        {!! $news->text !!}
-    </div>
+    <article class="article-text main-container mb-5">
+        <h2 class="article-text__title">{{ $news->title }}</h2>
+        <small class="text-muted d-block mb-3">{{ $news->formatted_date }}</small>
+        <p class="article-text__description">{!! $news->text !!}</p>
+    </article>
 @endsection

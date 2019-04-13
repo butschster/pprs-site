@@ -92,7 +92,7 @@ export default {
   methods: {
     AddFile () {
       let file = { size: 123, name: 'Icon' }
-      let url = '/assets/img/demo/gallery/' + this.count + '.jpg'
+      let url = '/admin/img/demo/gallery/' + this.count + '.jpg'
       this.$refs.myVueDropzone.manuallyAddFile(file, url)
       if (this.count !== 12) {
         this.count = this.count + 1

@@ -7,6 +7,7 @@
 .main-navbar__link {
     display: flex;
     color: $gray-900;
+    font-size: 1.2rem;
 }
 
 .main-navbar__toggler {
@@ -16,7 +17,22 @@
 
 @include  media-breakpoint-up(md) {
     .main-navbar {
-        padding: 2.8rem 0;
+        padding: 1.2rem 0;
         min-height: $height-navbar-md;
+
+        & .nav-item {
+            width: 20%;
+            max-width: 220px;
+        }
+    }
+
+    .main-navbar__link {
+        font-size: 0.85rem;
+        padding: 0;
+    }
+
+    .main-navbar__list {
+        width: 100%;
+        justify-content: space-between;
     }
 }

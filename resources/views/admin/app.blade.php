@@ -28,12 +28,12 @@
     <meta name="theme-color" content="#333333">
 </head>
 <body class="layout-default skin-default">
-<div id="app" class="site-wrapper">
-    <div class="mobile-menu-overlay" @click.prevent="$utils.toggleSidebar"></div>
-    <transition name="fade" mode="out-in">
-        <router-view></router-view>
-    </transition>
-</div>
-<script type="text/javascript" src="{{mix("/admin/js/app.js")}}"></script>
+    <div id="app" class="site-wrapper">
+        <div class="mobile-menu-overlay" @click.prevent="$utils.toggleSidebar"></div>
+        <transition name="fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </div>
+    <script type="text/javascript" src="{{mix("/admin/js/app.js")}}"></script>
 </body>
 </html>

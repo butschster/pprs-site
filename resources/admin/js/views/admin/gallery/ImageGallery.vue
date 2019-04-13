@@ -52,18 +52,18 @@ export default {
   data: function () {
     return {
       images: [
-        '/assets/img/demo/gallery/1.jpg',
-        '/assets/img/demo/gallery/2.jpg',
-        '/assets/img/demo/gallery/3.jpg',
-        '/assets/img/demo/gallery/4.jpg',
-        '/assets/img/demo/gallery/5.jpg',
-        '/assets/img/demo/gallery/6.jpg',
-        '/assets/img/demo/gallery/7.jpg',
-        '/assets/img/demo/gallery/8.jpg',
-        '/assets/img/demo/gallery/9.jpg',
-        '/assets/img/demo/gallery/10.jpg',
-        '/assets/img/demo/gallery/11.jpg',
-        '/assets/img/demo/gallery/12.jpg'
+        '/admin/img/demo/gallery/1.jpg',
+        '/admin/img/demo/gallery/2.jpg',
+        '/admin/img/demo/gallery/3.jpg',
+        '/admin/img/demo/gallery/4.jpg',
+        '/admin/img/demo/gallery/5.jpg',
+        '/admin/img/demo/gallery/6.jpg',
+        '/admin/img/demo/gallery/7.jpg',
+        '/admin/img/demo/gallery/8.jpg',
+        '/admin/img/demo/gallery/9.jpg',
+        '/admin/img/demo/gallery/10.jpg',
+        '/admin/img/demo/gallery/11.jpg',
+        '/admin/img/demo/gallery/12.jpg'
       ],
       imgIndex: null
     }

@@ -1,15 +1,15 @@
 import VueRouter from 'vue-router'
 import VeeValidate from 'vee-validate'
-// import Vuelidate from 'vuelidate'
+import Vuelidate from 'vuelidate'
 // import VuePrism from 'vue-prism'
 // import VTooltip from 'v-tooltip'
 
 import Ls from './services/ls'
-// import VDropdown from './components/dropdown/VDropdown'
-// import VDropdownItem from './components/dropdown/VDropdownItem'
-// import VDropdownDivider from './components/dropdown/VDropdownDivider'
-// import VCollapse from './components/collapse/VCollapse'
-// import VCollapseItem from './components/collapse/VCollapseItem'
+import VDropdown from './components/dropdown/VDropdown'
+import VDropdownItem from './components/dropdown/VDropdownItem'
+import VDropdownDivider from './components/dropdown/VDropdownDivider'
+import VCollapse from './components/collapse/VCollapse'
+import VCollapseItem from './components/collapse/VCollapseItem'
 
 /**
  * Global CSS imports
@@ -84,14 +84,14 @@ require('./helpers/directives')
 /**
  * Global Components
  */
-// Vue.component('v-dropdown', VDropdown)
-// Vue.component('v-dropdown-item', VDropdownItem)
-// Vue.component('v-dropdown-divider', VDropdownDivider)
-// Vue.component('v-collapse', VCollapse)
-// Vue.component('v-collapse-item', VCollapseItem)
+Vue.component('v-dropdown', VDropdown)
+Vue.component('v-dropdown-item', VDropdownItem)
+Vue.component('v-dropdown-divider', VDropdownDivider)
+Vue.component('v-collapse', VCollapse)
+Vue.component('v-collapse-item', VCollapseItem)
 
 Vue.use(VueRouter)
 // Vue.use(VuePrism)
 // Vue.use(VTooltip)
 Vue.use(VeeValidate)
-// Vue.use(Vuelidate)
+Vue.use(Vuelidate)

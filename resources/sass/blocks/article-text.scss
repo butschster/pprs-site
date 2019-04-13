@@ -1,0 +1,28 @@
+.article-text {
+    margin-bottom: 3rem;
+}
+
+.article-text__title {
+    color: $blue;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+@include  media-breakpoint-up(md) {
+    .article-text__title {
+        font-size: 48px;
+    }
+}
+
+@include  media-breakpoint-up(lg) {
+    .article-text {
+        width: 100%;
+        max-width: 1150px;
+        margin: 0;
+    }
+
+    .article-text__description {
+        padding-right: 2rem;
+    }
+}
