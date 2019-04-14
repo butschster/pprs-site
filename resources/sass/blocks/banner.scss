@@ -10,7 +10,6 @@
     background-color: $gray-100;
     color: $black;
     transition: all $duration $transition-style;
-    background-image: url("../images/bg-menu-banner.png");
     background-size: cover;
     background-position: center;
 
@@ -59,20 +58,11 @@
 }
 
 @include  media-breakpoint-up(lg) {
-    .banners-group {
-
-        @for $i from 1 through 5 {
-            .banner:nth-child(#{$i}) .banner__container {
-                background-image:  url("../images/banners-main-#{$i}.png");
-                background-size:  cover;
-                background-position: 50% 100%;
-                background-repeat: no-repeat;
-            }
-        }
-    }
-
     .banner__container {
         padding: 2.5rem 0;
+        background-size:  cover;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
 
         & .main-container {
             width: 100%;

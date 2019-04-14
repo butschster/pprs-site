@@ -1,0 +1,17 @@
+.top-banner-wrapper {
+    margin-bottom: 2rem;
+}
+
+@include  media-breakpoint-up(md) {
+    .top-banner-wrapper {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@include  media-breakpoint-up(lg) {
+    .top-banner-wrapper {
+        width: map-get($container, xl);
+        margin: $center;
+        margin-bottom: 2.6rem;
+    }
+}

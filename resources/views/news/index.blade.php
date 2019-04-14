@@ -5,7 +5,7 @@
 @endsection
 
 @section('banner')
-    <div class="jumbotron jumbotron-fluid top-banner top-banner--news">
+    <div class="jumbotron jumbotron-fluid top-banner top-banner--news" style="background-image: url('{{ $page->section_image_url }};'">
         <div class="top-banner__container main-container">
             <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
             <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
@@ -19,7 +19,7 @@
         @foreach($news as $item)
             <div class="media mb-5 main-container news-container">
                 <div class="media-body">
-                    <h3 class="mt-0"><strong>{{ $item->title }}</strong></h3>
+                    <h2 class="mt-0"><strong>{{ $item->title }}</strong></h2>
                     <div class="my-2"><small class="text-muted">{{ $item->formatted_date }}</small></div>
                     {!! $item->description !!}
 
