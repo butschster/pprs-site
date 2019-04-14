@@ -1,9 +1,7 @@
 .top-banner {
+    padding: 2rem 0;
     background-color: $blue;
     color: $gray-900;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-    background-image: url("../images/top-banners-articles.png");
     background-size: cover;
     background-position: 0 50%;
     background-repeat: no-repeat;
@@ -35,7 +33,6 @@
 
     &--main {
         background-color: $yellow;
-        background-image: url("../images/top-banners-main.png");
 
         &__title {
             font-size: 2rem;
@@ -50,13 +47,12 @@
 
     &--news {
         background-color: $orange;
-        background-image: url("../images/top-banners-news.png");
     }
 }
 
 @include  media-breakpoint-up(md) {
     .top-banner {
-        margin-bottom: 2.5rem;
+
 
         &__title {
             font-size: 4rem;
@@ -72,15 +68,6 @@
 
 @include  media-breakpoint-up(lg) {
     .top-banner {
-        width: map-get($container, xl);
-        margin: $center;
-        margin-bottom: 2.6rem;
-        background-image: url("../images/top-banners-articles-xl.png");
-        max-width: 1710px;
-
-        &--news {
-            background-image: url("../images/top-banners-news-xl.png");
-        }
 
         &__text,
         & strong {
@@ -91,10 +78,6 @@
             width: 80%;
             font-size: 3.8rem;
             margin-top: 1rem;
-        }
-
-        &--main {
-            background-image: url("../images/top-banners-main-xl.png");
         }
 
         &--main__title {
