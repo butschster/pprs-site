@@ -80,7 +80,7 @@
                 <div class="card-header text-white bg-primary">
                     Текст
                 </div>
-                <ckeditor :editor="text_editor" v-model="page.text"/>
+                <VueCkeditor v-model="page.text" :config="config" />
                 <div class="card-footer">
                     <button class="btn btn-primary" type="button" @click="save">
                         <i class="fa fa-check"></i> Сохранить
@@ -94,7 +94,7 @@
 <script>
     import VueElementLoading from 'vue-element-loading'
     import Swatches from 'vue-swatches'
-    import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+    import VueCkeditor from 'vue-ckeditor2'
     import Treeselect from '@riophae/vue-treeselect'
     import FormError from '../../../components/form/FormError'
     import Banner from './partials/Banner'
@@ -102,14 +102,14 @@
     const slugify = require('@sindresorhus/slugify')
 
     export default {
-        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner},
+        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, VueCkeditor},
         data() {
             return {
                 loading: true,
                 colors: 'material-basic',
                 page: null,
                 pages: [],
-                text_editor: ClassicEditor
+                config: {}
             }
         },
         created() {

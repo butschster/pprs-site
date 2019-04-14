@@ -4,7 +4,7 @@
             Баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
         </div>
         <div class="card-body">
-            <ckeditor :editor="banner_text_editor" v-model="banner.content"/>
+            <VueCkeditor v-model="banner.content"/>
             <FormError field="content"/>
 
             <VueDropzone ref="dropzone" id="dropzone" :options="dropzoneOptions"
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+    import VueCkeditor from 'vue-ckeditor2'
     import vue2Dropzone from 'vue2-dropzone'
     import FormError from '../../../../components/form/FormError'
 
@@ -40,12 +40,11 @@
     export default {
         components: {
             VueDropzone: vue2Dropzone,
-            FormError
+            FormError, VueCkeditor
         },
         props: ['id', 'page_id'],
         data() {
             return {
-                banner_text_editor: ClassicEditor,
                 banner: {
                     id: null,
                     image_uuid: null,
