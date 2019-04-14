@@ -4644,12 +4644,12 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: #333333;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.7);
+  color: #6c757d;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -4664,16 +4664,16 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
+  color: #333333;
   border-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.5);
+  color: #333333;
 }
 
 .navbar-light .navbar-text a {
@@ -10819,16 +10819,12 @@ html {
 }
 
 .top-banner {
-  padding: 2rem 0;
+  padding: 0;
   background-color: #3490dc;
   color: #333333;
   background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
-}
-
-.top-banner strong {
-  font-size: 1.7rem;
 }
 
 .top-banner__text {
@@ -10838,15 +10834,8 @@ html {
   font-size: 12px;
 }
 
-.top-banner__title a {
+.top-banner__title {
   color: #ffffff;
-}
-
-.top-banner__title a:focus,
-.top-banner__title a:hover {
-  color: #ffffff;
-  text-decoration: none;
-  opacity: 0.7;
 }
 
 .top-banner--main {
@@ -10867,6 +10856,10 @@ html {
   background-color: #eebb45;
 }
 
+.top-banner__container {
+  padding: 2rem 0;
+}
+
 @media (min-width: 720px) {
   .top-banner__title {
     font-size: 4rem;
@@ -10880,8 +10873,7 @@ html {
 }
 
 @media (min-width: 992px) {
-  .top-banner__text,
-  .top-banner strong {
+  .top-banner__text {
     width: 80%;
   }
 
@@ -10897,14 +10889,13 @@ html {
 
   .top-banner__container {
     width: 100%;
-    padding: 0 2rem;
+    padding: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
   .top-banner__title,
-  .top-banner__text,
-  .top-banner strong {
+  .top-banner__text {
     width: 65%;
     max-width: 790px;
   }

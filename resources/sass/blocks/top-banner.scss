@@ -1,14 +1,10 @@
 .top-banner {
-    padding: 2rem 0;
+    padding: 0;
     background-color: $blue;
     color: $gray-900;
     background-size: cover;
     background-position: 0 50%;
     background-repeat: no-repeat;
-
-    & strong {
-        font-size: 1.7rem;
-    }
 
     &__text {
         font-weight: 700;
@@ -18,17 +14,7 @@
     }
 
     &__title {
-
-        a {
             color: $white;
-
-            &:focus,
-            &:hover {
-                color: $white;
-                text-decoration: none;
-                opacity: 0.7;
-            }
-        }
     }
 
     &--main {
@@ -48,11 +34,14 @@
     &--news {
         background-color: $orange;
     }
+
+    &__container {
+        padding: 2rem 0;
+    }
 }
 
 @include  media-breakpoint-up(md) {
     .top-banner {
-
 
         &__title {
             font-size: 4rem;
@@ -69,8 +58,7 @@
 @include  media-breakpoint-up(lg) {
     .top-banner {
 
-        &__text,
-        & strong {
+        &__text {
             width: 80%;
         }
 
@@ -86,7 +74,7 @@
 
         &__container {
             width: 100%;
-            padding:  0 2rem;
+            padding: 2rem;
         }
     }
 }
@@ -95,8 +83,7 @@
     .top-banner {
 
         &__title,
-        &__text,
-        & strong {
+        &__text {
             width: 65%;
             max-width: 790px;
         }

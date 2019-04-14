@@ -5,11 +5,10 @@
 @endsection
 
 @section('banner')
-    <div class="jumbotron jumbotron-fluid top-banner top-banner--news" style="background-image: url('{{ $page->section_image_url }};'">
+    <div class="jumbotron jumbotron-fluid top-banner top-banner--news">
         <div class="top-banner__container main-container">
-            <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
-            <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
-            <h1 class="top-banner__title"><a href="#">Новости</a></h1>
+            <div class="top-banner__text"></div>
+            <h1 class="top-banner__title">Новости</h1>
         </div>
     </div>
 @endsection

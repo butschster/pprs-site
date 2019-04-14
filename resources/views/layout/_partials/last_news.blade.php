@@ -8,7 +8,7 @@
                 <a href="{{ $item->url() }}" class="news__link">{{ $item->title }}</a>
             </h3>
             <small class="text-muted news__date">{{ $item->formatted_date }}</small>
-            <p class="news__description">{!! $item->description !!}</p>
+            <div class="news__description">{!! $item->description !!}</div>
         </div>
     </div>
 @endforeach
