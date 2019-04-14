@@ -42,15 +42,8 @@
                         <Treeselect v-model="page.parent_id" :options="pages"/>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary" type="button" @click="save">
-                        <i class="fa fa-check"></i> Сохранить
-                    </button>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-primary text-white">
                     Meta данные
                 </div>
                 <div class="card-body">
@@ -74,13 +67,13 @@
                 </div>
             </div>
 
-            <Banner v-if="page.id" :id="page.banner_id" :page_id="page.id" />
+            <Banner v-if="page.id && !page.is_article" :id="page.banner_id" :page_id="page.id" />
 
-            <div class="card">
+            <div class="card" v-if="page.is_article">
                 <div class="card-header text-white bg-primary">
                     Текст
                 </div>
-                <VueCkeditor v-model="page.text" :config="config" />
+                <VueCkeditor :config="config" v-model="page.text"/>
                 <div class="card-footer">
                     <button class="btn btn-primary" type="button" @click="save">
                         <i class="fa fa-check"></i> Сохранить
@@ -92,9 +85,9 @@
 </template>
 
 <script>
+    import VueCkeditor from 'vue-ckeditor2'
     import VueElementLoading from 'vue-element-loading'
     import Swatches from 'vue-swatches'
-    import VueCkeditor from 'vue-ckeditor2'
     import Treeselect from '@riophae/vue-treeselect'
     import FormError from '../../../components/form/FormError'
     import Banner from './partials/Banner'
@@ -109,7 +102,13 @@
                 colors: 'material-basic',
                 page: null,
                 pages: [],
-                config: {}
+                config: {
+                    height: 100,
+                    filebrowserImageBrowseUrl: '/api/files?type=Images',
+                    filebrowserImageUploadUrl: '/api/files/upload?type=Images&_token=',
+                    filebrowserBrowseUrl: '/api/files?type=Files',
+                    filebrowserUploadUrl: '/api/files/upload?type=Files&_token='
+                }
             }
         },
         created() {
@@ -148,6 +147,7 @@
                     const response = await axios.post(`/api/page/${this.id}`, this.page)
                     this.page = response.data.data
 
+                    toastr['success']('Данные обновлены!', 'Success')
                 } catch (e) {
                     console.error(e)
                 }

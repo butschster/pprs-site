@@ -12,9 +12,9 @@ Route::prefix('auth')->namespace('Admin\\')->group(function () {
 // admin route
 Route::namespace('Api\\')->middleware('auth')->group(function () {
     Route::get('page/{id}', 'PagesController@show')->name('page.show');
-    Route::post('page/{id}', 'PagesController@update')->name('page.update');
     Route::get('pages', 'PagesController@index')->name('pages');
     Route::post('pages/sort', 'PagesController@sort')->name('pages.sort');
+    Route::post('page/{id}', 'PagesController@update')->name('page.update');
     Route::delete('pages/{id}', 'PagesController@delete')->name('pages.delete');
 
     Route::get('banner/{banner}', 'BannersController@show')->name('banner.show');

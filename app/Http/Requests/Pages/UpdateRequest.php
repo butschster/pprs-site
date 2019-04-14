@@ -27,10 +27,11 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:3',
-            'color' => 'required',
+            'title' => 'nullable|min:3',
+            'color' => 'nullable|string',
             'parent_id' => ['nullable', Rule::exists('pages', 'id')],
-            'slug' => ['nullable', 'min:3', Rule::unique('pages')->ignore($id)],
+            'slug' => ['nullable', 'min:3', Rule::unique('pages')->ignore($this->route('id'))],
+            'text' => 'nullable'
         ];
     }
 
@@ -43,7 +44,7 @@ class UpdateRequest extends FormRequest
         Arr::forget($data, 'parent_id');
         $page->update($data);
 
-        if ($this->has('parent_id')) {
+        if (!empty($this->parent_id)) {
             Page::findOrFail($this->parent_id)->appendNode($page);
         }
     }

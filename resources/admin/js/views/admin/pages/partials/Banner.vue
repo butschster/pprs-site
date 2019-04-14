@@ -3,25 +3,26 @@
         <div class="card-header text-white bg-primary">
             Баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
         </div>
-        <div class="card-body">
-            <VueCkeditor v-model="banner.content"/>
-            <FormError field="content"/>
+        <VueDropzone ref="dropzone" id="dropzone" :options="dropzoneOptions" @vdropzone-success="fileUploaded" @vdropzone-sending="sendingEvent" :useCustomSlot=true>
+            <div class="jumbotron rounded-0 top-banner mb-0">
+                <div class="top-banner__container main-container" :style="{backgroundImage: `url('${banner.image_url}')`}">
+                    <div class="top-banner__text" v-html="banner.content"></div>
+                    <h1 class="top-banner__title"><a href="#">Section name</a></h1>
+                </div>
+            </div>
+        </VueDropzone>
+        <FormError field="image_uuid"/>
 
-            <VueDropzone ref="dropzone" id="dropzone" :options="dropzoneOptions"
-                         @vdropzone-success="fileUploaded"
-                         @vdropzone-sending="sendingEvent"
-            />
-            <FormError field="image_uuid"/>
-        </div>
-        <div class="jumbotron rounded-0 mb-0" :style="{backgroundImage: `url('${banner.image_url}')`}">
-            <div class="top-banner__container main-container" v-html="banner.content"></div>
+        <div class="card-body">
+            <VueCkeditor :config="config"  v-model="banner.content"/>
+            <FormError field="content"/>
         </div>
         <div class="card-footer">
             <button class="btn btn-primary" type="button" @click="save">
                 <i class="fa fa-check"></i> {{ actionText }}
             </button>
 
-            <button v-if="isExists"" class="btn btn-danger" type="button" @click="remove">
+            <button v-if="isExists" class="btn btn-danger" type="button" @click="remove">
                 <i class="fa fa-trash"></i> Удалить
             </button>
         </div>
@@ -29,8 +30,8 @@
 </template>
 
 <script>
-    import VueCkeditor from 'vue-ckeditor2'
     import vue2Dropzone from 'vue2-dropzone'
+    import VueCkeditor from 'vue-ckeditor2'
     import FormError from '../../../../components/form/FormError'
 
     import Ls from '../../../../services/ls'
@@ -58,6 +59,13 @@
                     maxFiles: 1,
                     acceptedFiles: 'image/*',
                     headers: {"Authorization": `Bearer ${AUTH_TOKEN}`}
+                },
+                config: {
+                    height: 100,
+                    filebrowserImageBrowseUrl: '/api/files?type=Images',
+                    filebrowserImageUploadUrl: '/api/files/upload?type=Images&_token=',
+                    filebrowserBrowseUrl: '/api/files?type=Files',
+                    filebrowserUploadUrl: '/api/files/upload?type=Files&_token='
                 }
             }
         },
@@ -87,6 +95,9 @@
                     })
 
                     this.banner = response.data.data
+
+                    toastr['success']('Баннер обновлен!', 'Success')
+
                 } catch (e) {
                     console.error(e)
                 }
@@ -100,6 +111,8 @@
                     })
 
                     this.banner = response.data.data
+
+                    toastr['success']('Баннер создан!', 'Success')
                 } catch (e) {
                     console.error(e)
                 }

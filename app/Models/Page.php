@@ -183,4 +183,12 @@ class Page extends Model
     {
         return $this->belongsTo(Image::class, 'section_image_uuid');
     }
+
+    /**
+     * @return bool
+     */
+    public function isArticle(): bool
+    {
+        return $this->isLeaf();
+    }
 }

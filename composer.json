@@ -22,7 +22,8 @@
         "spatie/laravel-sitemap": "^5.3",
         "tightenco/ziggy": "^0.6.9",
         "tymon/jwt-auth": "1.0.0-rc.4.1",
-        "unisender/api-wrapper": "^1.4"
+        "unisender/api-wrapper": "^1.4",
+        "unisharp/laravel-filemanager": "~1.8"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

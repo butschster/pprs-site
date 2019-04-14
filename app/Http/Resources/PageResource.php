@@ -30,7 +30,7 @@ class PageResource extends JsonResource
             'section_image_url' => $this->section_image_url,
             'section_title' => $this->section_title,
             'section_text' => $this->section_text,
-
+            'is_article' => $this->isArticle(),
             'text' => $this->text,
         ];
     }

@@ -34,6 +34,7 @@
         <router-view></router-view>
     </transition>
 </div>
+<script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script type="text/javascript" src="{{mix("/admin/js/app.js")}}"></script>
 </body>
 </html>
