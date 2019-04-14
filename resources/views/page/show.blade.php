@@ -9,7 +9,7 @@
         <div class="jumbotron jumbotron-fluid top-banner">
             <div class="top-banner__container main-container">
                 <strong class="d-block mb-1">Первично-прогрессирующий рассеянный склероз</strong>
-                <p class="top-banner__text">Информационный портал для пациентов и их родственников</p>
+                <p class="top-banner__text">{{ $page->banner_content }}</p>
                 <h1 class="top-banner__title"><a href="#">{{ $page->title }}</a></h1>
             </div>
         </div>

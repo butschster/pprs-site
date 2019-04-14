@@ -14,7 +14,7 @@
         <ul class="action-list">
             <li>
                 <a href="#" class="dropdown-item" @click.prevent="logout">
-                    <i class="icon-fa icon-fa-sign-out"/> Logout
+                    <i class="fa fa-sign-out"/> Logout
                 </a>
             </li>
         </ul>

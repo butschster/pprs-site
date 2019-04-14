@@ -15,5 +15,13 @@ Route::namespace('Api\\')->middleware('auth')->group(function () {
     Route::post('page/{id}', 'PagesController@update')->name('page.update');
     Route::get('pages', 'PagesController@index')->name('pages');
     Route::post('pages/sort', 'PagesController@sort')->name('pages.sort');
+    Route::delete('pages/{id}', 'PagesController@delete')->name('pages.delete');
+
+    Route::get('banner/{banner}', 'BannersController@show')->name('banner.show');
+    Route::post('banner', 'BannersController@store')->name('banner.store');
+    Route::put('banner/{banner}', 'BannersController@update')->name('banner.update');
+    Route::delete('banner/{banner}', 'BannersController@delete')->name('banner.delete');
+
+    Route::post('image/upload', 'ImagesController@upload')->name('image.upload');
 });
 

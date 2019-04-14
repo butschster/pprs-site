@@ -8,18 +8,18 @@
             </ol>
             <div class="page-actions">
                 <a href="#" class="btn btn-primary">
-                    <i class="icon-fa icon-fa-plus"></i> Добавить
+                    <i class="fa fa-plus"></i> Добавить
                 </a>
             </div>
         </div>
         <VueElementLoading :active="loading"   />
         <VueNestable v-model="pages" @change="changedPosition">
             <div slot-scope="{ item }" class="d-flex justify-content-center">
-                <VueNestableHandle :item="item" class="mr-2">
-                    <i class="fa fa-arrows" aria-hidden="true"></i>
+                <VueNestableHandle :item="item" class="mr-2 bg-light text-muted p-2">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                 </VueNestableHandle>
-                <router-link tag="a" :to="{name: 'page.show', params: {id: item.id }}" class="flex-grow-1">
-                    {{ item.title }}
+                <router-link tag="a" :to="{name: 'page.show', params: {id: item.id }}" class="flex-grow-1 p-2">
+                    <i class="fa fa-chevron-right mr-2" :style="{color: item.color}"></i> {{ item.title }}
                 </router-link>
             </div>
         </VueNestable>
@@ -65,6 +65,7 @@
                         pages: this.pages
                     })
                     this.pages = response.data
+                    toastr['success']('Готово!', 'Success')
                 } catch (e) {
                     console.error(e)
                 }

@@ -11,9 +11,12 @@ $factory->define(Page::class, function (Faker $faker) {
         'meta_description' => $faker->sentence,
         'meta_keywords' => implode(', ', $faker->words()),
         'color' => $faker->hexColor,
-        'banner' => 'page/banners/banner.jpg',
-        'banner_text' => $faker->paragraph,
-        'section_image' => 'page/images/banner.jpg',
+        'banner_id' => function () {
+            return factory(\App\Models\Banner::class)->create()->id;
+        },
+        'section_image_uuid' => function () {
+            return factory(\App\Models\Image::class)->create()->uuid;
+        },
         'section_title' => $faker->sentence,
         'section_text' => $faker->paragraph,
         'text' => $faker->text(10000),
@@ -21,13 +24,9 @@ $factory->define(Page::class, function (Faker $faker) {
 });
 
 $factory->state(Page::class, 'banner', function ($faker) {
-    return [
-        'banner' => 'page/banners/' . $faker->image(storage_path('app/public/page/banners'), 800, 300, null, false),
-    ];
+    return [];
 });
 
 $factory->state(Page::class, 'section_image', function ($faker) {
-    return [
-        'section_image' => 'page/images/' . $faker->image(storage_path('app/public/page/images'), 600, 200, null, false),
-    ];
+    return [];
 });

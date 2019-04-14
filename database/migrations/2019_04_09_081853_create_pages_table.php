@@ -22,11 +22,13 @@ class CreatePagesTable extends Migration
             $table->string('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
             $table->string('color', 7)->nullable();
-            $table->string('banner')->nullable();
-            $table->text('banner_text')->nullable();
-            $table->string('section_image')->nullable();
+
+            $table->unsignedBigInteger('banner_id')->nullable();
+
+            $table->string('section_image_uuid')->nullable();
             $table->string('section_title')->nullable();
             $table->text('section_text')->nullable();
+
             $table->text('text')->nullable();
 
             NestedSet::columns($table);

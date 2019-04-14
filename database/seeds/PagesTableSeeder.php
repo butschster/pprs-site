@@ -159,7 +159,7 @@ class PagesTableSeeder extends Seeder
         }
 
         if (empty($children)) {
-            $data['banner'] = null;
+            $data['banner_id'] = null;
         }
 
         $data['section_title'] = $data['title'];

@@ -1,3 +1,4 @@
+
 @foreach($pages as $page)
     @if($page->has_section_image)
         <div class="banner">

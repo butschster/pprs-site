@@ -45,7 +45,7 @@
             return {
                 loginData: {
                     email: 'admin@site.com',
-                    password: 'secret',
+                    password: 'password',
                     remember: ''
                 }
             }

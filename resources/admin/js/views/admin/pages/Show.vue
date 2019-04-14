@@ -74,22 +74,7 @@
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header text-white bg-primary">
-                    Баннер
-                </div>
-                <div class="card-body">
-                    <ckeditor :editor="banner_text_editor" v-model="page.banner_text"/>
-                </div>
-                <div class="jumbotron rounded-0 mb-0">
-                    <div class="top-banner__container main-container" v-html="page.banner_text"></div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary" type="button" @click="save">
-                        <i class="fa fa-check"></i> Сохранить
-                    </button>
-                </div>
-            </div>
+            <Banner v-if="page.id" :id="page.banner_id" :page_id="page.id" />
 
             <div class="card">
                 <div class="card-header text-white bg-primary">
@@ -112,18 +97,18 @@
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
     import Treeselect from '@riophae/vue-treeselect'
     import FormError from '../../../components/form/FormError'
+    import Banner from './partials/Banner'
 
     const slugify = require('@sindresorhus/slugify')
 
     export default {
-        components: {VueElementLoading, Swatches, Treeselect, FormError},
+        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner},
         data() {
             return {
                 loading: true,
                 colors: 'material-basic',
                 page: null,
                 pages: [],
-                banner_text_editor: ClassicEditor,
                 text_editor: ClassicEditor
             }
         },
