@@ -137,9 +137,11 @@ class Page extends Model
             return null;
         }
 
-        dd($this->banner()->toSql());
+        if ($this->banner) {
+            return $this->banner->image_url;
+        }
 
-        return $this->banner->image_url;
+        return null;
     }
 
     /**
@@ -185,7 +187,7 @@ class Page extends Model
      */
     public function getMetaDescriptionAttribute($description)
     {
-        return (string) $description;
+        return (string)$description;
     }
 
     /**
@@ -194,7 +196,7 @@ class Page extends Model
      */
     public function getMetaKeywordsAttribute($keywords)
     {
-        return (string) $keywords;
+        return (string)$keywords;
     }
 
     /**
