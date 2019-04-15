@@ -14,6 +14,7 @@ class Banner extends Model
 
         static::deleted(function (Banner $banner) {
             $banner->image->delete();
+            Page::where('banner_id', $banner->id)->update(['banner_id' => null]);
         });
     }
 

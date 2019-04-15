@@ -27,7 +27,6 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'page_id' => ['required', Rule::exists('pages', 'id')],
             'content' => 'required',
             'image_uuid' => ['required', Rule::exists('images', 'uuid')],
         ];
@@ -38,12 +37,6 @@ class StoreRequest extends FormRequest
      */
     public function persist(): Banner
     {
-        $page = Page::findOrFail($this->page_id)->banner()->associate(
-            $banner = Banner::create($this->validated())
-        );
-
-        $page->save();
-
-        return $banner;
+        return Banner::create($this->validated());
     }
 }

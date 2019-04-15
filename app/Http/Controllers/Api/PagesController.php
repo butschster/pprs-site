@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\Pages\RebuildTreeRequest;
+use App\Http\Requests\Pages\StoreRequest;
 use App\Http\Requests\Pages\UpdateRequest;
 use App\Http\Resources\PageResource;
 use App\Models\Page;
@@ -38,6 +39,15 @@ class PagesController extends Controller
         $request->persist();
 
         return $this->index();
+    }
+
+    public function store(StoreRequest $request)
+    {
+        $page = $request->persist();
+
+        return new PageResource(
+            $page
+        );
     }
 
     /**

@@ -137,6 +137,8 @@ class Page extends Model
             return null;
         }
 
+        dd($this->banner()->toSql());
+
         return $this->banner->image_url;
     }
 
@@ -166,6 +168,33 @@ class Page extends Model
     public function getLabelAttribute(): string
     {
         return $this->title;
+    }
+
+    /**
+     * @param string|null $title
+     * @return string
+     */
+    public function getMetaTitleAttribute($title)
+    {
+        return $title ?? $this->title;
+    }
+
+    /**
+     * @param string|null $description
+     * @return string
+     */
+    public function getMetaDescriptionAttribute($description)
+    {
+        return (string) $description;
+    }
+
+    /**
+     * @param string|null $keywords
+     * @return string
+     */
+    public function getMetaKeywordsAttribute($keywords)
+    {
+        return (string) $keywords;
     }
 
     /**

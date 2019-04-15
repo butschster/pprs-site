@@ -43,15 +43,14 @@
             VueDropzone: vue2Dropzone,
             FormError, VueCkeditor
         },
-        props: ['id', 'page_id'],
+        props: ['id', 'value'],
         data() {
             return {
                 banner: {
                     id: null,
                     image_uuid: null,
                     image_url: null,
-                    content: '',
-                    page_id: null
+                    content: ''
                 },
                 dropzoneOptions: {
                     url: '/api/image/upload',
@@ -106,12 +105,13 @@
                 try {
                     const response = await axios.post(`/api/banner`, {
                         content: this.banner.content,
-                        page_id: this.page_id,
                         image_uuid: this.banner.image_uuid
                     })
 
                     this.banner = response.data.data
 
+                    this.$emit('created', this.banner.id)
+                    this.$emit('input', this.banner.id)
                     toastr['success']('Баннер создан!', 'Success')
                 } catch (e) {
                     console.error(e)
@@ -126,7 +126,6 @@
                         image_uuid: null,
                         image_url: null,
                         content: '',
-                        page_id: null
                     }
                 } catch (e) {
                     console.error(e)

@@ -13,6 +13,11 @@
                 </li>
                 <li class="breadcrumb-item">{{ page.title }}</li>
             </ol>
+            <div class="page-actions">
+                <router-link :to="{name: 'page.create', params: {parent_id: page.id}}" class="btn btn-primary">
+                    <i class="fa fa-plus"></i> Добавить
+                </router-link>
+            </div>
         </div>
 
         <div v-if="page">
@@ -30,16 +35,18 @@
                         </div>
 
                         <FormError field="title" />
+                        <FormError field="color" />
                     </div>
                     <div class="form-group">
                         <label>Текст ссылки</label>
                         <input type="text" class="form-control" v-model="page.slug" :placeholder="slug">
-                        <span class="help-text">{{ page.link }}</span>
-
+                        <small class="help-text text-muted">Для автоматической генерации оставьте поле пустым</small>
+                        <FormError field="slug" />
                     </div>
                     <div class="form-group">
                         <label>Родительская страница</label>
                         <Treeselect v-model="page.parent_id" :options="pages"/>
+                        <FormError field="parent_id" />
                     </div>
                 </div>
 
@@ -50,36 +57,34 @@
                     <div class="form-group">
                         <label>Meta title</label>
                         <input type="text" class="form-control" v-model="page.meta_title">
+                        <FormError field="meta_title" />
                     </div>
                     <div class="form-group">
                         <label>Meta keywords</label>
                         <input type="text" class="form-control" v-model="page.meta_keywords">
+                        <FormError field="meta_keywords" />
                     </div>
                     <div class="form-group">
                         <label>Meta description</label>
                         <input type="text" class="form-control" v-model="page.meta_description">
+                        <FormError field="meta_description" />
                     </div>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary" type="button" @click="save">
-                        <i class="fa fa-check"></i> Сохранить
-                    </button>
-                </div>
-            </div>
-
-            <Banner v-if="page.id && !page.is_article" :id="page.banner_id" :page_id="page.id" />
-
-            <div class="card" v-if="page.is_article">
                 <div class="card-header text-white bg-primary">
                     Текст
                 </div>
-                <VueCkeditor :config="config" v-model="page.text"/>
+                <div class="form-group">
+                    <VueCkeditor :config="config" v-model="page.text"/>
+                    <FormError field="text"/>
+                </div>
                 <div class="card-footer">
                     <button class="btn btn-primary" type="button" @click="save">
                         <i class="fa fa-check"></i> Сохранить
                     </button>
                 </div>
             </div>
+
+            <Banner v-if="page" :id="page.banner_id" @created="attachBanner" />
         </div>
     </div>
 </template>
@@ -148,6 +153,20 @@
                     this.page = response.data.data
 
                     toastr['success']('Данные обновлены!', 'Success')
+                } catch (e) {
+                    console.error(e)
+                }
+
+                this.loading = false
+            },
+            async attachBanner(banner_id) {
+                this.loading = true
+
+                try {
+                    const response = await axios.post(`/api/page/${this.id}`, {banner_id})
+                    this.page = response.data.data
+
+                    toastr['success']('Баннер прикреплен к странице!', 'Success')
                 } catch (e) {
                     console.error(e)
                 }

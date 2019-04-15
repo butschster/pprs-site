@@ -31,6 +31,8 @@ class CreatePagesTable extends Migration
 
             $table->text('text')->nullable();
 
+            $table->foreign('banner_id')->references('id')->on('banners')->onDelete('set null');
+
             NestedSet::columns($table);
 
             $table->timestamps();

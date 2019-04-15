@@ -7,9 +7,9 @@
                 <li class="breadcrumb-item">Страницы</li>
             </ol>
             <div class="page-actions">
-                <a href="#" class="btn btn-primary">
+                <router-link :to="{name: 'page.create'}" class="btn btn-primary">
                     <i class="fa fa-plus"></i> Добавить
-                </a>
+                </router-link>
             </div>
         </div>
         <VueElementLoading :active="loading"   />
@@ -18,9 +18,14 @@
                 <VueNestableHandle :item="item" class="mr-2 bg-light text-muted p-2">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </VueNestableHandle>
-                <router-link tag="a" :to="{name: 'page.show', params: {id: item.id }}" class="flex-grow-1 p-2">
-                    <i class="fa fa-chevron-right mr-2" :style="{color: item.color}"></i> {{ item.title }}
-                </router-link>
+                <div class="flex-grow-1 p-2 d-flex justify-content-center">
+                    <router-link tag="a" class="flex-grow-1" :to="{name: 'page.show', params: {id: item.id }}">
+                        <i class="fa fa-chevron-right mr-2" :style="{color: item.color}"></i> {{ item.title }}
+                    </router-link>
+                    <router-link tag="a" :to="{name: 'page.create', params: {parent_id: item.id }}" class="btn btn-primary btn-xs">
+                        <i class="fa fa-plus"></i> Добавить
+                    </router-link>
+                </div>
             </div>
         </VueNestable>
     </div>
