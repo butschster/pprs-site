@@ -32,7 +32,10 @@ class UpdateRequest extends FormRequest
             'parent_id' => ['nullable', Rule::exists('pages', 'id')],
             'banner_id' => ['nullable', Rule::exists('banners', 'id')],
             'slug' => ['nullable', 'min:3', Rule::unique('pages')->ignore($this->route('id'))],
-            'text' => 'nullable|string'
+            'text' => 'nullable|string',
+            'meta_title' => 'nullable|string',
+            'meta_keywords' => 'nullable|string',
+            'meta_description' => 'nullable|string'
         ];
     }
 

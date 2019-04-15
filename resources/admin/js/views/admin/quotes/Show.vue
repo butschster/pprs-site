@@ -13,6 +13,11 @@
                 </li>
                 <li class="breadcrumb-item">{{ quote.title }}</li>
             </ol>
+            <div class="page-actions">
+                <button @click="remove" class="btn btn-danger">
+                    <i class="fa fa-trash"></i> Удалить
+                </button>
+            </div>
         </div>
 
         <Quote :quote="quote" class="mb-5"/>
@@ -93,6 +98,19 @@
                     this.quote = response.data.data
 
                     toastr['success']('Данные обновлены!', 'Success')
+                } catch (e) {
+                    console.error(e)
+                }
+
+                this.loading = false
+            },
+            async remove() {
+                this.loading = true
+
+                try {
+                    await axios.delete(`/api/quote/${this.quote.id}`)
+                    toastr['success']('Цитата удалена!', 'Success')
+                    this.$router.push({name: 'quotes.index'})
                 } catch (e) {
                     console.error(e)
                 }

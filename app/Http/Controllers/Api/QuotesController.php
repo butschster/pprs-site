@@ -62,7 +62,6 @@ class QuotesController extends Controller
             'image_uuid' => ['nullable', Rule::exists('images', 'uuid')],
         ]);
 
-
         $quote->update(array_filter($data));
 
         return new QuoteResource($quote);

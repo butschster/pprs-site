@@ -24,5 +24,8 @@ global.axios.interceptors.response.use(response => {
 const app = new Vue({
     el: '#app',
     router,
-    store
+    store,
+    created() {
+        this.$moment.locale('ru')
+    }
 })

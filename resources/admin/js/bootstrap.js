@@ -7,6 +7,9 @@ import VDropdownDivider from './components/dropdown/VDropdownDivider'
 import VCollapse from './components/collapse/VCollapse'
 import VCollapseItem from './components/collapse/VCollapseItem'
 import VueClipboard from 'vue-clipboard2'
+import VueMoment from 'vue-moment'
+const moment = require('moment')
+require('moment/locale/ru')
 
 /**
  * Global CSS imports
@@ -78,3 +81,6 @@ Vue.component('v-collapse-item', VCollapseItem)
 Vue.use(VueClipboard)
 Vue.use(VueRouter)
 Vue.use(Vuelidate)
+Vue.use(VueMoment, {
+    moment
+})

@@ -3,7 +3,7 @@
         <div class="card-header text-white bg-primary">
             Баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
         </div>
-        <Dropzone section="banners" @uploaded="fileUploaded">
+        <Dropzone section="banners" @uploaded="fileUploaded" :useCustomSlot="true">
             <div class="jumbotron rounded-0 top-banner mb-0">
                 <div class="top-banner__container main-container" :style="{backgroundImage: `url('${banner.image_url}')`}">
                     <div class="top-banner__text" v-html="banner.content"></div>
