@@ -3,15 +3,14 @@
         <div class="card-header text-white bg-primary">
             Баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
         </div>
-        <VueDropzone ref="dropzone" id="dropzone" :options="dropzoneOptions" @vdropzone-success="fileUploaded" @vdropzone-sending="sendingEvent" :useCustomSlot=true>
+        <Dropzone section="banners" @uploaded="fileUploaded">
             <div class="jumbotron rounded-0 top-banner mb-0">
                 <div class="top-banner__container main-container" :style="{backgroundImage: `url('${banner.image_url}')`}">
                     <div class="top-banner__text" v-html="banner.content"></div>
                     <h1 class="top-banner__title"><a href="#">Section name</a></h1>
                 </div>
             </div>
-        </VueDropzone>
-        <FormError field="image_uuid"/>
+        </Dropzone>
 
         <div class="card-body">
             <VueCkeditor :config="config"  v-model="banner.content"/>
@@ -30,18 +29,13 @@
 </template>
 
 <script>
-    import vue2Dropzone from 'vue2-dropzone'
     import VueCkeditor from 'vue-ckeditor2'
     import FormError from '../../../../components/form/FormError'
-
-    import Ls from '../../../../services/ls'
-
-    const AUTH_TOKEN = Ls.get('auth.token')
+    import Dropzone from '../../../../components/Dropzone'
 
     export default {
         components: {
-            VueDropzone: vue2Dropzone,
-            FormError, VueCkeditor
+            Dropzone, FormError, VueCkeditor
         },
         props: ['id', 'value'],
         data() {
@@ -51,13 +45,6 @@
                     image_uuid: null,
                     image_url: null,
                     content: ''
-                },
-                dropzoneOptions: {
-                    url: '/api/image/upload',
-                    uploadMultiple: false,
-                    maxFiles: 1,
-                    acceptedFiles: 'image/*',
-                    headers: {"Authorization": `Bearer ${AUTH_TOKEN}`}
                 },
                 config: {
                     height: 100,
@@ -131,14 +118,11 @@
                     console.error(e)
                 }
             },
-            fileUploaded(file, {data}) {
+            fileUploaded(data, file, dropzone) {
                 this.banner.image_uuid = data.uuid
                 this.banner.image_url = data.url
-                this.$refs.dropzone.removeAllFiles()
+                dropzone.removeAllFiles()
             },
-            sendingEvent(file, xhr, formData) {
-                formData.append('section', 'banner');
-            }
         },
         computed: {
             isExists() {

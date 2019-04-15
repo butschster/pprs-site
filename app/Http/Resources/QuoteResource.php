@@ -18,7 +18,8 @@ class QuoteResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'text' => $this->text,
-            'image' => $this->image_url
+            'image' => $this->image_url,
+            'image_uuid' => $this->image_uuid
         ];
     }
 }

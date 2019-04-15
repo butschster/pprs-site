@@ -17,7 +17,8 @@ class CreateQuotesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('text');
-            $table->string('image');
+            $table->string('image_uuid');
+
             $table->timestamps();
         });
     }

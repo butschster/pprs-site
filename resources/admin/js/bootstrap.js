@@ -1,14 +1,12 @@
 import VueRouter from 'vue-router'
 import Vuelidate from 'vuelidate'
-// import VuePrism from 'vue-prism'
-// import VTooltip from 'v-tooltip'
-
 import Ls from './services/ls'
 import VDropdown from './components/dropdown/VDropdown'
 import VDropdownItem from './components/dropdown/VDropdownItem'
 import VDropdownDivider from './components/dropdown/VDropdownDivider'
 import VCollapse from './components/collapse/VCollapse'
 import VCollapseItem from './components/collapse/VCollapseItem'
+import VueClipboard from 'vue-clipboard2'
 
 /**
  * Global CSS imports
@@ -77,6 +75,6 @@ Vue.component('v-dropdown-divider', VDropdownDivider)
 Vue.component('v-collapse', VCollapse)
 Vue.component('v-collapse-item', VCollapseItem)
 
+Vue.use(VueClipboard)
 Vue.use(VueRouter)
-// Vue.use(VTooltip)
 Vue.use(Vuelidate)
