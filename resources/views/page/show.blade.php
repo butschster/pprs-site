@@ -6,12 +6,12 @@
 
 @section('banner')
     @if($page->has_banner)
-        <div class="jumbotron jumbotron-fluid top-banner">
+        <a class="jumbotron jumbotron-fluid top-banner" href="{{ $page->parent->url() }}">
             <div class="top-banner__container main-container" style="background-image: url('{{ $page->banner_url }};'">
                 <div class="top-banner__text">{{ $page->banner_content }}</div>
-                <h1 class="top-banner__title">{{ $page->title }}</a></h1>
+                <h1 class="top-banner__title">{{ $page->title }}</h1>
             </div>
-        </div>
+        </a>
     @endif
 @endsection
 
@@ -19,9 +19,6 @@
     @if(!$page->isArticle())
         @include('page._partials.subpages', ['pages' => $page->getChildren()])
     @else
-    <article class="article-text main-container mb-5">
-        <h2 class="article-text__title">{{ $page->title }}</h2>
-        <div class="article-text__description">{!! $page->text !!}</div>
-    </article>
+        @include('page._partials.article')
     @endif
 @endsection
