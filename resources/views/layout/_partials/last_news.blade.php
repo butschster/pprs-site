@@ -4,11 +4,11 @@
 @foreach($news as $item)
     <div class="media mb-4 pr-lg-3">
         <div class="media-body news">
-            <h3 class="news__title">
-                <a href="{{ $item->url() }}" class="news__link">{{ $item->title }}</a>
-            </h3>
+            <h3 class="news__title">{{ $item->title }}</h3>
             <small class="text-muted news__date">{{ $item->formatted_date }}</small>
-            <div class="news__description">{!! $item->description !!}</div>
+            <div class="news__description">
+                <a href="{{ $item->url() }}" class="news__link">{!! $item->description !!}</a>
+            </div>
         </div>
     </div>
 @endforeach
