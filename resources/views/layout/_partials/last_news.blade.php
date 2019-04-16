@@ -2,7 +2,7 @@
     <a href="{{ route('news.index') }}" class="text-warning">Новое на портале</a>
 </h2>
 @foreach($news as $item)
-    <div class="media mb-4 pr-lg-3">
+    <div class="media mb-4 pr-xl-3">
         <div class="media-body news">
             <h3 class="news__title">{{ $item->title }}</h3>
             <small class="text-muted news__date">{{ $item->formatted_date }}</small>

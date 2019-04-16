@@ -27,13 +27,13 @@
                     @yield('banner')
             </div>
             <div class="main-container main-container--main-content">
-                <div class="row mx-0 mx-lg-n4">
+                <div class="row mx-0 mx-lg-n2">
 
                     @if($showLastNews ?? true)
-                        <section class="px-0 px-lg-4 col-lg-8  order-1">
+                        <section class="px-0 pl-lg-2 col-lg-8  order-1">
                             @yield('content')
                         </section>
-                        <aside class=" px-0 px-lg-4 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
+                        <aside class=" px-0 px-lg-2 pl-xl-4 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
 
                             @if(!request()->routeIs('subscribe.form'))
                                 <a href="{{ route('subscribe.form') }}" class="btn btn-block btn-lg btn-warning btn-subscribe">

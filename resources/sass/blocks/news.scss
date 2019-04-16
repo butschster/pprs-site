@@ -20,14 +20,12 @@
 }
 
 .news__description {
-    font-size: 1.2rem;
-    // font-size: 27px;
+    font-size: 27px;
 }
 
 @include  media-breakpoint-up(lg) {
     .news__link {
-        font-size: 1.1rem;
-        // font-size: 22px;
+        font-size: 22px;
     }
 
     .news__date {
@@ -35,7 +33,6 @@
     }
 
     .news__description {
-         font-size: 0.71rem;
-         // font-size: 18px;
+        font-size: 18px;
     }
 }

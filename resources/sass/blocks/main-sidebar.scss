@@ -9,3 +9,9 @@
         text-transform: uppercase;
     }
 }
+
+@include  media-breakpoint-up(xxl) {
+    .main-sidebar {
+        padding-left: 105px!important;
+    }
+}
