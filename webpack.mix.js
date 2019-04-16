@@ -26,7 +26,6 @@ mix.js('resources/js/app.js', 'public/js')
             'public/admin/css/**/*.css'
         ],
     })
-    .version()
 
 mix.webpackConfig({
     resolve: {
@@ -36,3 +35,11 @@ mix.webpackConfig({
         ]
     }
 });
+
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'source-map'
+    }).sourceMaps()
+} else {
+    mix.version()
+}

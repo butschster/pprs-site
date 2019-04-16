@@ -3,9 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class News extends Model
 {
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saved(function (News $news) {
+            Cache::forget('news.text-parsed'.$news->id);
+        });
+    }
+
     /**
      * @var array
      */
@@ -49,5 +59,15 @@ class News extends Model
     public function getMetaKeywordsAttribute($keywords)
     {
         return (string)$keywords;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParsedTextAttribute()
+    {
+        return Cache::rememberForever('news.text-parsed'.$this->id, function () {
+            return preg_replace('/\[quote\|([0-9]+)\]/', '<quote :id="$1"></quote>', $this->text);
+        });
     }
 }

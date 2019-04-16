@@ -1,6 +1,6 @@
 <?php
 
-Route::get('quote/{quote}', 'Api\QuotesController@show')->middleware('ttl:600');
+Route::get('quote/{quote}/cached', 'Api\QuotesController@show')->middleware('ttl:600');
 
 Route::prefix('auth')->namespace('Admin\\')->group(function () {
     Route::post('login', 'AuthController@login')->name('login');
@@ -38,7 +38,6 @@ Route::namespace('Api\\')->middleware('auth')->group(function () {
     Route::post('news/{post}', 'NewsController@update')->name('post.update');
     Route::post('news', 'NewsController@store')->name('post.store');
     Route::delete('news/{post}', 'NewsController@delete')->name('post.delete');
-
 
     // Images
     Route::post('image/upload', 'ImagesController@upload')->name('image.upload');

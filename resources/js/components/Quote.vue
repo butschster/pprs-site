@@ -33,7 +33,7 @@
         methods: {
             async load() {
                 try {
-                    const response = await axios.get(this.route('api.quote.show', {quote: this.id}));
+                    const response = await axios.get(`/api/quote/${this.id}/cached`);
                     this.image = response.data.data.image
                     this.text = response.data.data.text
                     this.title = response.data.data.title

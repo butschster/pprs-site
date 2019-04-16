@@ -15,7 +15,7 @@
             </ol>
         </div>
 
-        <Quote :quote="quote" class="mb-5"/>
+        <Quote :quote="quote" class="mb-5" :allowImageChange="true" @fileUploaded="fileUploaded"/>
 
         <div class="card">
             <div class="card-body">
