@@ -1,6 +1,8 @@
 .subscribe__text {
-    font-size: 0.95rem;
-    line-height: 1rem;
+    // font-size: 0.95rem;
+    // line-height: 1rem;
+     font-size: 24px;
+     line-height: 35px;
 }
 
 @include  media-breakpoint-up(lg) {

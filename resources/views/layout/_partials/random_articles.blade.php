@@ -3,7 +3,7 @@
         <div class="banner card mx-0 px-lg-3">
             @if($page->parent)
                 <h3 class="card-header bg-white banner__name-page main-container px-0">
-                    <a class="banner__name-page" href="{{ $page->parent->url() }}">{{ $page->parent->section_title }}</a>
+                    <a class="banner__name-page" href="{{ $page->parent->url() }}" style="color: {{ $page->color }}">{{ $page->parent->section_title }}</a>
                 </h3>
             @endif
             <a href="{{ $page->url() }}" class='banner__container card-body'>

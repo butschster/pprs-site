@@ -1,5 +1,6 @@
 .news__link {
     color: $black;
+    font-size: 33px;
 
     &:focus,
     &:hover,
@@ -14,18 +15,26 @@
     width: 100%;
     margin: 1.5rem 0;
     text-transform: uppercase;
+    font-size: 21px;
 }
 
 .news__description {
     font-size: 1.2rem;
+    // font-size: 27px;
 }
 
 @include  media-breakpoint-up(lg) {
     .news__link {
         font-size: 1.1rem;
+        // font-size: 22px;
+    }
+
+    .news__date {
+        font-size: 14px;
     }
 
     .news__description {
-        font-size: 0.71rem;
+         font-size: 0.71rem;
+         // font-size: 18px;
     }
 }

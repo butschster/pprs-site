@@ -8,11 +8,12 @@
     display: flex;
     color: $gray-900;
     font-size: 1.2rem;
-    line-height: 1.25rem;
+    line-height: 20px;
     letter-spacing: -0.02em;
+    padding-bottom: 1.2rem;
 
     & i {
-        line-height: 1.25rem;
+        line-height: 20px;
     }
 }
 
@@ -22,19 +23,26 @@
 }
 
 @include  media-breakpoint-up(md) {
+    .main-navbar__link {
+        height: 100%;
+        font-size: 0.85rem;
+        padding-top: 0.75rem;
+        padding-bottom: 1.2rem;
+        border-top: 1.2rem solid transparent;
+    }
+
     .main-navbar {
-        padding: 1.2rem 0;
         min-height: $height-navbar-md;
 
         & .nav-item {
             width: 20%;
             max-width: 220px;
         }
-    }
 
-    .main-navbar__link {
-        font-size: 0.85rem;
-        padding: 0;
+        & .navbar-nav .show > .nav-link {
+            border-top: 1.2rem solid $green;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+        }
     }
 
     .main-navbar__list {
