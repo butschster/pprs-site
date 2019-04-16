@@ -1,5 +1,3 @@
-// initial state
-// shape: [{ id, quantity }]
 const state = {
     errors: {},
 }

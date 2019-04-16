@@ -19,7 +19,7 @@
         props: ['quote'],
         computed: {
             code() {
-                return `<quote :id="${this.quote.id}"></quote>`
+                return `[quote|${this.quote.id}]`
             }
         }
     }

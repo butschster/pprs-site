@@ -12,9 +12,8 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
-
-mix.js('resources/admin/js/app.js', 'public/admin/js/')
+    .sass('resources/sass/app.scss', 'public/css')
+    .js('resources/admin/js/app.js', 'public/admin/js/')
     .sass('resources/admin/sass/laraspace.scss', 'public/admin/css/')
     .browserSync({
         proxy: 'localhost:8000',
@@ -27,3 +26,13 @@ mix.js('resources/admin/js/app.js', 'public/admin/js/')
             'public/admin/css/**/*.css'
         ],
     })
+    .version()
+
+mix.webpackConfig({
+    resolve: {
+        modules: [
+            'node_modules',
+            path.resolve(__dirname, 'resources/admin/js')
+        ]
+    }
+});

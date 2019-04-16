@@ -1,6 +1,7 @@
 <template>
     <div>
-        <VueDropzone ref="dropzone" id="dropzone" :options="options" @vdropzone-success="fileUploaded" @vdropzone-sending="sendingEvent" :useCustomSlot="useCustomSlot">
+        <VueDropzone ref="dropzone" id="dropzone" :options="options" @vdropzone-success="fileUploaded"
+                     @vdropzone-sending="sendingEvent" :useCustomSlot="useCustomSlot">
             <slot></slot>
         </VueDropzone>
         <FormError field="file"/>
@@ -9,9 +10,10 @@
 
 <script>
     import vue2Dropzone from 'vue2-dropzone'
-    import FormError from './form/FormError'
+    import FormError from './FormError'
 
-    import Ls from '../services/ls'
+    import Ls from 'services/ls'
+
     const AUTH_TOKEN = Ls.get('auth.token')
 
     export default {

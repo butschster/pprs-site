@@ -3,8 +3,8 @@
 <head>
     <title>PPRS Admin</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,300,700' rel='stylesheet' type='text/css'>
-    <script src="/admin/js/core/pace.js"></script>
-    <link href="{{mix("/admin/css/laraspace.css")}}" rel="stylesheet" type="text/css">
+    <script src="{{ asset('admin/js/core/pace.js') }}"></script>
+    <link href="{{  mix("/admin/css/laraspace.css") }}" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="/admin/img/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/admin/img/favicons/apple-touch-icon-60x60.png">
@@ -32,7 +32,7 @@
     <div class="mobile-menu-overlay" @click.prevent="$utils.toggleSidebar"></div>
     <router-view></router-view>
 </div>
-<script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
-<script type="text/javascript" src="{{mix("/admin/js/app.js")}}"></script>
+<script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ mix("/admin/js/app.js" )}}"></script>
 </body>
 </html>

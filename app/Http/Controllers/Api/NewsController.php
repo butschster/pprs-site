@@ -67,8 +67,7 @@ class NewsController extends Controller
             'meta_description' => 'nullable|string',
         ]);
 
-
-        $post->update(array_filter($data));
+        $post->update($data);
 
         return new NewsResource($post);
     }

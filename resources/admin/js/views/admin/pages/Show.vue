@@ -14,7 +14,10 @@
                 <li class="breadcrumb-item">{{ page.title }}</li>
             </ol>
             <div class="page-actions">
-                <router-link :to="{name: 'page.create', params: {parent_id: page.id}}" class="btn btn-primary">
+                <a :href="page.link" target="_blank" class="btn btn-xs btn-link">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Посмотреть
+                </a>
+                <router-link :to="{name: 'page.create', params: {parent_id: page.id}}" class="btn btn-xs btn-primary">
                     <i class="fa fa-plus"></i> Добавить
                 </router-link>
             </div>
@@ -74,7 +77,7 @@
                     Текст
                 </div>
                 <div class="form-group">
-                    <VueCkeditor :config="config" v-model="page.text"/>
+                    <CKEditor v-model="page.text"/>
                     <FormError field="text"/>
                 </div>
                 <div class="card-footer">
@@ -90,30 +93,23 @@
 </template>
 
 <script>
-    import VueCkeditor from 'vue-ckeditor2'
+    import CKEditor from 'components/form/CKEditor'
     import VueElementLoading from 'vue-element-loading'
     import Swatches from 'vue-swatches'
     import Treeselect from '@riophae/vue-treeselect'
-    import FormError from '../../../components/form/FormError'
+    import FormError from 'components/form/FormError'
     import Banner from './partials/Banner'
 
     const slugify = require('@sindresorhus/slugify')
 
     export default {
-        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, VueCkeditor},
+        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, CKEditor},
         data() {
             return {
                 loading: true,
                 colors: 'material-basic',
                 page: null,
-                pages: [],
-                config: {
-                    height: 100,
-                    filebrowserImageBrowseUrl: '/api/files?type=Images',
-                    filebrowserImageUploadUrl: '/api/files/upload?type=Images&_token=',
-                    filebrowserBrowseUrl: '/api/files?type=Files',
-                    filebrowserUploadUrl: '/api/files/upload?type=Files&_token='
-                }
+                pages: []
             }
         },
         created() {

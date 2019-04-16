@@ -13,7 +13,7 @@
         </Dropzone>
 
         <div class="card-body">
-            <VueCkeditor :config="config"  v-model="banner.content"/>
+            <CKEditor v-model="banner.content"/>
             <FormError field="content"/>
         </div>
         <div class="card-footer">
@@ -29,13 +29,13 @@
 </template>
 
 <script>
-    import VueCkeditor from 'vue-ckeditor2'
-    import FormError from '../../../../components/form/FormError'
-    import Dropzone from '../../../../components/Dropzone'
+    import CKEditor from 'components/form/CKEditor'
+    import FormError from 'components/form/FormError'
+    import Dropzone from 'components/form/Dropzone'
 
     export default {
         components: {
-            Dropzone, FormError, VueCkeditor
+            Dropzone, FormError, CKEditor
         },
         props: ['id', 'value'],
         data() {
@@ -45,13 +45,6 @@
                     image_uuid: null,
                     image_url: null,
                     content: ''
-                },
-                config: {
-                    height: 100,
-                    filebrowserImageBrowseUrl: '/api/files?type=Images',
-                    filebrowserImageUploadUrl: '/api/files/upload?type=Images&_token=',
-                    filebrowserBrowseUrl: '/api/files?type=Files',
-                    filebrowserUploadUrl: '/api/files/upload?type=Files&_token='
                 }
             }
         },
@@ -106,7 +99,7 @@
             },
             async remove() {
                 try {
-                    await axios.delete(`/api/banner/${this.id}`)
+                    await axios.delete(`/api/banner/${this.banner.id}`)
 
                     this.banner = {
                         id: null,
@@ -114,6 +107,8 @@
                         image_url: null,
                         content: '',
                     }
+
+                    this.$emit('input', null)
                 } catch (e) {
                     console.error(e)
                 }

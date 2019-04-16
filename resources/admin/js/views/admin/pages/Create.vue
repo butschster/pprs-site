@@ -68,7 +68,7 @@
                 Текст
             </div>
             <div class="form-group">
-                <VueCkeditor :config="config" v-model="page.text"/>
+                <CKEditor v-model="page.text"/>
                 <FormError field="text"/>
             </div>
             <div class="card-footer">
@@ -83,17 +83,17 @@
 </template>
 
 <script>
-    import VueCkeditor from 'vue-ckeditor2'
+    import CKEditor from 'components/form/CKEditor'
     import VueElementLoading from 'vue-element-loading'
     import Swatches from 'vue-swatches'
     import Treeselect from '@riophae/vue-treeselect'
-    import FormError from '../../../components/form/FormError'
+    import FormError from 'components/form/FormError'
     import Banner from './partials/Banner'
 
     const slugify = require('@sindresorhus/slugify')
 
     export default {
-        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, VueCkeditor},
+        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, CKEditor},
         data() {
             return {
                 loading: true,
@@ -109,14 +109,7 @@
                     parent_id: null,
                     color: ''
                 },
-                pages: [],
-                config: {
-                    height: 100,
-                    filebrowserImageBrowseUrl: '/api/files?type=Images',
-                    filebrowserImageUploadUrl: '/api/files/upload?type=Images&_token=',
-                    filebrowserBrowseUrl: '/api/files?type=Files',
-                    filebrowserUploadUrl: '/api/files/upload?type=Files&_token='
-                }
+                pages: []
             }
         },
         async created() {

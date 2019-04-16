@@ -9,6 +9,11 @@ html {
     font-size: 1rem;
 }
 
+body.ckeditor {
+    font-size: .7rem;
+    padding: 20px;
+}
+
 @include media-breakpoint-up(sm) {
     html {
         font-size: 1.1rem;

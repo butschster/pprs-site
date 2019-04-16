@@ -24,6 +24,8 @@ class PageResource extends JsonResource
             'meta_keywords' => $this->meta_keywords,
             'meta_description' => $this->meta_description,
             'banner_id' => $this->banner_id,
+            'link' => $this->url(),
+
 
             'has_section_image' => $this->has_section_image,
             'section_image_uuid' => $this->section_image_uuid,

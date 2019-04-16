@@ -1,3 +1,3 @@
 <template>
-  <div class="dropdown-item-divider"/>
+    <div class="dropdown-item-divider"/>
 </template>

@@ -41,12 +41,14 @@ class PagesController extends Controller
         return $this->index();
     }
 
+    /**
+     * @param StoreRequest $request
+     * @return PageResource
+     */
     public function store(StoreRequest $request)
     {
-        $page = $request->persist();
-
         return new PageResource(
-            $page
+            $request->persist()
         );
     }
 

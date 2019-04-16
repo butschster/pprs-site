@@ -59,10 +59,10 @@ class QuotesController extends Controller
         $data = $this->validate($request, [
             'title' => 'required|string',
             'text' => 'required|string',
-            'image_uuid' => ['nullable', Rule::exists('images', 'uuid')],
+            'image_uuid' => ['required', Rule::exists('images', 'uuid')],
         ]);
 
-        $quote->update(array_filter($data));
+        $quote->update($data);
 
         return new QuoteResource($quote);
     }

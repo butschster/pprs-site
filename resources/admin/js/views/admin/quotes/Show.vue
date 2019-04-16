@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст</label>
-                    <VueCkeditor :config="config" v-model="quote.text"/>
+                    <CKEditor v-model="quote.text"/>
                     <FormError field="text"/>
                 </div>
 
@@ -51,14 +51,14 @@
 </template>
 
 <script>
-    import VueCkeditor from 'vue-ckeditor2'
-    import FormError from '../../../components/form/FormError'
+    import CKEditor from 'components/form/CKEditor'
+    import FormError from 'components/form/FormError'
     import VueElementLoading from 'vue-element-loading'
-    import Dropzone from '../../../components/Dropzone'
+    import Dropzone from 'components/form/Dropzone'
     import Quote from './partials/Quote'
 
     export default {
-        components: {VueCkeditor, VueElementLoading, FormError, Dropzone, Quote},
+        components: {CKEditor, VueElementLoading, FormError, Dropzone, Quote},
         data() {
             return {
                 loading: false,
@@ -68,9 +68,6 @@
                     text: '',
                     image: '',
                     image_uuid: ''
-                },
-                config: {
-                    height: 100
                 }
             }
         },
