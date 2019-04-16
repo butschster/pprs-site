@@ -64,6 +64,14 @@
             width: 20%;
             max-width: 220px;
             margin-bottom: 0;
+
+            &:nth-last-child(-n+3) {
+
+                & .main-navbar__dropdown-menu {
+                    left: auto;
+                    right: 0;
+                }
+            }
         }
 
         & .show {

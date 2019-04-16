@@ -1,16 +1,15 @@
 <div class="row mb-2">
     <ol class="col-6 col-lg-8 main-footer__nav">
         <a href="{{ route('news.index') }}" class="main-footer__link mr-4">Новости</a>
-        <a href="#" class=" main-footer__link d-none d-md-block">Карта сайта</a>
     </ol>
     <ul class="col-6 col-lg-4 social">
         <li class="social__item">
-            <a class="social__link mr-4" href="https://twitter.com" aria-label="facebook">
+            <a class="social__link mr-4" href="https://www.facebook.com/pprs.ru/" aria-label="facebook">
                 <img width="71" height="71" src="{{ asset('images/facebook.png') }}">
             </a>
         </li>
         <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com" aria-label="vk">
+            <a class="social__link" href="https://vk.com/pprs_ru" aria-label="vk">
                 <img width="71" height="71" src="{{ asset('images/vk.png') }}">
             </a>
         </li>

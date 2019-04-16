@@ -10829,6 +10829,11 @@ body.ckeditor {
     margin-bottom: 0;
   }
 
+  .main-navbar .nav-item:nth-last-child(-n+3) .main-navbar__dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+
   .main-navbar .show {
     background-color: #ffffff;
   }
@@ -10989,6 +10994,11 @@ body.ckeditor {
   color: #000000;
 }
 
+.banner__container:focus .banner__text-preview,
+.banner__container:hover .banner__text-preview {
+  text-decoration: underline;
+}
+
 .banner__container:active {
   opacity: 0.5;
 }
@@ -10999,6 +11009,7 @@ body.ckeditor {
   margin-bottom: 1rem;
   letter-spacing: 0.04em;
   font-weight: 700;
+  border: none;
 }
 
 .banner__name-page:focus,

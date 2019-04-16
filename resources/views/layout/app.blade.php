@@ -24,9 +24,7 @@
         </header>
         <main class="main-content">
             <div class="top-banner-wrapper">
-                <a class="d-block" href="#">
                     @yield('banner')
-                </a>
             </div>
             <div class="main-container main-container--main-content">
                 <div class="row mx-0 mx-lg-n4">

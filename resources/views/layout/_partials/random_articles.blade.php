@@ -1,6 +1,6 @@
 <div class="article-card card-deck mx-lg-n3 px-lg-4">
     @foreach($pages as $page)
-        <div class="banner card mx-0 px-lg-3">
+        <div class="banner card mx-0 px-lg-3 mb-4 mb-lg-0">
             @if($page->parent)
                 <h3 class="card-header bg-white banner__name-page main-container px-0">
                     <a class="banner__name-page" href="{{ $page->parent->url() }}" style="color: {{ $page->color }}">{{ $page->parent->section_title }}</a>
