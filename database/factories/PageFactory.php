@@ -18,6 +18,7 @@ $factory->define(Page::class, function (Faker $faker) {
             return factory(\App\Models\Image::class)->create()->uuid;
         },
         'section_title' => $faker->sentence,
+        'section_subtitle' => $faker->sentence,
         'section_text' => $faker->paragraph,
         'text' => $faker->text(10000),
     ];

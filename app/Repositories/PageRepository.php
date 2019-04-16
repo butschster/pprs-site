@@ -29,6 +29,6 @@ class PageRepository
      */
     public function getRandomArticles(): Collection
     {
-        return Page::with('parent', 'ancestors')->whereIsLeaf()->inRandomOrder()->take(3)->get();
+        return Page::with('parent', 'ancestors')->whereIsLeaf()->whereNotNull('section_image_uuid')->inRandomOrder()->take(3)->get();
     }
 }

@@ -71,6 +71,7 @@
                 <CKEditor v-model="page.text"/>
                 <FormError field="text"/>
             </div>
+            <SectionBanner v-if="page" v-model="page" />
             <div class="card-footer">
                 <button class="btn btn-primary" type="button" @click="store">
                     <i class="fa fa-check"></i> Сохранить
@@ -89,11 +90,12 @@
     import Treeselect from '@riophae/vue-treeselect'
     import FormError from 'components/form/FormError'
     import Banner from './partials/Banner'
+    import SectionBanner from './partials/SectionBanner'
 
     const slugify = require('@sindresorhus/slugify')
 
     export default {
-        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, CKEditor},
+        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, CKEditor, SectionBanner},
         data() {
             return {
                 loading: true,
