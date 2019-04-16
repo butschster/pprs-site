@@ -30,6 +30,12 @@
     font-size: 1.25rem;
     margin-bottom: 1rem;
     letter-spacing: 0.04em;
+
+    &:focus,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
 }
 
 .banner__title {

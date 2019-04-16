@@ -1,5 +1,11 @@
 .news__link {
     color: $black;
+
+    &:focus,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
 }
 
 .news__date {
