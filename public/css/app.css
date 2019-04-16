@@ -10766,7 +10766,14 @@ body.ckeditor {
 .main-navbar {
   background-color: #ffffff;
   padding: 0;
-  min-height: 95px;
+}
+
+.main-navbar .show {
+  background-color: #eaeaea;
+}
+
+.main-navbar__list .nav-item {
+  margin-bottom: 20px;
 }
 
 .main-navbar__link {
@@ -10787,9 +10794,25 @@ body.ckeditor {
   margin-left: auto;
 }
 
-@media (min-width: 720px) {
+.main-navbar__dropdown-menu {
+  border: none;
+  border-radius: 0;
+}
+
+.main-navbar__dropdown-menu .dropdown-item {
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.main-navbar__dropdown-menu .dropdown-item:focus,
+.main-navbar__dropdown-menu .dropdown-item:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
   .main-navbar__link {
     height: 100%;
+    background-color: #ffffff;
     font-size: 0.85rem;
     padding-top: 0.75rem;
     padding-bottom: 1.2rem;
@@ -10803,21 +10826,47 @@ body.ckeditor {
   .main-navbar .nav-item {
     width: 20%;
     max-width: 220px;
+    margin-bottom: 0;
+  }
+
+  .main-navbar .show {
+    background-color: #ffffff;
   }
 
   .main-navbar .navbar-nav .show > .nav-link {
     border-top: 1.2rem solid #38c172;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.19);
+    position: relative;
+    z-index: 10000;
   }
 
   .main-navbar__list {
     width: 100%;
     justify-content: space-between;
   }
+
+  .main-navbar__dropdown-menu {
+    margin: 0;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.19);
+    top: 98%;
+  }
 }
 
 .top-banner-wrapper {
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1500;
+}
+
+.top-banner-wrapper a:focus,
+.top-banner-wrapper a:hover {
+  text-decoration: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  color: #000000;
+}
+
+.top-banner-wrapper a:active {
+  opacity: 0.5;
 }
 
 @media (min-width: 720px) {
@@ -10851,10 +10900,6 @@ body.ckeditor {
 }
 
 .top-banner__title {
-  color: #ffffff;
-}
-
-.top-banner__title a {
   color: #ffffff;
 }
 
@@ -11143,7 +11188,7 @@ body.ckeditor {
 }
 
 .article-text__title {
-  color: #ffffff;
+  color: #3490dc;
   font-size: 2rem;
   margin-bottom: 3rem;
 }

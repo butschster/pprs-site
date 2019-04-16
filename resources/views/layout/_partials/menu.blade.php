@@ -14,7 +14,7 @@
                     <i class="fas fa-angle-right mr-1" style="color: {{ $page->color }}"></i>
                     <b>{{ $page->title }}</b>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu main-navbar__dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ $page->url() }}">Перейти в раздел</a>
                     @foreach($page->children as $child)
                         <a class="dropdown-item" href="{{ $child->url() }}">{{ $child->title }}</a>

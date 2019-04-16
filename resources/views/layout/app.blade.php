@@ -13,18 +13,20 @@
 <body>
     <div id="app">
         <header class="main-header">
-            <div class="breadcrumb__wrapper">
+            <div class="breadcrumb__wrapper d-none d-lg-block">
                 <div class="main-container">
                     @yield('breadcrumbs')
                 </div>
             </div>
-            <div class="main-container">
+            <div class="main-container py-4 py-lg-0">
                 @include('layout._partials.menu')
             </div>
         </header>
         <main class="main-content">
             <div class="top-banner-wrapper">
-                @yield('banner')
+                <a class="d-block" href="#">
+                    @yield('banner')
+                </a>
             </div>
             <div class="main-container main-container--main-content">
                 <div class="row mx-0 mx-lg-n4">

@@ -8,7 +8,7 @@
             @endif
             <a href="{{ $page->url() }}" class='banner__container card-body'>
                 <h4 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_title }}</h4>
-                <div class="banner__text-preview card-text main-container px-lg-0">{{ $page->section_text }}</div>
+                <div class="banner__text-preview card-text main-container px-lg-4">{{ $page->section_text }}</div>
             </a>
         </div>
     @endforeach
