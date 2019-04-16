@@ -18892,8 +18892,8 @@ ____.dashbox:hover {
 
 .top-banner {
   padding: 0;
-  background-color: #007bff;
-  color: #212529;
+  background-color: #3490dc;
+  color: #333333;
   background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
@@ -18911,7 +18911,7 @@ ____.dashbox:hover {
 }
 
 .top-banner--main {
-  background-color: #ffc107;
+  background-color: #efcb4c;
 }
 
 .top-banner--main__title {
@@ -18925,14 +18925,14 @@ ____.dashbox:hover {
 }
 
 .top-banner--news {
-  background-color: #fd7e14;
+  background-color: #eebb45;
 }
 
 .top-banner__container {
   padding: 2rem 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   .top-banner__title {
     font-size: 4rem;
   }
@@ -18970,6 +18970,113 @@ ____.dashbox:hover {
   .top-banner__text {
     width: 65%;
     max-width: 790px;
+  }
+}
+
+.banner {
+  padding: 0;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.banner__container {
+  display: block;
+  padding: 2.2rem 0;
+  background-color: #f3f4f0;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  font-weight: 700;
+}
+
+.banner__container:focus,
+.banner__container:hover {
+  text-decoration: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  color: #000000;
+}
+
+.banner__container:focus .banner__text-preview,
+.banner__container:hover .banner__text-preview {
+  text-decoration: underline;
+}
+
+.banner__container:active {
+  opacity: 0.5;
+}
+
+.banner__name-page {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  border: none;
+}
+
+.banner__name-page:focus,
+.banner__name-page:hover,
+.banner__name-page:active {
+  text-decoration: none;
+}
+
+.banner__title {
+  color: #ffffff;
+  background-color: #3490dc;
+  font-size: 1.15rem;
+  padding: 0.5rem 0;
+  padding-left: 4%;
+  padding-right: 1rem;
+  margin-bottom: 3.6rem;
+  display: inline-flex;
+  min-width: 50%;
+}
+
+.banner__text-preview {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  color: #000000;
+}
+
+@media (min-width: 720px) {
+  .banner__title {
+    padding-left: 7%;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner__container {
+    padding: 2.5rem 0;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .banner__container .main-container {
+    width: 100%;
+  }
+
+  .banner__container .banner__text-preview {
+    margin: 0;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    width: 70%;
+    max-width: 870px;
+  }
+
+  .banner__name-page {
+    font-size: 0.71rem;
+    letter-spacing: 0.02em;
+    width: 100%;
+  }
+
+  .banner__title {
+    font-size: 0.71rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    width: 70%;
+    max-width: 870px;
   }
 }
 

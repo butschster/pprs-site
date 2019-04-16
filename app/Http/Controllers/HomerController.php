@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Repositories\PageRepository;
 
 class HomerController extends Controller
 {
-    public function show()
+    /**
+     * @param PageRepository $repository
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show(PageRepository $repository)
     {
-        return view('home');
+        $pages = $repository->getMenu();
+
+        return view('home', compact('pages'));
     }
 }

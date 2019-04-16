@@ -1,7 +1,7 @@
 <template>
-    <div class="card">
-        <div class="card-header text-white bg-primary">
-            Баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
+    <div class="card shadow-lg">
+        <div class="card-header">
+            Главный баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
         </div>
         <Dropzone section="banners" @uploaded="fileUploaded" :useCustomSlot="true">
             <div class="jumbotron rounded-0 top-banner mb-0">
@@ -11,11 +11,8 @@
                 </div>
             </div>
         </Dropzone>
-
-        <div class="card-body">
-            <CKEditor v-model="banner.content"/>
-            <FormError field="content"/>
-        </div>
+        <CKEditor v-model="banner.content"/>
+        <FormError field="content"/>
         <div class="card-footer">
             <button class="btn btn-primary" type="button" @click="save">
                 <i class="fa fa-check"></i> {{ actionText }}
@@ -55,7 +52,6 @@
         },
         methods: {
             async load() {
-
                 try {
                     const response = await axios.get(`/api/banner/${this.id}`)
                     this.banner = response.data.data
@@ -68,7 +64,7 @@
             },
             async update() {
                 try {
-                    const response = await axios.put(`/api/banner/${this.id}`, {
+                    const response = await axios.put(`/api/banner/${this.banner.id}`, {
                         content: this.banner.content,
                         image_uuid: this.banner.image_uuid
                     })

@@ -7471,6 +7471,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _riophae_vue_treeselect__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_riophae_vue_treeselect__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var components_form_FormError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/form/FormError */ "./resources/admin/js/components/form/FormError.vue");
 /* harmony import */ var _partials_Banner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./partials/Banner */ "./resources/admin/js/views/admin/pages/partials/Banner.vue");
+/* harmony import */ var _partials_SectionBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./partials/SectionBanner */ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -7561,6 +7562,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+
 
 
 
@@ -7577,7 +7580,8 @@ var slugify = __webpack_require__(/*! @sindresorhus/slugify */ "./node_modules/@
     Treeselect: _riophae_vue_treeselect__WEBPACK_IMPORTED_MODULE_4___default.a,
     FormError: components_form_FormError__WEBPACK_IMPORTED_MODULE_5__["default"],
     Banner: _partials_Banner__WEBPACK_IMPORTED_MODULE_6__["default"],
-    CKEditor: components_form_CKEditor__WEBPACK_IMPORTED_MODULE_1__["default"]
+    CKEditor: components_form_CKEditor__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SectionBanner: _partials_SectionBanner__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   data: function data() {
     return {
@@ -7923,6 +7927,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _riophae_vue_treeselect__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_riophae_vue_treeselect__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var components_form_FormError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/form/FormError */ "./resources/admin/js/components/form/FormError.vue");
 /* harmony import */ var _partials_Banner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./partials/Banner */ "./resources/admin/js/views/admin/pages/partials/Banner.vue");
+/* harmony import */ var _partials_SectionBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./partials/SectionBanner */ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8023,6 +8028,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+
 
 
 
@@ -8039,7 +8046,8 @@ var slugify = __webpack_require__(/*! @sindresorhus/slugify */ "./node_modules/@
     Treeselect: _riophae_vue_treeselect__WEBPACK_IMPORTED_MODULE_4___default.a,
     FormError: components_form_FormError__WEBPACK_IMPORTED_MODULE_5__["default"],
     Banner: _partials_Banner__WEBPACK_IMPORTED_MODULE_6__["default"],
-    CKEditor: components_form_CKEditor__WEBPACK_IMPORTED_MODULE_1__["default"]
+    CKEditor: components_form_CKEditor__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SectionBanner: _partials_SectionBanner__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   data: function data() {
     return {
@@ -8293,9 +8301,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 
 
 
@@ -8373,7 +8378,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return axios.put("/api/banner/".concat(this.id), {
+                return axios.put("/api/banner/".concat(this.banner.id), {
                   content: this.banner.content,
                   image_uuid: this.banner.image_uuid
                 });
@@ -8506,6 +8511,95 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       return 'Создать';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var components_form_CKEditor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! components/form/CKEditor */ "./resources/admin/js/components/form/CKEditor.vue");
+/* harmony import */ var components_form_FormError__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! components/form/FormError */ "./resources/admin/js/components/form/FormError.vue");
+/* harmony import */ var components_form_Dropzone__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/form/Dropzone */ "./resources/admin/js/components/form/Dropzone.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Dropzone: components_form_Dropzone__WEBPACK_IMPORTED_MODULE_2__["default"],
+    FormError: components_form_FormError__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CKEditor: components_form_CKEditor__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: ['value'],
+  data: function data() {
+    return {
+      page: {
+        color: '',
+        section_title: '',
+        section_subtitle: '',
+        section_text: '',
+        section_image_url: ''
+      }
+    };
+  },
+  created: function created() {
+    this.page = this.value;
+  },
+  watch: {
+    page: {
+      handler: function handler(data) {
+        this.$emit('input', data);
+      },
+      deep: true
+    }
+  },
+  methods: {
+    fileUploaded: function fileUploaded(data, file, dropzone) {
+      this.page.section_image_uuid = data.uuid;
+      this.page.section_image_url = data.url;
+      dropzone.removeAllFiles();
     }
   }
 });
@@ -61033,272 +61127,293 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c(
-            "div",
-            { staticClass: "form-group" },
-            [
-              _c("label", [_vm._v("Название страницы")]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "d-flex" },
-                [
-                  _c("div", { staticClass: "flex-grow-1 mr-3" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.page.title,
-                          expression: "page.title"
-                        }
-                      ],
-                      staticClass: "form-control form-control-lg",
-                      attrs: { type: "text" },
-                      domProps: { value: _vm.page.title },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+      _c(
+        "div",
+        { staticClass: "card" },
+        [
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", [_vm._v("Название страницы")]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "d-flex" },
+                  [
+                    _c("div", { staticClass: "flex-grow-1 mr-3" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.page.title,
+                            expression: "page.title"
                           }
-                          _vm.$set(_vm.page, "title", $event.target.value)
+                        ],
+                        staticClass: "form-control form-control-lg",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.page.title },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.page, "title", $event.target.value)
+                          }
                         }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("Swatches", {
+                      attrs: {
+                        colors: _vm.colors,
+                        "popover-to": "left",
+                        "row-length": "6",
+                        "swatch-size": "46",
+                        "trigger-style": { borderRadius: "6px" }
+                      },
+                      model: {
+                        value: _vm.page.color,
+                        callback: function($$v) {
+                          _vm.$set(_vm.page, "color", $$v)
+                        },
+                        expression: "page.color"
                       }
                     })
-                  ]),
-                  _vm._v(" "),
-                  _c("Swatches", {
-                    attrs: {
-                      colors: _vm.colors,
-                      "popover-to": "left",
-                      "row-length": "6",
-                      "swatch-size": "46",
-                      "trigger-style": { borderRadius: "6px" }
-                    },
-                    model: {
-                      value: _vm.page.color,
-                      callback: function($$v) {
-                        _vm.$set(_vm.page, "color", $$v)
-                      },
-                      expression: "page.color"
-                    }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "title" } }),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "color" } })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "form-group" },
-            [
-              _c("label", [_vm._v("Текст ссылки")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.page.slug,
-                    expression: "page.slug"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "text", placeholder: _vm.slug },
-                domProps: { value: _vm.page.slug },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.page, "slug", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("small", { staticClass: "help-text text-muted" }, [
-                _vm._v("Для автоматической генерации оставьте поле пустым")
-              ]),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "slug" } })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "form-group" },
-            [
-              _c("label", [_vm._v("Родительская страница")]),
-              _vm._v(" "),
-              _c("Treeselect", {
-                attrs: { options: _vm.pages },
-                model: {
-                  value: _vm.page.parent_id,
-                  callback: function($$v) {
-                    _vm.$set(_vm.page, "parent_id", $$v)
-                  },
-                  expression: "page.parent_id"
-                }
-              }),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "parent_id" } })
-            ],
-            1
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-header bg-primary text-white" }, [
-          _vm._v("\n            Meta данные\n        ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c(
-            "div",
-            { staticClass: "form-group" },
-            [
-              _c("label", [_vm._v("Meta title")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.page.meta_title,
-                    expression: "page.meta_title"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "text" },
-                domProps: { value: _vm.page.meta_title },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.page, "meta_title", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "meta_title" } })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "form-group" },
-            [
-              _c("label", [_vm._v("Meta keywords")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.page.meta_keywords,
-                    expression: "page.meta_keywords"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "text" },
-                domProps: { value: _vm.page.meta_keywords },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.page, "meta_keywords", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "meta_keywords" } })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "form-group" },
-            [
-              _c("label", [_vm._v("Meta description")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.page.meta_description,
-                    expression: "page.meta_description"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "text" },
-                domProps: { value: _vm.page.meta_description },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.page, "meta_description", $event.target.value)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("FormError", { attrs: { field: "meta_description" } })
-            ],
-            1
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-header text-white bg-primary" }, [
-          _vm._v("\n            Текст\n        ")
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "form-group" },
-          [
-            _c("CKEditor", {
-              model: {
-                value: _vm.page.text,
-                callback: function($$v) {
-                  _vm.$set(_vm.page, "text", $$v)
-                },
-                expression: "page.text"
-              }
-            }),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "title" } }),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "color" } })
+              ],
+              1
+            ),
             _vm._v(" "),
-            _c("FormError", { attrs: { field: "text" } })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer" }, [
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", [_vm._v("Текст ссылки")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.page.slug,
+                      expression: "page.slug"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", placeholder: _vm.slug },
+                  domProps: { value: _vm.page.slug },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.page, "slug", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("small", { staticClass: "help-text text-muted" }, [
+                  _vm._v("Для автоматической генерации оставьте поле пустым")
+                ]),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "slug" } })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", [_vm._v("Родительская страница")]),
+                _vm._v(" "),
+                _c("Treeselect", {
+                  attrs: { options: _vm.pages },
+                  model: {
+                    value: _vm.page.parent_id,
+                    callback: function($$v) {
+                      _vm.$set(_vm.page, "parent_id", $$v)
+                    },
+                    expression: "page.parent_id"
+                  }
+                }),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "parent_id" } })
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-header bg-primary text-white" }, [
+            _vm._v("\n            Meta данные\n        ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", [_vm._v("Meta title")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.page.meta_title,
+                      expression: "page.meta_title"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.page.meta_title },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.page, "meta_title", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "meta_title" } })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", [_vm._v("Meta keywords")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.page.meta_keywords,
+                      expression: "page.meta_keywords"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.page.meta_keywords },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.page, "meta_keywords", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "meta_keywords" } })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", [_vm._v("Meta description")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.page.meta_description,
+                      expression: "page.meta_description"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.page.meta_description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.page,
+                        "meta_description",
+                        $event.target.value
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("FormError", { attrs: { field: "meta_description" } })
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-header text-white bg-primary" }, [
+            _vm._v("\n            Текст\n        ")
+          ]),
+          _vm._v(" "),
           _c(
-            "button",
-            {
-              staticClass: "btn btn-primary",
-              attrs: { type: "button" },
-              on: { click: _vm.store }
-            },
+            "div",
+            { staticClass: "form-group" },
             [
-              _c("i", { staticClass: "fa fa-check" }),
-              _vm._v(" Сохранить\n            ")
-            ]
-          )
-        ])
-      ]),
+              _c("CKEditor", {
+                model: {
+                  value: _vm.page.text,
+                  callback: function($$v) {
+                    _vm.$set(_vm.page, "text", $$v)
+                  },
+                  expression: "page.text"
+                }
+              }),
+              _vm._v(" "),
+              _c("FormError", { attrs: { field: "text" } })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm.page
+            ? _c("SectionBanner", {
+                model: {
+                  value: _vm.page,
+                  callback: function($$v) {
+                    _vm.page = $$v
+                  },
+                  expression: "page"
+                }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-footer" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { type: "button" },
+                on: { click: _vm.store }
+              },
+              [
+                _c("i", { staticClass: "fa fa-check" }),
+                _vm._v(" Сохранить\n            ")
+              ]
+            )
+          ])
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("Banner", {
         model: {
@@ -61572,299 +61687,325 @@ var render = function() {
         ? _c(
             "div",
             [
-              _c("div", { staticClass: "card" }, [
-                _c("div", { staticClass: "card-body" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("label", [_vm._v("Название страницы")]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "d-flex" },
-                        [
-                          _c("div", { staticClass: "flex-grow-1 mr-3" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.page.title,
-                                  expression: "page.title"
-                                }
-                              ],
-                              staticClass: "form-control form-control-lg",
-                              attrs: { type: "text" },
-                              domProps: { value: _vm.page.title },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
+              _c(
+                "div",
+                { staticClass: "card" },
+                [
+                  _c("div", { staticClass: "card-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("Название страницы")]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "d-flex" },
+                          [
+                            _c("div", { staticClass: "flex-grow-1 mr-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.page.title,
+                                    expression: "page.title"
                                   }
-                                  _vm.$set(
-                                    _vm.page,
-                                    "title",
-                                    $event.target.value
-                                  )
+                                ],
+                                staticClass: "form-control form-control-lg",
+                                attrs: { type: "text" },
+                                domProps: { value: _vm.page.title },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.page,
+                                      "title",
+                                      $event.target.value
+                                    )
+                                  }
                                 }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("Swatches", {
+                              attrs: {
+                                colors: _vm.colors,
+                                "popover-to": "left",
+                                "row-length": "6",
+                                "swatch-size": "46",
+                                "trigger-style": { borderRadius: "6px" }
+                              },
+                              model: {
+                                value: _vm.page.color,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.page, "color", $$v)
+                                },
+                                expression: "page.color"
                               }
                             })
-                          ]),
-                          _vm._v(" "),
-                          _c("Swatches", {
-                            attrs: {
-                              colors: _vm.colors,
-                              "popover-to": "left",
-                              "row-length": "6",
-                              "swatch-size": "46",
-                              "trigger-style": { borderRadius: "6px" }
-                            },
-                            model: {
-                              value: _vm.page.color,
-                              callback: function($$v) {
-                                _vm.$set(_vm.page, "color", $$v)
-                              },
-                              expression: "page.color"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "title" } }),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "color" } })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("label", [_vm._v("Текст ссылки")]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.page.slug,
-                            expression: "page.slug"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text", placeholder: _vm.slug },
-                        domProps: { value: _vm.page.slug },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.page, "slug", $event.target.value)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "help-text text-muted" }, [
-                        _vm._v(
-                          "Для автоматической генерации оставьте поле пустым"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "slug" } })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("label", [_vm._v("Родительская страница")]),
-                      _vm._v(" "),
-                      _c("Treeselect", {
-                        attrs: { options: _vm.pages },
-                        model: {
-                          value: _vm.page.parent_id,
-                          callback: function($$v) {
-                            _vm.$set(_vm.page, "parent_id", $$v)
-                          },
-                          expression: "page.parent_id"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "parent_id" } })
-                    ],
-                    1
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "card-header bg-primary text-white" },
-                  [_vm._v("\n                Meta данные\n            ")]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("label", [_vm._v("Meta title")]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.page.meta_title,
-                            expression: "page.meta_title"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.page.meta_title },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.page,
-                              "meta_title",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "meta_title" } })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("label", [_vm._v("Meta keywords")]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.page.meta_keywords,
-                            expression: "page.meta_keywords"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.page.meta_keywords },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.page,
-                              "meta_keywords",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "meta_keywords" } })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group" },
-                    [
-                      _c("label", [_vm._v("Meta description")]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.page.meta_description,
-                            expression: "page.meta_description"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: { value: _vm.page.meta_description },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.page,
-                              "meta_description",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("FormError", { attrs: { field: "meta_description" } })
-                    ],
-                    1
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "card-header text-white bg-primary" },
-                  [_vm._v("\n                Текст\n            ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
-                    _c("CKEditor", {
-                      model: {
-                        value: _vm.page.text,
-                        callback: function($$v) {
-                          _vm.$set(_vm.page, "text", $$v)
-                        },
-                        expression: "page.text"
-                      }
-                    }),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("FormError", { attrs: { field: "title" } }),
+                        _vm._v(" "),
+                        _c("FormError", { attrs: { field: "color" } })
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
-                    _c("FormError", { attrs: { field: "text" } })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-footer" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("Текст ссылки")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.page.slug,
+                              expression: "page.slug"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "text", placeholder: _vm.slug },
+                          domProps: { value: _vm.page.slug },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.page, "slug", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("small", { staticClass: "help-text text-muted" }, [
+                          _vm._v(
+                            "Для автоматической генерации оставьте поле пустым"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("FormError", { attrs: { field: "slug" } })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("Родительская страница")]),
+                        _vm._v(" "),
+                        _c("Treeselect", {
+                          attrs: { options: _vm.pages },
+                          model: {
+                            value: _vm.page.parent_id,
+                            callback: function($$v) {
+                              _vm.$set(_vm.page, "parent_id", $$v)
+                            },
+                            expression: "page.parent_id"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("FormError", { attrs: { field: "parent_id" } })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { type: "button" },
-                      on: { click: _vm.save }
-                    },
+                    "div",
+                    { staticClass: "card-header bg-primary text-white" },
+                    [_vm._v("\n                Meta данные\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("Meta title")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.page.meta_title,
+                              expression: "page.meta_title"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "text" },
+                          domProps: { value: _vm.page.meta_title },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.page,
+                                "meta_title",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("FormError", { attrs: { field: "meta_title" } })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("Meta keywords")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.page.meta_keywords,
+                              expression: "page.meta_keywords"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "text" },
+                          domProps: { value: _vm.page.meta_keywords },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.page,
+                                "meta_keywords",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("FormError", { attrs: { field: "meta_keywords" } })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("Meta description")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.page.meta_description,
+                              expression: "page.meta_description"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "text" },
+                          domProps: { value: _vm.page.meta_description },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.page,
+                                "meta_description",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("FormError", {
+                          attrs: { field: "meta_description" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "card-header text-white bg-primary" },
+                    [_vm._v("\n                Текст\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "form-group" },
                     [
-                      _c("i", { staticClass: "fa fa-check" }),
-                      _vm._v(" Сохранить\n                ")
-                    ]
-                  )
-                ])
-              ]),
+                      _c("CKEditor", {
+                        model: {
+                          value: _vm.page.text,
+                          callback: function($$v) {
+                            _vm.$set(_vm.page, "text", $$v)
+                          },
+                          expression: "page.text"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("FormError", { attrs: { field: "text" } })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm.page
+                    ? _c("SectionBanner", {
+                        model: {
+                          value: _vm.page,
+                          callback: function($$v) {
+                            _vm.page = $$v
+                          },
+                          expression: "page"
+                        }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-footer" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "button" },
+                        on: { click: _vm.save }
+                      },
+                      [
+                        _c("i", { staticClass: "fa fa-check" }),
+                        _vm._v(" Сохранить\n                ")
+                      ]
+                    )
+                  ])
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm.page
+              _vm.page.id
                 ? _c("Banner", {
                     attrs: { id: _vm.page.banner_id },
-                    on: { created: _vm.attachBanner }
+                    on: { created: _vm.attachBanner },
+                    model: {
+                      value: _vm.page.banner_id,
+                      callback: function($$v) {
+                        _vm.$set(_vm.page, "banner_id", $$v)
+                      },
+                      expression: "page.banner_id"
+                    }
                   })
                 : _vm._e()
             ],
@@ -61899,10 +62040,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "card" },
+    { staticClass: "card shadow-lg" },
     [
-      _c("div", { staticClass: "card-header text-white bg-primary" }, [
-        _vm._v("\n        Баннер "),
+      _c("div", { staticClass: "card-header" }, [
+        _vm._v("\n        Главный баннер "),
         !_vm.isExists
           ? _c("span", { staticClass: "badge badge-warning" }, [
               _vm._v("Не добавлен")
@@ -61941,24 +62082,17 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "card-body" },
-        [
-          _c("CKEditor", {
-            model: {
-              value: _vm.banner.content,
-              callback: function($$v) {
-                _vm.$set(_vm.banner, "content", $$v)
-              },
-              expression: "banner.content"
-            }
-          }),
-          _vm._v(" "),
-          _c("FormError", { attrs: { field: "content" } })
-        ],
-        1
-      ),
+      _c("CKEditor", {
+        model: {
+          value: _vm.banner.content,
+          callback: function($$v) {
+            _vm.$set(_vm.banner, "content", $$v)
+          },
+          expression: "banner.content"
+        }
+      }),
+      _vm._v(" "),
+      _c("FormError", { attrs: { field: "content" } }),
       _vm._v(" "),
       _c("div", { staticClass: "card-footer" }, [
         _c(
@@ -61988,6 +62122,171 @@ var render = function() {
               ]
             )
           : _vm._e()
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=template&id=89d1ab04&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=template&id=89d1ab04& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("div", { staticClass: "card-header bg-primary text-white" }, [
+        _vm._v("\n        Секционный баннер\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "Dropzone",
+        {
+          staticClass: "card-body",
+          attrs: { section: "section_banner", useCustomSlot: true },
+          on: { uploaded: _vm.fileUploaded }
+        },
+        [
+          _c("div", { staticClass: "banner mb-0" }, [
+            _c(
+              "h2",
+              {
+                staticClass: "banner__name-page main-container",
+                style: { color: _vm.page.color }
+              },
+              [_vm._v(_vm._s(_vm.page.section_title))]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "banner__container",
+                style: { background: "url(" + _vm.page.section_image_url + ")" }
+              },
+              [
+                _c(
+                  "h2",
+                  {
+                    staticClass: "banner__title",
+                    style: { background: _vm.page.color }
+                  },
+                  [_vm._v(_vm._s(_vm.page.section_subtitle))]
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "banner__text-preview main-container",
+                  domProps: { innerHTML: _vm._s(_vm.page.section_text) }
+                })
+              ]
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c("label", [_vm._v("Заголовок")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.page.section_title,
+                  expression: "page.section_title"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.page.section_title },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.page, "section_title", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("FormError", { attrs: { field: "section_title" } })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c("label", [_vm._v("Подзаголовок")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.page.section_subtitle,
+                  expression: "page.section_subtitle"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text" },
+              domProps: { value: _vm.page.section_subtitle },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.page, "section_subtitle", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("FormError", { attrs: { field: "section_subtitle" } })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c("label", [_vm._v("Краткое описание")]),
+            _vm._v(" "),
+            _c("CKEditor", {
+              model: {
+                value: _vm.page.section_text,
+                callback: function($$v) {
+                  _vm.$set(_vm.page, "section_text", $$v)
+                },
+                expression: "page.section_text"
+              }
+            }),
+            _vm._v(" "),
+            _c("FormError", { attrs: { field: "section_text" } })
+          ],
+          1
+        )
       ])
     ],
     1
@@ -88041,6 +88340,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Banner_vue_vue_type_template_id_fbd6b122___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Banner_vue_vue_type_template_id_fbd6b122___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/admin/js/views/admin/pages/partials/SectionBanner.vue ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SectionBanner_vue_vue_type_template_id_89d1ab04___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SectionBanner.vue?vue&type=template&id=89d1ab04& */ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=template&id=89d1ab04&");
+/* harmony import */ var _SectionBanner_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SectionBanner.vue?vue&type=script&lang=js& */ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SectionBanner_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SectionBanner_vue_vue_type_template_id_89d1ab04___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SectionBanner_vue_vue_type_template_id_89d1ab04___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/admin/js/views/admin/pages/partials/SectionBanner.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionBanner_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./SectionBanner.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionBanner_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=template&id=89d1ab04&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=template&id=89d1ab04& ***!
+  \********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionBanner_vue_vue_type_template_id_89d1ab04___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./SectionBanner.vue?vue&type=template&id=89d1ab04& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/admin/js/views/admin/pages/partials/SectionBanner.vue?vue&type=template&id=89d1ab04&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionBanner_vue_vue_type_template_id_89d1ab04___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionBanner_vue_vue_type_template_id_89d1ab04___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

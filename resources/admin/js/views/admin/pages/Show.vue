@@ -26,7 +26,6 @@
         <div v-if="page">
             <div class="card">
                 <div class="card-body">
-
                     <div class="form-group">
                         <label>Название страницы</label>
                         <div class="d-flex">
@@ -80,6 +79,8 @@
                     <CKEditor v-model="page.text"/>
                     <FormError field="text"/>
                 </div>
+
+                <SectionBanner v-if="page" v-model="page" />
                 <div class="card-footer">
                     <button class="btn btn-primary" type="button" @click="save">
                         <i class="fa fa-check"></i> Сохранить
@@ -87,7 +88,7 @@
                 </div>
             </div>
 
-            <Banner v-if="page" :id="page.banner_id" @created="attachBanner" />
+            <Banner v-if="page.id" :id="page.banner_id" v-model="page.banner_id" @created="attachBanner" />
         </div>
     </div>
 </template>
@@ -99,11 +100,12 @@
     import Treeselect from '@riophae/vue-treeselect'
     import FormError from 'components/form/FormError'
     import Banner from './partials/Banner'
+    import SectionBanner from './partials/SectionBanner'
 
     const slugify = require('@sindresorhus/slugify')
 
     export default {
-        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, CKEditor},
+        components: {VueElementLoading, Swatches, Treeselect, FormError, Banner, CKEditor, SectionBanner},
         data() {
             return {
                 loading: true,
