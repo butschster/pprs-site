@@ -27,6 +27,7 @@ class CreatePagesTable extends Migration
 
             $table->string('section_image_uuid')->nullable();
             $table->string('section_title')->nullable();
+            $table->string('section_subtitle')->nullable();
             $table->text('section_text')->nullable();
 
             $table->text('text')->nullable();

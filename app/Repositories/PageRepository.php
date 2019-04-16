@@ -7,12 +7,21 @@ use Illuminate\Support\Collection;
 
 class PageRepository
 {
+    protected $cachedMenu;
+
     /**
      * @return Collection
      */
     public function getMenu(): Collection
     {
-        return Page::whereIsRoot()->defaultOrder()->with('children', 'children.ancestors', 'ancestors')->get();
+        if ($this->cachedMenu) {
+            return $this->cachedMenu;
+        }
+
+        return $this->cachedMenu = Page::whereIsRoot()
+            ->defaultOrder()
+            ->with('children', 'children.ancestors', 'ancestors')
+            ->get();
     }
 
     /**
