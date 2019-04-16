@@ -10855,7 +10855,6 @@ body.ckeditor {
 .top-banner-wrapper {
   margin-bottom: 2rem;
   position: relative;
-  z-index: 1500;
 }
 
 .top-banner-wrapper a:focus,
