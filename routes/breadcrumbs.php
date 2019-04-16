@@ -5,7 +5,7 @@ Breadcrumbs::for('home', function ($trail) {
 });
 
 Breadcrumbs::for('page', function ($trail, $page) {
-    $parent = $page->ancestors->first();
+    $parent = $page->ancestors->last();
 
     if (!$parent) {
         $trail->parent('home');

@@ -17,6 +17,6 @@
     <article class="article-text main-container mb-5">
         <h2 class="article-text__title">{{ $news->title }}</h2>
         <small class="text-muted d-block mb-3">{{ $news->formatted_date }}</small>
-        <div class="article-text__description">{!! $news->text !!}</div>
+        <div class="article-text__description">{!! $news->parsed_text !!}</div>
     </article>
 @endsection

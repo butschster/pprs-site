@@ -6,7 +6,7 @@ window.Ziggy = Ziggy
 
 require('./bootstrap');
 
-Vue.component('quote', require('./components/Quote.vue').default);
+Vue.component('quote', require('./components/Quote').default);
 
 Vue.mixin({
     methods: {route}

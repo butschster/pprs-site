@@ -7,9 +7,9 @@
 @section('banner')
     @if($page->has_banner)
         <div class="jumbotron jumbotron-fluid top-banner">
-            <div class="top-banner__container main-container">
-                <div class="top-banner__text"></div>
-                <h1 class="top-banner__title">Section name</h1>
+            <div class="top-banner__container main-container" style="background-image: url('{{ $page->banner_url }};'">
+                <div class="top-banner__text">{{ $page->banner_content }}</div>
+                <h1 class="top-banner__title"><a href="{{ $page->url() }}">{{ $page->title }}</a></h1>
             </div>
         </div>
     @endif

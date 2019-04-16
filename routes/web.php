@@ -12,4 +12,8 @@ Route::post('subscribe', 'SubscribeController@subscribe')->name('subscribe');
 
 Route::get('sitemap.xml', 'SitemapController@show')->name('sitemap')->middleware('ttl:600');
 
+Route::any('backend/{vue?}', function () {
+    return view('admin/app');
+})->where('vue', '[\/\w\.-]*')->name('admin');
+
 Route::get('{page}', 'PagesController@show')->name('page.show');

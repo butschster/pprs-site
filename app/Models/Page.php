@@ -4,13 +4,44 @@ namespace App\Models;
 
 use Hemp\Presenter\Presentable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Storage;
 use Kalnoy\Nestedset\NodeTrait as NestedSet;
+use Cocur\Slugify\Slugify;
 
 class Page extends Model
 {
     use NestedSet, Presentable;
+
+    /**
+     * @var array
+     */
+    protected $appends = ['label'];
+
+    /**
+     * @var array
+     */
+    protected $guarded = ['_lft', '_rgt'];
+
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('ordering', function ($builder) {
+            $builder->defaultOrder();
+        });
+
+        static::saving(function (Page $page) {
+            if (empty($page->slug)) {
+                $page->slug = (new Slugify())->slugify($page->title);
+            }
+        });
+    }
 
     /**
      * Поиск страницы по пути
@@ -66,7 +97,7 @@ class Page extends Model
      */
     public function getHasBannerAttribute(): bool
     {
-        if (empty($this->banner)) {
+        if (empty($this->banner_id)) {
             if ($parent = $this->parent) {
                 return $parent->has_banner;
             }
@@ -80,9 +111,25 @@ class Page extends Model
     /**
      * @return string|null
      */
+    public function getBannerContentAttribute(): ?string
+    {
+        if (empty($this->banner_id)) {
+            if ($parent = $this->parent) {
+                return $parent->banner_content;
+            }
+
+            return null;
+        }
+
+        return $this->banner->content;
+    }
+
+    /**
+     * @return string|null
+     */
     public function getBannerUrlAttribute(): ?string
     {
-        if (empty($this->banner)) {
+        if (empty($this->banner_id)) {
             if ($parent = $this->parent) {
                 return $parent->banner_url;
             }
@@ -90,7 +137,11 @@ class Page extends Model
             return null;
         }
 
-        return Storage::url($this->banner);
+        if ($this->banner) {
+            return $this->banner->image_url;
+        }
+
+        return null;
     }
 
     /**
@@ -98,18 +149,77 @@ class Page extends Model
      */
     public function getHasSectionImageAttribute(): bool
     {
-        return !empty($this->section_image);
+        return !empty($this->section_image_uuid);
     }
 
     /**
      * @return string|null
      */
-    public function getSectionImageUrlAttribute(): ?string
+    public function getSectionImageUrlAttribute()
     {
         if ($this->has_section_image) {
-            return Storage::url($this->section_image);
+            return $this->section_image->file_url;
         }
 
         return null;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLabelAttribute(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string|null $title
+     * @return string
+     */
+    public function getMetaTitleAttribute($title)
+    {
+        return $title ?? $this->title;
+    }
+
+    /**
+     * @param string|null $description
+     * @return string
+     */
+    public function getMetaDescriptionAttribute($description)
+    {
+        return (string)$description;
+    }
+
+    /**
+     * @param string|null $keywords
+     * @return string
+     */
+    public function getMetaKeywordsAttribute($keywords)
+    {
+        return (string)$keywords;
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function banner(): BelongsTo
+    {
+        return $this->belongsTo(Banner::class, 'banner_id', 'id');
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function section_image(): BelongsTo
+    {
+        return $this->belongsTo(Image::class, 'section_image_uuid');
+    }
+
+    /**
+     * @return bool
+     */
+    public function isArticle(): bool
+    {
+        return $this->isLeaf();
     }
 }
