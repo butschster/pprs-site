@@ -44,8 +44,8 @@
         data() {
             return {
                 loginData: {
-                    email: 'admin@site.com',
-                    password: 'password',
+                    email: '',
+                    password: '',
                     remember: ''
                 }
             }
