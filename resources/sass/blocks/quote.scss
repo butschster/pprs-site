@@ -1,5 +1,37 @@
 .quote {
+    display: flex;
+
     h5 {
-        font-size: 1rem;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+}
+
+.quote__text {
+    background-color: $gray-100;
+    background-image: url("../images/bg-quote.png");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.quote__img {
+    min-height: 350px;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        width: auto;
+        height: 100%
     }
 }

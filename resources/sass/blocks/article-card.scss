@@ -5,13 +5,14 @@
     padding-left: 0;
     padding-right: 0;
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 @include  media-breakpoint-up(lg) {
     .article-card {
         order: 3;
         flex-direction: row;
+        margin: 3rem 0;
 
         & .banner__text-preview {
             font-size: 0.95rem;

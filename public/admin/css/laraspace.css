@@ -18995,7 +18995,7 @@ ____.dashbox:hover {
   color: #000000;
   transition: all 0.3s ease-in-out;
   background-size: cover;
-  background-position: center;
+  background-position: 0 50%;
   font-weight: 700;
 }
 

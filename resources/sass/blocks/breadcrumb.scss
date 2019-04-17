@@ -1,7 +1,7 @@
 .breadcrumb {
     display: none;
     margin-bottom: 0;
-    padding: 0.85rem;
+    padding: 0.85rem 0;
 
     & a {
         text-decoration: underline;
@@ -14,10 +14,14 @@
 .breadcrumb__wrapper {
     width: 100%;
     background-color: $breadcrumb-bg;
+    z-index: 20000;
+    position: relative;
 }
 
 @include  media-breakpoint-up(md) {
     .breadcrumb {
         display: flex;
+        z-index: 20000;
+        position: relative;
     }
 }

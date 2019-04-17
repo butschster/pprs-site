@@ -30,13 +30,13 @@
                 <div class="row mx-0 mx-lg-n2">
 
                     @if($showLastNews ?? true)
-                        <section class="px-0 pl-lg-2 col-lg-8  order-1">
+                        <section class="px-0 px-lg-2 pr-xl-0 col-lg-8  order-1">
                             @yield('content')
                         </section>
-                        <aside class=" px-0 px-lg-2 pl-xl-4 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
+                        <aside class=" px-0 px-lg-2 pl-xl-4 mb-5 mb-lg-0 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
 
                             @if(!request()->routeIs('subscribe.form'))
-                                <a href="{{ route('subscribe.form') }}" class="btn btn-block btn-lg btn-warning btn-subscribe">
+                                <a href="{{ route('subscribe.form') }}" class="d-none d-lg-block btn btn-block btn-lg btn-warning btn-subscribe">
                                     Подписаться на рассылку
                                 </a>
                             @endif
@@ -46,6 +46,14 @@
                     @else
                         @yield('content')
                     @endif
+
+                    <div class="main-container d-block d-lg-none order-2">
+                        @if(!request()->routeIs('subscribe.form'))
+                            <a href="{{ route('subscribe.form') }}" class="btn btn-block btn-lg btn-warning btn-subscribe mt-3 mb-5">
+                                Подписаться на рассылку
+                            </a>
+                        @endif
+                    </div>
 
                     @if(!request()->routeIs('home'))
                         @include('layout._partials.random_articles')

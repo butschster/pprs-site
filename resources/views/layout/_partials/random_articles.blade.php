@@ -1,4 +1,4 @@
-<div class="article-card card-deck mx-lg-n3 px-lg-4">
+<div class="article-card card-deck mx-lg-n3 px-lg-2">
     @foreach($pages as $page)
         <div class="banner card mx-0 px-lg-3 mb-4 mb-lg-0">
             <h3 class="card-header bg-white banner__name-page main-container px-0">

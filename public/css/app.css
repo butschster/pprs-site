@@ -11670,7 +11670,7 @@ body.ckeditor {
 .breadcrumb {
   display: none;
   margin-bottom: 0;
-  padding: 0.85rem;
+  padding: 0.85rem 0;
 }
 
 .breadcrumb a {
@@ -11683,17 +11683,22 @@ body.ckeditor {
 .breadcrumb__wrapper {
   width: 100%;
   background-color: #eaeaea;
+  z-index: 20000;
+  position: relative;
 }
 
 @media (min-width: 720px) {
   .breadcrumb {
     display: flex;
+    z-index: 20000;
+    position: relative;
   }
 }
 
 .main-navbar {
   background-color: #ffffff;
   padding: 0;
+  margin-top: -6px;
 }
 
 .main-navbar .show {
@@ -11721,6 +11726,7 @@ body.ckeditor {
 
 .main-navbar__link i {
   line-height: 26px;
+  margin-right: 12px;
 }
 
 .main-navbar__toggler {
@@ -11754,27 +11760,45 @@ body.ckeditor {
     font-size: 22px;
     line-height: 20px;
     padding-top: 0.75rem;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.5rem;
+    padding-left: 15px;
     border-top: 1.2rem solid transparent;
   }
 
   .main-navbar__link i {
     line-height: 20px;
+    margin-right: 7px;
   }
 
   .main-navbar {
-    min-height: 150px;
+    height: 100%;
   }
 
   .main-navbar .nav-item {
     width: 20%;
-    max-width: 220px;
     margin-bottom: 0;
+    height: 100%;
+  }
+
+  .main-navbar .nav-item .main-navbar__link {
+    justify-content: center;
   }
 
   .main-navbar .nav-item:nth-last-child(-n+3) .main-navbar__dropdown-menu {
     left: auto;
     right: 0;
+  }
+
+  .main-navbar .nav-item:first-child .main-navbar__link {
+    justify-content: flex-start;
+  }
+
+  .main-navbar .nav-item:last-child {
+    margin-right: 0 !important;
+  }
+
+  .main-navbar .nav-item:last-child .main-navbar__link {
+    justify-content: flex-end;
   }
 
   .main-navbar .show {
@@ -11945,7 +11969,7 @@ body.ckeditor {
   color: #000000;
   transition: all 0.3s ease-in-out;
   background-size: cover;
-  background-position: center;
+  background-position: 0 50%;
   font-weight: 700;
 }
 
@@ -12090,7 +12114,7 @@ body.ckeditor {
   font-weight: 700;
   border-radius: 8rem;
   margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   background-image: url(/images/btn-bg.png?1b45ffa1c88405f2eda8cdfad1d1a867);
   background-size: cover;
   background-position: center;
@@ -12123,7 +12147,7 @@ body.ckeditor {
 
 .news__link {
   color: #000000;
-  font-size: 33px;
+  font-size: 27px;
 }
 
 .news__link:focus,
@@ -12137,26 +12161,29 @@ body.ckeditor {
   color: #495057;
   display: block;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   text-transform: uppercase;
   font-size: 21px;
 }
 
-.news__description {
-  font-size: 27px;
+.news__title {
+  font-size: 33px;
+  font-weight: 700;
 }
 
 @media (min-width: 992px) {
   .news__link {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .news__date {
     font-size: 14px;
+    margin: 0.5rem;
+    font-weight: 700;
   }
 
-  .news__description {
-    font-size: 18px;
+  .news__title {
+    font-size: 22px;
   }
 }
 
@@ -12167,13 +12194,14 @@ body.ckeditor {
   padding-left: 0;
   padding-right: 0;
   flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 992px) {
   .article-card {
     order: 3;
     flex-direction: row;
+    margin: 3rem 0;
   }
 
   .article-card .banner__text-preview {
@@ -12251,8 +12279,43 @@ body.ckeditor {
   }
 }
 
+.quote {
+  display: flex;
+}
+
 .quote h5 {
-  font-size: 1rem;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.quote a {
+  color: #000000;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.quote__text {
+  background-color: #f3f4f0;
+  background-image: url(/images/bg-quote.png?c8bf027475eeaa0fb0a8acabda4856f7);
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.quote__img {
+  min-height: 350px;
+  overflow: hidden;
+}
+
+.quote__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
@@ -12314,6 +12377,12 @@ body.ckeditor {
 @media (min-width: 992px) {
   .social {
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1500px) {
+  .social {
+    padding-left: 105px !important;
   }
 }
 

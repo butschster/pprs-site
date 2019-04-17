@@ -11,7 +11,7 @@
             <li class="nav-item dropdown mr-1">
                 <a class="nav-link main-navbar__link px-0" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-angle-right mr-1" style="color: {{ $page->color }}"></i>
+                    <i class="fas fa-angle-right" style="color: {{ $page->color }}"></i>
                     <b>{{ $page->title }}</b>
                 </a>
                 <div class="dropdown-menu main-navbar__dropdown-menu" aria-labelledby="navbarDropdown">
