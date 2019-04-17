@@ -43,7 +43,7 @@ const actions = {
         })
     },
 
-    logout() {
+    logout({commit}) {
         return new Promise((resolve, reject) => {
             axios.post('/api/auth/logout').then(response => {
                 Ls.remove('auth.token')

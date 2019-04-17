@@ -8,7 +8,7 @@
             <div><i class="fa fa-3x fa-microphone text-secondary mb-4"></i></div>
 
             <router-link tag="h5" v-if="quote.id" :to="{name: 'quote.show', params: {id: quote.id }}" v-html="quote.text" />
-            <h5 v-else v-html="quote.text" />
+            <div v-else v-html="quote.text" />
         </div>
         <div v-if="quote.image" class="quote__img d-none d-md-block px-0 col-6">
             <img height="360" width="560" :src="quote.image"/>
