@@ -21,15 +21,13 @@
     </header>
 </template>
 <script type="text/babel">
-    import Auth from '../../../services/auth'
-
     export default {
         methods: {
             onNavToggle() {
                 this.$utils.toggleSidebar()
             },
             logout() {
-                Auth.logout().then(() => {
+                this.$store.dispatch('auth/logout',).then(() => {
                     this.$router.replace({name: 'login'})
                 })
             }

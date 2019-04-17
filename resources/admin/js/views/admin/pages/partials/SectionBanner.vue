@@ -3,10 +3,10 @@
         <div class="card-header bg-primary text-white">
             Секционный баннер
         </div>
-        <Dropzone section="section_banner" @uploaded="fileUploaded" :useCustomSlot="true" class="card-body">
+        <Dropzone id="section_banner" section="section_banner" @uploaded="fileUploaded" :useCustomSlot="true" class="card-body">
             <div class="banner mb-0">
                 <h2 class="banner__name-page main-container" :style="{color: page.color }">{{ page.section_title }}</h2>
-                <div class="banner__container" :style="{background: `url(${page.section_image_url})`}">
+                <div class="banner__container" :style="bannerImage">
                     <h2 class="banner__title" :style="{background: page.color}">{{ page.section_subtitle }}</h2>
                     <div class="banner__text-preview main-container" v-html="page.section_text"/>
                 </div>
@@ -49,7 +49,8 @@
                     section_title: '',
                     section_subtitle: '',
                     section_text: '',
-                    section_image_url: ''
+                    section_image_url: '',
+                    section_image_uuid: null
                 }
             }
         },
@@ -69,6 +70,15 @@
                 this.page.section_image_uuid = data.uuid
                 this.page.section_image_url = data.url
                 dropzone.removeAllFiles()
+            }
+        },
+        computed: {
+            bannerImage() {
+                if (this.page.section_image_url) {
+                    return {background: `url(${this.page.section_image_url})`}
+                }
+
+                return null
             }
         }
     }

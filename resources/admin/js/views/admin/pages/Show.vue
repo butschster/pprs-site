@@ -80,7 +80,8 @@
                     <FormError field="text"/>
                 </div>
 
-                <SectionBanner v-if="page" v-model="page" />
+                <SectionBanner v-model="page" />
+
                 <div class="card-footer">
                     <button class="btn btn-primary" type="button" @click="save">
                         <i class="fa fa-check"></i> Сохранить

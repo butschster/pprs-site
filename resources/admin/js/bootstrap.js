@@ -48,23 +48,6 @@ global.axios.defaults.headers.common = {
 }
 
 /**
- * Global Axios Request Interceptor
- */
-
-global.axios.interceptors.request.use((config) => {
-    // Do something before request is sent
-    const AUTH_TOKEN = Ls.get('auth.token')
-
-    if (AUTH_TOKEN) {
-        config.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`
-    }
-
-    return config
-}, error => {
-    return Promise.reject(error)
-})
-
-/**
  * Custom Directives
  */
 require('./helpers/directives')

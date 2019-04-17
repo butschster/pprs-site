@@ -1,3 +1,4 @@
+
 export default {
     get(key) {
         return localStorage.getItem(key) ? localStorage.getItem(key) : null

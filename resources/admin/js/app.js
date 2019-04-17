@@ -8,6 +8,23 @@ Vue.component('quote-preview', require('../../js/components/Quote').default);
 
 Vue.prototype.$utils = utils
 
+/**
+ * Global Axios Request Interceptor
+ */
+
+global.axios.interceptors.request.use((config) => {
+    // Do something before request is sent
+    const bearerString = store.getters['auth/bearerString']
+
+    if (bearerString) {
+        config.headers.common['Authorization'] = bearerString
+    }
+
+    return config
+}, error => {
+    return Promise.reject(error)
+})
+
 global.axios.interceptors.response.use(response => {
     store.dispatch('validation/clear')
     return response
