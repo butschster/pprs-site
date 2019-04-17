@@ -11665,6 +11665,11 @@ body.ckeditor {
 .main-header {
   font-size: 0.85rem;
   line-height: 20px;
+  background-color: #ffffff;
+}
+
+.main-header--gray {
+  background-color: #f3f4f0;
 }
 
 .breadcrumb {

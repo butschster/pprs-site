@@ -1,4 +1,9 @@
 .main-header {
     font-size: 0.85rem;
     line-height: 20px;
+    background-color: $white;
+
+    &--gray {
+        background-color: $gray-100;
+    }
 }
