@@ -1,11 +1,12 @@
 <template>
-    <div class="d-flex shadow-lg bg-white align-items-stretch rounded my-5" v-if="loaded">
-        <div class="border-right p-5"
+    <div class="d-flex bg-white my-5 quote" v-if="loaded">
+        <div class="border-right px-3 py-4 quote__text mw-50 px-0 col-12- col-lg-6"
              style="background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/arches.png')">
-            <div><i class="fas fa-3x fa-microphone-alt"></i></div>
+            <div><i class="fas fa-3x fa-microphone-alt text-secondary"></i></div>
             <h5 class="mt-4 mb-0">{{ text }}</h5>
+            <a href="#" class="text-decoration text-black">ссылка</a>
         </div>
-        <img class="bd-placeholder-img" height="250px" :src="image"/>
+            <img class="bd-placeholder-img d-none d-lg-block px-0 col-6" height="360" width="560" :src="image"/>
     </div>
 </template>
 

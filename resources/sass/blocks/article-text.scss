@@ -1,5 +1,38 @@
 .article-text {
     margin-bottom: 3rem;
+
+    h3 {
+       font-size: 30px;
+       line-height: 1.2;
+       margin-bottom: 50px;
+       font-weight: 700;
+   }
+
+   img {
+       width: 100%;
+       height: auto;
+   }
+
+   ul {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+
+       li {
+           position: relative;
+           padding: 0;
+           padding-left: 30px;
+           font-size: 24px;
+
+           &::before {
+           content:"\2014";
+           position: absolute;
+           top: 0;
+           left: 0;
+           color: #eebb45;
+           }
+       }
+   }
 }
 
 .article-text__title {
@@ -8,6 +41,12 @@
     margin-bottom: 3rem;
 }
 
+.article-text__description {
+    margin-top: 2.5rem;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 400;
+}
 
 @include  media-breakpoint-up(md) {
     .article-text__title {
@@ -24,5 +63,6 @@
 
     .article-text__description {
         padding-right: 2rem;
+        font-size: 24px;
     }
 }

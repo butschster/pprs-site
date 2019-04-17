@@ -7,7 +7,8 @@
 @section('banner')
     <div class="jumbotron jumbotron-fluid top-banner top-banner--news">
         <div class="top-banner__container main-container">
-            <div class="top-banner__text"></div>
+            <strong>Первично-прогрессирующий рассеянный склероз</strong>
+            <div class="top-banner__text">информационный портал для пациентов и их родственников</div>
             <h1 class="top-banner__title">Новости</h1>
         </div>
     </div>

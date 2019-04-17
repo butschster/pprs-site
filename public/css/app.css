@@ -11599,6 +11599,8 @@ a.text-dark:focus {
 
 body {
   font-family: "Trebuchet", "Arial", sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.2;
 }
 
 html {
@@ -11698,6 +11700,12 @@ body.ckeditor {
   background-color: #eaeaea;
 }
 
+.main-navbar .navbar-nav .show > .nav-link i {
+  height: 20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .main-navbar__list .nav-item {
   margin-bottom: 20px;
 }
@@ -11705,14 +11713,14 @@ body.ckeditor {
 .main-navbar__link {
   display: flex;
   color: #333333;
-  font-size: 1.2rem;
-  line-height: 20px;
+  font-size: 30px;
+  line-height: 26px;
   letter-spacing: -0.02em;
   padding-bottom: 1.2rem;
 }
 
 .main-navbar__link i {
-  line-height: 20px;
+  line-height: 26px;
 }
 
 .main-navbar__toggler {
@@ -11731,6 +11739,7 @@ body.ckeditor {
   font-size: 30px;
   line-height: 30px;
   letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 .main-navbar__dropdown-menu .dropdown-item:focus,
@@ -11742,10 +11751,15 @@ body.ckeditor {
   .main-navbar__link {
     height: 100%;
     background-color: #ffffff;
-    font-size: 0.85rem;
+    font-size: 22px;
+    line-height: 20px;
     padding-top: 0.75rem;
     padding-bottom: 1.2rem;
     border-top: 1.2rem solid transparent;
+  }
+
+  .main-navbar__link i {
+    line-height: 20px;
   }
 
   .main-navbar {
@@ -11789,12 +11803,14 @@ body.ckeditor {
 
   .main-navbar__dropdown-menu .dropdown-item {
     font-size: 22px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
     white-space: normal;
   }
 }
 
 .top-banner-wrapper {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   position: relative;
 }
 
@@ -11838,10 +11854,19 @@ body.ckeditor {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 12px;
+  margin-bottom: 1.5rem;
 }
 
 .top-banner__title {
   color: #ffffff;
+}
+
+.top-banner strong {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .top-banner--main {
@@ -11851,7 +11876,6 @@ body.ckeditor {
 .top-banner--main__title {
   font-size: 2rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 .top-banner--main__text {
@@ -11863,7 +11887,8 @@ body.ckeditor {
 }
 
 .top-banner__container {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 720px) {
@@ -11873,20 +11898,19 @@ body.ckeditor {
 
   .top-banner--main__title {
     margin-bottom: 2rem;
-    margin-top: 2rem;
     font-size: 62px;
   }
 }
 
 @media (min-width: 992px) {
-  .top-banner__text {
+  .top-banner__text,
+  .top-banner strong {
     width: 80%;
   }
 
   .top-banner__title {
     width: 80%;
     font-size: 3.8rem;
-    margin-top: 1rem;
   }
 
   .top-banner--main__title {
@@ -11901,7 +11925,8 @@ body.ckeditor {
 
 @media (min-width: 1200px) {
   .top-banner__title,
-  .top-banner__text {
+  .top-banner__text,
+  .top-banner strong {
     width: 65%;
     max-width: 790px;
   }
@@ -12019,18 +12044,22 @@ body.ckeditor {
   margin-bottom: 3rem;
 }
 
-.pagination-banners__item a {
+.pagination-banners .page-item {
+  margin: 0 3px;
+}
+
+.pagination-banners .page-item .page-link {
   border-radius: 50%;
 }
 
-.pagination-banners__item:first-child .page-link {
+.pagination-banners .page-item:first-child .page-link {
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
   color: #e1d9a4;
   border-color: #e1d9a4;
 }
 
-.pagination-banners__item:last-child .page-link {
+.pagination-banners .page-item:last-child .page-link {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
   color: #e1d9a4;
@@ -12057,7 +12086,7 @@ body.ckeditor {
 
 .btn-subscribe {
   padding: 1.5rem;
-  font-size: 2rem;
+  font-size: 27px;
   font-weight: 700;
   border-radius: 8rem;
   margin-top: 3rem;
@@ -12067,12 +12096,28 @@ body.ckeditor {
   background-position: center;
 }
 
+.btn-subscribe--empty {
+  border: 3px solid #e1d9a4;
+  background-image: none;
+  margin: 0;
+  margin-bottom: 3rem;
+  padding: 0.45rem 1rem;
+}
+
+.btn-subscribe--empty:focus,
+.btn-subscribe--empty:hover {
+  background-color: #e1d9a4;
+  border-color: #e1d9a4;
+}
+
 @media (min-width: 992px) {
   .btn-subscribe {
-    font-size: 1.05rem;
-    padding: 0.75rem 1rem;
-    margin-bottom: 3rem;
+    padding: 0.7rem 1rem;
     margin-top: 0;
+  }
+
+  .btn-subscribe--empty {
+    padding: 0.45rem 1rem;
   }
 }
 
@@ -12141,10 +12186,50 @@ body.ckeditor {
   margin-bottom: 3rem;
 }
 
+.article-text h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.article-text img {
+  width: 100%;
+  height: auto;
+}
+
+.article-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-text ul li {
+  position: relative;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 24px;
+}
+
+.article-text ul li::before {
+  content: "\2014";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #eebb45;
+}
+
 .article-text__title {
   color: #3490dc;
   font-size: 2rem;
   margin-bottom: 3rem;
+}
+
+.article-text__description {
+  margin-top: 2.5rem;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 400;
 }
 
 @media (min-width: 720px) {
@@ -12162,7 +12247,12 @@ body.ckeditor {
 
   .article-text__description {
     padding-right: 2rem;
+    font-size: 24px;
   }
+}
+
+.quote h5 {
+  font-size: 1rem;
 }
 
 @media (min-width: 992px) {
@@ -12214,6 +12304,11 @@ body.ckeditor {
 .social__link:focus,
 .social__link:hover {
   opacity: 0.7;
+}
+
+.social__link img {
+  width: 71px;
+  height: 71px;
 }
 
 @media (min-width: 992px) {

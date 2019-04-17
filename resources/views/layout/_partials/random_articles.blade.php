@@ -4,7 +4,7 @@
             <h3 class="card-header bg-white banner__name-page main-container px-0">
                 <a class="banner__name-page" href="{{ $page->url() }}" style="color: {{ $page->color }}">{{ $page->section_title }}</a>
             </h3>
-            <a href="{{ $page->url() }}" class="banner__container card-body" style="background: url({{ $page->section_image_url }})">
+            <a href="{{ $page->url() }}" class="banner__container card-body" style="background-image: url({{ $page->section_image_url }})">
                 <h4 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_subtitle }}</h4>
                 <div class="banner__text-preview card-text main-container px-lg-4">{{ $page->section_text }}</div>
             </a>

@@ -9419,6 +9419,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -63375,35 +63376,38 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.loaded
-    ? _c(
-        "div",
-        {
-          staticClass:
-            "d-flex shadow-lg bg-white align-items-stretch rounded my-5"
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass: "border-right p-5",
-              staticStyle: {
-                "background-image":
-                  "url('https://www.toptal.com/designers/subtlepatterns/patterns/arches.png')"
-              }
-            },
-            [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("h5", { staticClass: "mt-4 mb-0" }, [_vm._v(_vm._s(_vm.text))])
-            ]
-          ),
-          _vm._v(" "),
-          _c("img", {
-            staticClass: "bd-placeholder-img",
-            attrs: { height: "250px", src: _vm.image }
-          })
-        ]
-      )
+    ? _c("div", { staticClass: "d-flex bg-white my-5 quote" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "border-right px-3 py-4 quote__text mw-50 px-0 col-12- col-lg-6",
+            staticStyle: {
+              "background-image":
+                "url('https://www.toptal.com/designers/subtlepatterns/patterns/arches.png')"
+            }
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("h5", { staticClass: "mt-4 mb-0" }, [_vm._v(_vm._s(_vm.text))]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "text-decoration text-black",
+                attrs: { href: "#" }
+              },
+              [_vm._v("ссылка")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "bd-placeholder-img d-none d-lg-block px-0 col-6",
+          attrs: { height: "360", width: "560", src: _vm.image }
+        })
+      ])
     : _vm._e()
 }
 var staticRenderFns = [
@@ -63411,7 +63415,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("i", { staticClass: "fas fa-3x fa-microphone-alt" })])
+    return _c("div", [
+      _c("i", { staticClass: "fas fa-3x fa-microphone-alt text-secondary" })
+    ])
   }
 ]
 render._withStripped = true

@@ -1,6 +1,6 @@
 .btn-subscribe {
     padding: 1.5rem;
-    font-size: 2rem;
+    font-size: 27px;
     font-weight: 700;
     border-radius: 8rem;
     margin-top: 3rem;
@@ -8,13 +8,29 @@
     background-image: url("../images/btn-bg.png");
     background-size: cover;
     background-position: center;
+
+    &--empty {
+        border: 3px solid $brown-light;
+        background-image: none;
+        margin: 0;
+        margin-bottom: 3rem;
+        padding: 0.45rem 1rem;
+
+        &:focus,
+        &:hover {
+            background-color: $brown-light;
+            border-color: $brown-light;
+        }
+    }
 }
 
 @include  media-breakpoint-up(lg) {
     .btn-subscribe {
-        font-size: 1.05rem;
-        padding: 0.75rem 1rem;
-        margin-bottom: 3rem;
+        padding: 0.7rem 1rem;
         margin-top: 0;
+
+        &--empty {
+            padding: 0.45rem 1rem;
+        }
     }
 }

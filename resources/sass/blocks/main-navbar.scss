@@ -5,6 +5,14 @@
     & .show {
         background-color: $gray-200;
     }
+
+    & .navbar-nav .show > .nav-link {
+        & i {
+            height: 20px;
+            transform: rotate(90deg);
+        }
+    }
+
 }
 
 .main-navbar__list {
@@ -16,13 +24,13 @@
 .main-navbar__link {
     display: flex;
     color: $gray-900;
-    font-size: 1.2rem;
-    line-height: 20px;
+    font-size: 30px;
+    line-height: 26px;
     letter-spacing: -0.02em;
     padding-bottom: 1.2rem;
 
     & i {
-        line-height: 20px;
+        line-height: 26px;
     }
 }
 
@@ -41,6 +49,7 @@
         font-size: 30px;
         line-height: 30px;
         letter-spacing: -0.02em;
+        font-weight: 700;
 
         &:focus,
         &:hover {
@@ -53,10 +62,15 @@
     .main-navbar__link {
         height: 100%;
         background-color: $white;
-        font-size: 0.85rem;
+        font-size: 22px;
+        line-height: 20px;
         padding-top: 0.75rem;
         padding-bottom: 1.2rem;
         border-top: 1.2rem solid transparent;
+
+        & i {
+            line-height: 20px;
+        }
     }
 
     .main-navbar {
@@ -102,6 +116,8 @@
 
         & .dropdown-item {
             font-size: 22px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
             white-space: normal;
         }
     }

@@ -11,10 +11,19 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         font-size: 12px;
+        margin-bottom: 1.5rem;
     }
 
     &__title {
-            color: $white;
+        color: $white;
+    }
+
+    & strong {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
     }
 
     &--main {
@@ -23,7 +32,6 @@
         &__title {
             font-size: 2rem;
             margin-bottom: 1rem;
-            margin-top: 1rem;
         }
 
         &__text {
@@ -36,7 +44,8 @@
     }
 
     &__container {
-        padding: 2rem 0;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -49,7 +58,6 @@
 
         &--main__title {
             margin-bottom: 2rem;
-            margin-top: 2rem;
             font-size: 62px;
         }
     }
@@ -58,14 +66,14 @@
 @include  media-breakpoint-up(lg) {
     .top-banner {
 
-        &__text {
+        &__text,
+        strong {
             width: 80%;
         }
 
         &__title {
             width: 80%;
             font-size: 3.8rem;
-            margin-top: 1rem;
         }
 
         &--main__title {
@@ -83,7 +91,8 @@
     .top-banner {
 
         &__title,
-        &__text {
+        &__text,
+        strong {
             width: 65%;
             max-width: 790px;
         }
