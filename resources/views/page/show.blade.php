@@ -12,7 +12,6 @@
         <div class="jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
         @endif
             <div class="top-banner__container main-container">
-                <strong>Первично-прогрессирующий рассеянный склероз</strong>
                 <div class="top-banner__text">{{ $banner->content() }}</div>
                 <h1 class="top-banner__title">{{ $banner->title() }}</h1>
             </div>
