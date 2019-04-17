@@ -11669,7 +11669,7 @@ body.ckeditor {
 }
 
 .main-header--gray {
-  background-color: #f3f4f0;
+  background-color: #eaeaea;
 }
 
 .breadcrumb {
@@ -11701,7 +11701,7 @@ body.ckeditor {
 }
 
 .main-navbar {
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 0;
   margin-top: -6px;
 }
@@ -11732,6 +11732,7 @@ body.ckeditor {
 .main-navbar__link i {
   line-height: 26px;
   margin-right: 12px;
+  padding-right: 8px;
 }
 
 .main-navbar__toggler {
@@ -11758,7 +11759,7 @@ body.ckeditor {
   text-decoration: underline;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .main-navbar__link {
     height: 100%;
     background-color: #ffffff;
@@ -11766,7 +11767,6 @@ body.ckeditor {
     line-height: 20px;
     padding-top: 0.75rem;
     padding-bottom: 1.5rem;
-    padding-left: 15px;
     border-top: 1.2rem solid transparent;
   }
 
@@ -11780,7 +11780,6 @@ body.ckeditor {
   }
 
   .main-navbar .nav-item {
-    width: 20%;
     margin-bottom: 0;
     height: 100%;
   }

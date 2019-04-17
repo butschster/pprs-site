@@ -32774,7 +32774,10 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.mixin({
  */
 
 new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
-  el: '#app'
+  el: '#app',
+  data: {
+    active: false
+  }
 });
 
 /***/ }),
