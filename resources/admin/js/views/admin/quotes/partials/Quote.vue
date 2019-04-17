@@ -17,10 +17,7 @@
 </template>
 
 <script>
-    import Dropzone from 'components/form/Dropzone'
-
     export default {
-        components: {Dropzone},
         props: {
             quote: Object,
             allowImageChange: {

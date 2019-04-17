@@ -71,7 +71,9 @@
                 <CKEditor v-model="page.text"/>
                 <FormError field="text"/>
             </div>
+
             <SectionBanner v-if="page" v-model="page" />
+
             <div class="card-footer">
                 <button class="btn btn-primary" type="button" @click="store">
                     <i class="fa fa-check"></i> Сохранить
@@ -109,7 +111,12 @@
                     meta_keywords: '',
                     meta_description: '',
                     parent_id: null,
-                    color: ''
+                    color: '',
+                    section_title: '',
+                    section_subtitle: '',
+                    section_text: '',
+                    section_image_url: '',
+                    section_image_uuid: null
                 },
                 pages: []
             }

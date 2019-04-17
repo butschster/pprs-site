@@ -1,6 +1,6 @@
 <template>
     <div>
-        <VueDropzone ref="dropzone" id="dropzone" :options="options" @vdropzone-success="fileUploaded"
+        <VueDropzone :ref="id" :id="id" :options="options" @vdropzone-success="fileUploaded"
                      @vdropzone-sending="sendingEvent" :useCustomSlot="useCustomSlot">
             <slot></slot>
         </VueDropzone>
@@ -11,14 +11,12 @@
 <script>
     import vue2Dropzone from 'vue2-dropzone'
     import FormError from './FormError'
-
-    import Ls from 'services/ls'
-
-    const AUTH_TOKEN = Ls.get('auth.token')
+    import { mapGetters } from 'vuex';
 
     export default {
         components: {VueDropzone: vue2Dropzone, FormError},
         props: {
+            id: String,
             section: String,
             useCustomSlot: {
                 type: Boolean,
@@ -34,17 +32,25 @@
                     uploadMultiple: false,
                     maxFiles: 1,
                     acceptedFiles: 'image/*',
-                    headers: {"Authorization": `Bearer ${AUTH_TOKEN}`}
+                    headers: {"Authorization": this.token}
                 }
             }
         },
+        mounted() {
+            this.$refs[this.id].setOption('headers', {"Authorization": this.token})
+        },
         methods: {
             fileUploaded(file, {data}) {
-                this.$emit('uploaded', data, file, this.$refs.dropzone)
+                this.$emit('uploaded', data, file, this.$refs[this.id])
             },
             sendingEvent(file, xhr, formData) {
                 formData.append('section', this.section);
             }
+        },
+        computed: {
+            ...mapGetters({
+                token: 'auth/bearerString'
+            })
         }
     }
 </script>

@@ -44,8 +44,8 @@
         data() {
             return {
                 loginData: {
-                    email: '',
-                    password: '',
+                    email: 'admin@site.com',
+                    password: 'password',
                     remember: ''
                 }
             }
@@ -67,7 +67,11 @@
                 this.$v.$touch()
 
                 if (!this.$v.$error) {
-                    Auth.login(this.loginData).then(res => res && this.$router.push({name: 'dashboard'}))
+                    this.$store.dispatch('auth/login', this.loginData)
+                        .then(res => {
+                            console.log(res)
+                            this.$router.push({name: 'dashboard'})
+                        })
                 }
             }
         }

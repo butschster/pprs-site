@@ -32,7 +32,7 @@
 
                 <div class="form-group">
                     <label>Изображение</label>
-                    <Dropzone @uploaded="fileUploaded" section="quote" class="p-5 border border-dark"/>
+                    <Dropzone id="quote" @uploaded="fileUploaded" section="quote" class="p-5 border border-dark"/>
                     <FormError field="image_uuid"/>
                 </div>
             </div>
