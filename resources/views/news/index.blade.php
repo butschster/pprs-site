@@ -15,11 +15,11 @@
 @endsection
 
 @section('content')
-    <section class="px-0 px-lg-4 col-12 order-1">
+    <section class="px-0 px-lg-2 col-12 order-1">
         @foreach($news as $item)
             <div class="media main-container news-container">
                 <div class="media-body">
-                    <h2 class="mt-0 col-lg-7 px-0"><strong>{{ $item->title }}</strong></h2>
+                    <h2 class=" h3 mt-0 col-lg-7 px-0"><strong>{{ $item->title }}</strong></h2>
                     <div class="my-2"><small class="text-muted">{{ $item->formatted_date }}</small></div>
                     {!! $item->description !!}
 

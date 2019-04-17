@@ -1,3 +1,7 @@
+.news-container {
+    font-size: 20px;
+}
+
 @include  media-breakpoint-up(lg) {
     .news-container {
         width: 100%;

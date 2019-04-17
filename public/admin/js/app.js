@@ -9420,7 +9420,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -63357,13 +63356,14 @@ var render = function() {
     ? _c("div", { staticClass: "my-5 quote" }, [
         _c(
           "div",
-          { staticClass: "px-3 py-4 quote__text mw-50 px-0 col-12 col-lg-6" },
+          { staticClass: "px-3 py-4 quote__text mw-50 px-0 col-12 col-md-6" },
           [
-            _vm._m(0),
+            _c("i", {
+              staticClass:
+                "fas fa-3x fa-microphone-alt text-secondary mb-4 d-block"
+            }),
             _vm._v(" "),
-            _c("h5", [_vm._v(_vm._s(_vm.text))]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#" } }, [_vm._v("ссылка")])
+            _c("div", { domProps: { innerHTML: _vm._s(_vm.text) } })
           ]
         ),
         _vm._v(" "),
@@ -63373,18 +63373,7 @@ var render = function() {
       ])
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("i", {
-        staticClass: "fas fa-3x fa-microphone-alt text-secondary mb-4"
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

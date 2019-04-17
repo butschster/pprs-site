@@ -2,6 +2,7 @@
     display: none;
     margin-bottom: 0;
     padding: 0.85rem 0;
+    font-size: 18px;
 
     & a {
         text-decoration: underline;
@@ -18,7 +19,7 @@
     position: relative;
 }
 
-@include  media-breakpoint-up(md) {
+@include  media-breakpoint-up(xl) {
     .breadcrumb {
         display: flex;
         z-index: 20000;

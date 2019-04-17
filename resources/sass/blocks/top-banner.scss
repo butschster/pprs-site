@@ -66,12 +66,12 @@
         }
 
         &__title {
-            font-size: 4rem;
+            font-size: 3rem;
         }
 
         &--main__title {
             margin-bottom: 2rem;
-            font-size: 62px;
+            font-size: 52px;
         }
     }
 }
@@ -86,16 +86,19 @@
 
         &__title {
             width: 80%;
-            font-size: 3.8rem;
+            font-size: 3.4rem;
+            line-height: 1;
         }
 
         &--main__title {
-            font-size: 62px;
+            font-size: 52px;
+            line-height: 1;
         }
 
         &__container {
             width: 100%;
-            padding: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
     }
 }

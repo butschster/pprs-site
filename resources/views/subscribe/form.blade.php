@@ -22,9 +22,11 @@
         <form class="w-100 w-md-80 w-lg-50" method="POST" action="{{ route('subscribe') }}">
             @csrf
 
-            <div class="form-group  row mb-4">
-                <label for="exampleInputName" class="col-sm-2">Имя</label>
-                <input type="text" class="form-control col-sm-10 col-lg-6 {{ $errors->has('name') ? ' is-invalid' : '' }}" id="exampleInputName" placeholder="Ваше имя" name="name">
+            <div class="form-group row mb-4 align-items-baseline">
+                <label for="exampleInputName" class="col-sm-2 mb-0">Имя</label>
+                <div class="col-sm-10 col-lg-6">
+                    <input type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" id="exampleInputName" placeholder="Ваше имя" name="name">
+                </div>
 
                 @if ($errors->has('name'))
                     <span class="invalid-feedback col-sm-10 col-lg-6 offset-sm-2" role="alert">
@@ -33,9 +35,11 @@
                 @endif
             </div>
 
-            <div class="form-group row mb-5">
-                <label for="exampleInputEmail" class="col-sm-2">Email</label>
-                <input type="email" class="form-control col-sm-10 col-lg-6 {{ $errors->has('email') ? ' is-invalid' : '' }}" id="exampleInputEmail" placeholder="Ваш email" name="email">
+            <div class="form-group row mb-5 align-items-baseline">
+                <label for="exampleInputEmail" class="col-sm-2 mb-0">Email</label>
+                <div class="col-sm-10 col-lg-6">
+                    <input type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" id="exampleInputEmail" placeholder="Ваш email" name="email">
+                </div>
 
                 @if ($errors->has('email'))
                     <span class="invalid-feedback col-sm-10 col-lg-6 offset-sm-2" role="alert">
