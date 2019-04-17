@@ -5,14 +5,23 @@
 @endsection
 
 @section('banner')
-    @if($page->has_banner)
-        <div class="jumbotron jumbotron-fluid top-banner">
+    @if($banner = $page->banner_data)
+        @if(!$banner->isPage($page->getModel()))
+        <a href="{{ $banner->url() }}" class="d-block jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
+        @else
+        <div class="jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
+        @endif
             <div class="top-banner__container main-container">
                 <strong>Первично-прогрессирующий рассеянный склероз</strong>
-                <div class="top-banner__text">{{ $page->banner_content }}</div>
-                <h1 class="top-banner__title">{{ $page->title }}</h1>
+                <div class="top-banner__text">{{ $banner->content() }}</div>
+                <h1 class="top-banner__title">{{ $banner->title() }}</h1>
             </div>
+
+        @if(!$banner->isPage($page->getModel()))
+        </a>
+        @else
         </div>
+        @endif
     @endif
 @endsection
 

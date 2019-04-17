@@ -93,55 +93,19 @@ class Page extends Model
     }
 
     /**
-     * @return bool
+     * @return Banner|null
      */
-    public function getHasBannerAttribute(): bool
+    public function getBannerDataAttribute(): ?\App\ValueObjects\Banner
     {
         if (empty($this->banner_id)) {
             if ($parent = $this->parent) {
-                return $parent->has_banner;
-            }
-
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getBannerContentAttribute(): ?string
-    {
-        if (empty($this->banner_id)) {
-            if ($parent = $this->parent) {
-                return $parent->banner_content;
+                return $parent->banner_data;
             }
 
             return null;
         }
 
-        return $this->banner->content;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getBannerUrlAttribute(): ?string
-    {
-        if (empty($this->banner_id)) {
-            if ($parent = $this->parent) {
-                return $parent->banner_url;
-            }
-
-            return null;
-        }
-
-        if ($this->banner) {
-            return $this->banner->image_url;
-        }
-
-        return null;
+        return new \App\ValueObjects\Banner($this->banner, $this);
     }
 
     /**
