@@ -5,12 +5,12 @@
     <ul class="col-6 col-lg-4 pl-xl-4 social">
         <li class="social__item">
             <a class="social__link mr-4" href="https://www.facebook.com/pprs.ru/" aria-label="facebook">
-                <img width="71" height="71" src="{{ asset('images/facebook.png') }}">
+                <img width="71" height="71" src="{{ asset('images/facebook.png') }}" alt="facebook-icon">
             </a>
         </li>
         <li class="social__item">
             <a class="social__link" href="https://vk.com/pprs_ru" aria-label="vk">
-                <img width="71" height="71" src="{{ asset('images/vk.png') }}">
+                <img width="71" height="71" src="{{ asset('images/vk.png') }}" alt="vk-icon">
             </a>
         </li>
     </ul>

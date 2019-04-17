@@ -16,7 +16,7 @@
                 <div class="dropdown-menu main-navbar__dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ $page->url() }}">Перейти в раздел</a>
                     @foreach($page->children as $child)
-                        <a class="dropdown-item" href="{{ $child->url() }}">{{ $child->title }}</a>
+                    <a class="dropdown-item" href="{{ $child->url() }}">{{ $child->title }}</a>
                     @endforeach
                 </div>
             </li>
