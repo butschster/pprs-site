@@ -2,6 +2,7 @@
     padding: 0;
     background-color: $blue;
     color: $gray-900;
+    background-image: url("../images/top-banners-blue.png");
     background-size: cover;
     background-position: 0 50%;
     background-repeat: no-repeat;
@@ -28,6 +29,7 @@
 
     &--main {
         background-color: $yellow;
+        background-image: url("../images/top-banners-main.png");
 
         &__title {
             font-size: 2rem;
@@ -41,6 +43,7 @@
 
     &--news {
         background-color: $orange;
+        background-image: url("../images/top-banners-orange.png");
     }
 
     &__container {
@@ -51,6 +54,16 @@
 
 @include  media-breakpoint-up(md) {
     .top-banner {
+        background-image: url("../images/top-banners-blue-xl-main.png");
+
+        &--news {
+            background-image: url("../images/top-banners-orange-xl-main.png");
+        }
+
+        &--main {
+            background-color: $yellow;
+            background-image: url("../images/top-banners-main-xl.png");
+        }
 
         &__title {
             font-size: 4rem;

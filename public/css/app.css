@@ -11872,6 +11872,7 @@ body.ckeditor {
   padding: 0;
   background-color: #3490dc;
   color: #333333;
+  background-image: url(/images/top-banners-blue.png?b6d3e0ca569baac0660a181d87bb3bdc);
   background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
@@ -11899,6 +11900,7 @@ body.ckeditor {
 
 .top-banner--main {
   background-color: #efcb4c;
+  background-image: url(/images/top-banners-main.png?4bd92f9f7b691e629cdd8638b8b334e8);
 }
 
 .top-banner--main__title {
@@ -11912,6 +11914,7 @@ body.ckeditor {
 
 .top-banner--news {
   background-color: #eebb45;
+  background-image: url(/images/top-banners-orange.png?6d208da7dea2d6dde9667e479ab37df7);
 }
 
 .top-banner__container {
@@ -11920,6 +11923,19 @@ body.ckeditor {
 }
 
 @media (min-width: 720px) {
+  .top-banner {
+    background-image: url(/images/top-banners-blue-xl-main.png?dfca31d0e94b0538af9a374881d8b577);
+  }
+
+  .top-banner--news {
+    background-image: url(/images/top-banners-orange-xl-main.png?5f34f22b0a266e02e29f08c9a03a1f37);
+  }
+
+  .top-banner--main {
+    background-color: #efcb4c;
+    background-image: url(/images/top-banners-main-xl.png?64e1b8c207e62cc382b5c25bd1cf9fe8);
+  }
+
   .top-banner__title {
     font-size: 4rem;
   }
