@@ -1,18 +1,18 @@
 <template>
-    <div class="d-flex shadow-lg bg-white rounded">
-        <div class="border-right position-relative p-5 flex-fill" style="background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/arches.png')">
+    <div class="my-5 quote">
+        <div class="p-4 quote__text mw-50 px-0 col-12 col-lg-6 position-relative">
             <button type="button" class="btn position-absolute" v-clipboard:copy="code" style="top: 0; right: 0;" v-if="quote.id">
                 <i class="fa fa-clipboard" aria-hidden="true"></i>
             </button>
 
-            <div class="mr-4"><i class="fa fa-3x fa-microphone" aria-hidden="true"></i></div>
-            <router-link v-if="quote.id" class="lead mt-3 mb-0" :to="{name: 'quote.show', params: {id: quote.id }}" v-html="quote.text" />
-            <div v-else class="lead mt-3 d-block mb-0" v-html="quote.text" />
+            <div><i class="fa fa-3x fa-microphone text-secondary mb-4"></i></div>
+
+            <router-link tag="h5" v-if="quote.id" :to="{name: 'quote.show', params: {id: quote.id }}" v-html="quote.text" />
+            <h5 v-else v-html="quote.text" />
         </div>
-        <Dropzone :useCustomSlot="true" v-if="allowImageChange" @uploaded="fileUploaded" section="quote">
-            <img v-if="quote.image" class="" :src="quote.image" width="250px"/>
-        </Dropzone>
-        <img v-else-if="quote.image" class="" :src="quote.image" width="250px"/>
+        <div v-if="quote.image" class="quote__img d-none d-md-block px-0 col-6">
+            <img height="360" width="560" :src="quote.image"/>
+        </div>
     </div>
 </template>
 

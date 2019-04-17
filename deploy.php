@@ -63,10 +63,10 @@ before('deploy:symlink', 'artisan:migrate');
 //after('artisan:config:cache', 'artisan:route:cache');
 
 after('deploy:writable', 'php:reload');
-//after('deploy:writable', 'opcache:clear');
+after('deploy:writable', 'opcache:clear');
 
 after('deploy:symlink', 'supervisor:queue:restart');
-//after('deploy:symlink', 'opcache:clear');
+after('deploy:symlink', 'opcache:clear');
 
 after('deploy:symlink', 'deploy:owner');
 after('deploy:symlink', 'php:reload');
