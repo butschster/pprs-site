@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg main-navbar navbar-light">
+<nav class="navbar navbar-expand-xl main-navbar navbar-light">
     <!-- <a class="navbar-brand" href="{{ route('home')  }}">ППРС</a> -->
-    <button class="navbar-toggler main-navbar__toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler main-navbar__toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -9,7 +9,7 @@
         @foreach($pages as $page)
             @if($page->hasChildren())
             <li class="nav-item dropdown mr-1">
-                <a class="nav-link main-navbar__link px-0" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link main-navbar__link px-0 px-lg-2" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-angle-right" style="color: {{ $page->color }}"></i>
                     <b>{{ $page->title }}</b>

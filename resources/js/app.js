@@ -18,6 +18,9 @@ Vue.mixin({
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-new Vue({
-    el: '#app'
-});
+ new Vue({
+     el: '#app',
+     data: {
+         active: false
+     }
+ });
