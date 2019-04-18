@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Banner extends Model
 {
@@ -46,5 +47,13 @@ class Banner extends Model
     public function image(): BelongsTo
     {
         return $this->belongsTo(Image::class, 'image_uuid');
+    }
+
+    /**
+     * @return HasOne
+     */
+    public function page(): HasOne
+    {
+        return $this->hasOne(Page::class);
     }
 }

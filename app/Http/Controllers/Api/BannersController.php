@@ -5,13 +5,25 @@ namespace App\Http\Controllers\Api;
 use App\Http\Requests\Banners\StoreRequest;
 use App\Http\Requests\Banners\UpdateRequest;
 use App\Http\Resources\BannerResource;
+use App\Http\Resources\BannersCollection;
+use App\Http\Resources\QuoteCollection;
 use App\Models\Banner;
 use App\Models\Page;
+use App\Models\Quote;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 class BannersController extends Controller
 {
+    /**
+     * @return BannersCollection
+     */
+    public function index()
+    {
+        return new BannersCollection(
+            Banner::latest()->get()
+        );
+    }
     /**
      * @param Banner $banner
      * @return BannerResource

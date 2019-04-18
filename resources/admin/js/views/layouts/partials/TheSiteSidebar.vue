@@ -17,6 +17,20 @@
                             <i class="fa fa-plus fa-fw" aria-hidden="true"></i>Добавить
                         </router-link>
                     </v-collapse-item>
+                    <v-collapse-item active-url="/backend/news">
+                        <a slot="item-title" href="#">
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            Новости
+                        </a>
+
+                        <router-link :to="{name: 'news.index'}">
+                            <i class="fa fa-th-list fa-fw" aria-hidden="true"></i> Cписок
+                        </router-link>
+
+                        <router-link :to="{name: 'news.create'}">
+                            <i class="fa fa-plus fa-fw" aria-hidden="true"></i> Добавить
+                        </router-link>
+                    </v-collapse-item>
                     <v-collapse-item active-url="/backend/quotes">
                         <a slot="item-title" href="#">
                             <i class="fa fa-quote-right" aria-hidden="true"></i>
@@ -31,18 +45,14 @@
                             <i class="fa fa-plus fa-fw" aria-hidden="true"></i> Добавить
                         </router-link>
                     </v-collapse-item>
-                    <v-collapse-item active-url="/backend/news">
+                    <v-collapse-item active-url="/backend/banners">
                         <a slot="item-title" href="#">
-                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                            Новости
+                            <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                            Баннеры
                         </a>
 
-                        <router-link :to="{name: 'news.index'}">
+                        <router-link :to="{name: 'banners.index'}">
                             <i class="fa fa-th-list fa-fw" aria-hidden="true"></i> Cписок
-                        </router-link>
-
-                        <router-link :to="{name: 'news.create'}">
-                            <i class="fa fa-plus fa-fw" aria-hidden="true"></i> Добавить
                         </router-link>
                     </v-collapse-item>
                 </v-collapse>

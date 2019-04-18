@@ -33,6 +33,10 @@ import NewsIndex from './views/admin/news/Index'
 import NewsCreate from './views/admin/news/Create'
 import NewsShow from './views/admin/news/Show'
 
+// Banners
+import BannersIndex from './views/admin/banners/Index'
+import BannerShow from './views/admin/banners/Show'
+
 import NotFoundPage from './views/errors/404'
 
 Vue.use(VueRouter)
@@ -102,6 +106,17 @@ const routes = [
                 path: 'news/:id',
                 component: NewsShow,
                 name: 'news.show'
+            },
+            // Banners
+            {
+                path: 'banners',
+                component: BannersIndex,
+                name: 'banners.index'
+            },
+            {
+                path: 'banner/:id',
+                component: BannerShow,
+                name: 'banner.show'
             },
         ]
     },

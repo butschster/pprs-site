@@ -19,6 +19,7 @@ class BannerResource extends JsonResource
             'content' => $this->content,
             'image_uuid' => $this->image_uuid,
             'image_url' => $this->image_url,
+            'page' => new PageResource($this->page),
         ];
     }
 }

@@ -9,7 +9,7 @@
             <div class="jumbotron rounded-0 top-banner mb-0" :class="bannerSize" :style="bannerBackground">
                 <div class="top-banner__container main-container">
                     <div class="top-banner__text" v-html="banner.content"></div>
-                    <h1 class="top-banner__title"><a href="#">Section name</a></h1>
+                    <h1 class="top-banner__title">{{ sectionName }}</h1>
                 </div>
 
                 <button v-if="banner.image_uuid" class="btn btn-sm btn-danger position-absolute" type="button"
@@ -112,6 +112,7 @@
                         image_url: null,
                         content: '',
                     }
+                    toastr['success']('Баннер спешно удален!', 'Success')
 
                     this.$emit('input', null)
                 } catch (e) {
@@ -132,6 +133,13 @@
             }
         },
         computed: {
+            sectionName() {
+                if (this.banner.page) {
+                    return this.banner.page.title
+                }
+
+                return 'Section name'
+            },
             bannerBackground() {
                 if (this.banner.image_url) {
                     return {backgroundImage: `url('${this.banner.image_url}')`}
