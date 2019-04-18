@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
 
-    &__text {
+    &__small {
         font-weight: 700;
         letter-spacing: 0.04em;
         text-transform: uppercase;
@@ -20,14 +20,17 @@
 
     &__title {
         color: $white;
+        font-size: 3rem;
+        line-height: 1.2;
     }
 
-    & strong {
+    &__strong {
         display: inline-block;
         margin-bottom: 10px;
         font-size: 30px;
         line-height: 1.2;
         font-weight: 700;
+
     }
 
     &--main {
@@ -82,8 +85,7 @@
 @include  media-breakpoint-up(lg) {
     .top-banner {
 
-        &__text,
-        strong {
+        &__text {
             width: 80%;
         }
 
@@ -111,8 +113,7 @@
         min-height: 455px;
 
         &__title,
-        &__text,
-        strong {
+        &__text {
             width: 65%;
             max-width: 790px;
         }

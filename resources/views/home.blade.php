@@ -3,8 +3,10 @@
 @section('banner')
     <div class="jumbotron jumbotron-fluid top-banner top-banner--main">
         <div class="top-banner__container main-container">
-            <h1 class="top-banner__title top-banner--main__title">Первично-прогрессирующий рассеянный склероз</h1>
-            <div class="top-banner__text top-banner--main__text">Информационный портал для пациентов и их родственников</div>
+            <div class="top-banner__text-wrapper">
+                <h1 class="top-banner__title top-banner--main__title"></h1>
+                <p class="top-banner__text top-banner--main__text"></p>
+            </div>
         </div>
     </div>
 @endsection
