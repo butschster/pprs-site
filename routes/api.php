@@ -17,7 +17,7 @@ Route::namespace('Api\\')->middleware('auth')->group(function () {
     Route::post('pages/sort', 'PagesController@sort')->name('pages.sort');
     Route::post('page/{id}', 'PagesController@update')->name('page.update');
     Route::post('page', 'PagesController@store')->name('page.store');
-    Route::delete('pages/{id}', 'PagesController@delete')->name('pages.delete');
+    Route::delete('page/{id}', 'PagesController@delete')->name('pages.delete');
 
     // Banners
     Route::get('banner/{banner}', 'BannersController@show')->name('banner.show');

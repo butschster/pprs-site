@@ -25,6 +25,9 @@
                     <router-link tag="a" :to="{name: 'page.create', params: {parent_id: item.id }}" class="btn px-2 btn-success btn-xs rounded-circle">
                         <i class="fa fa-plus"></i>
                     </router-link>
+                    <button v-if="!hasChildren(item)" class="btn ml-2 px-2 btn-danger btn-xs rounded-circle" @click="remove(item)">
+                        <i class="fa fa-trash"></i>
+                    </button>
                 </div>
             </div>
         </VueNestable>
@@ -76,6 +79,22 @@
                 }
 
                 this.loading = false
+            },
+            async remove(page) {
+                this.loading = true
+
+                try {
+                    await axios.delete(`/api/page/${page.id}`)
+                    toastr['success']('Страница удалена!', 'Success')
+                    this.load()
+                } catch (e) {
+                    console.error(e)
+                }
+
+                this.loading = false
+            },
+            hasChildren(page) {
+                return page.children && _.size(page.children) > 0
             }
         }
     }
