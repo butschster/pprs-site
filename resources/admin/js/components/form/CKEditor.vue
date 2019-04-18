@@ -51,8 +51,11 @@
                         '/css/app.css'
                     ],
                     stylesSet: [
-                        {name: 'Blue Title', element: 'h1', attributes: {class: 'article-text__title'}},
+                        {name: 'Uppercased', element: 'p;h2;h3;h4', attributes: {class: 'text-uppercase'}},
+                        {name: 'Title', element: 'h1', attributes: {class: 'article-text__title'}},
+
                     ],
+                    format_tags: 'p;h2;h3;h4;h5;h6',
                     embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
                     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
                 }

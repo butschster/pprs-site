@@ -15,7 +15,6 @@
                 <div class="top-banner__text">{{ $banner->content() }}</div>
                 <h1 class="top-banner__title">{{ $banner->title() }}</h1>
             </div>
-
         @if(!$banner->isPage($page->getModel()))
         </a>
         @else

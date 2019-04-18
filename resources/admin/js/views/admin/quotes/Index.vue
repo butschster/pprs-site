@@ -16,7 +16,7 @@
 
         <div class="d-flex flex-wrap">
             <div class="col-12 mb-5" v-for="quote in quotes">
-                <Quote :quote="quote" />
+                <Quote :quote="quote" :allowResize="false"/>
             </div>
         </div>
     </div>

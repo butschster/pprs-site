@@ -1,11 +1,13 @@
 <template>
     <div class="card shadow-lg">
-        <div class="card-header">
-            Главный баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div class="flex-fill">Главный баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span></div>
+            <Responsive @preview="resizeBanner"/>
         </div>
         <Dropzone id="top_banner" section="banners" @uploaded="fileUploaded" :useCustomSlot="true">
-            <div class="jumbotron rounded-0 top-banner mb-0">
-                <div class="top-banner__container main-container" :style="{backgroundImage: `url('${banner.image_url}')`}">
+            <div class="jumbotron rounded-0 top-banner mb-0" :class="bannerSize">
+                <div class="top-banner__container main-container"
+                     :style="{backgroundImage: `url('${banner.image_url}')`}">
                     <div class="top-banner__text" v-html="banner.content"></div>
                     <h1 class="top-banner__title"><a href="#">Section name</a></h1>
                 </div>
@@ -29,14 +31,16 @@
     import CKEditor from 'components/form/CKEditor'
     import FormError from 'components/form/FormError'
     import Dropzone from 'components/form/Dropzone'
+    import Responsive from 'components/Responsive'
 
     export default {
         components: {
-            Dropzone, FormError, CKEditor
+            Dropzone, FormError, CKEditor, Responsive
         },
         props: ['id', 'value'],
         data() {
             return {
+                bannerSize: 'col-12',
                 banner: {
                     id: null,
                     image_uuid: null,
@@ -114,6 +118,9 @@
                 this.banner.image_url = data.url
                 dropzone.removeAllFiles()
             },
+            resizeBanner(size) {
+                this.bannerSize = size
+            }
         },
         computed: {
             isExists() {

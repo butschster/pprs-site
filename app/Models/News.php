@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Services\TextParser\QuoteParser;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 
@@ -67,7 +68,7 @@ class News extends Model
     public function getParsedTextAttribute()
     {
         return Cache::rememberForever('news.text-parsed'.$this->id, function () {
-            return preg_replace('/\[quote\|([0-9]+)\]/', '<quote :id="$1"></quote>', $this->text);
+            return (new QuoteParser())->parse($this->text);
         });
     }
 }

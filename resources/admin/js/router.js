@@ -134,14 +134,14 @@ const router = new VueRouter({
     linkActiveClass: 'active'
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
     if (to.matched.some(m => m.meta.requiresAuth)) {
-        if (store.getters['auth/isLoggedIn']) {
+        try {
+            await store.dispatch('auth/check')
             next()
-            return
+        } catch(e) {
+            return next({name: 'login'})
         }
-
-        return next({name: 'login'})
     }
 
     return next()

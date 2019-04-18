@@ -11,7 +11,7 @@
 <script>
     import vue2Dropzone from 'vue2-dropzone'
     import FormError from './FormError'
-    import { mapGetters } from 'vuex';
+    import { mapGetters } from 'vuex'
 
     export default {
         components: {VueDropzone: vue2Dropzone, FormError},
