@@ -11,6 +11,7 @@ const getters = {
     isLoggedIn: state => !!state.token,
     authStatus: state => state.status,
     bearerString: state => `Bearer ${state.token}`,
+    token: state => state.token,
 }
 
 const actions = {

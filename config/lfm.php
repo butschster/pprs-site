@@ -15,7 +15,7 @@ return [
     'middlewares' => ['web'],
 
     // The url to this package. Change it if necessary.
-    'url_prefix' => 'api/files',
+    'url_prefix' => 'api/356A192B7913B04C54574D18C28D46E6395428AB',
 
     /*
     |--------------------------------------------------------------------------
@@ -25,6 +25,7 @@ return [
 
     // If true, private folders will be created for each signed-in user.
     'allow_multi_user' => false,
+
     // If true, share folder will be created when allow_multi_user is true.
     'allow_share_folder' => false,
 

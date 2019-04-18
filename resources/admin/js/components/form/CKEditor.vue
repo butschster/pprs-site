@@ -8,6 +8,7 @@
 
 <script>
     import VueCkeditor from 'vue-ckeditor2'
+    import { mapGetters } from 'vuex'
 
     export default {
         components: {VueCkeditor},
@@ -43,10 +44,6 @@
                     bodyClass: "",
                     language: 'ru',
                     extraPlugins: 'embed,autoembed',
-                    filebrowserImageBrowseUrl: '/api/files?type=Images',
-                    filebrowserImageUploadUrl: '/api/files/upload?type=Images&_token=',
-                    filebrowserBrowseUrl: '/api/files?type=Files',
-                    filebrowserUploadUrl: '/api/files/upload?type=Files&_token=',
                     contentsCss: [
                         '/css/app.css'
                     ],
@@ -65,6 +62,10 @@
         created() {
             this.config.height = this.height
             this.config.bodyClass = this.bodyClass
+            this.config.filebrowserImageBrowseUrl = `/${FILES_PATH}?type=Images&token=${this.token}`
+            this.config.filebrowserImageUploadUrl = `/${FILES_PATH}/upload?type=Images&token=${this.token}`
+            this.config.filebrowserBrowseUrl = `/${FILES_PATH}?type=Files&token=${this.token}`
+            this.config.filebrowserUploadUrl = `/${FILES_PATH}/upload?type=Files&token=${this.token}`
 
             this.config = Object.assign(this.config, this.style)
         },
@@ -74,6 +75,9 @@
             }
         },
         computed: {
+            ...mapGetters({
+                token: 'auth/token'
+            }),
             style() {
                 switch (this.toolbar) {
                     case 'minimal':

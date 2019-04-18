@@ -32,6 +32,9 @@
     <div class="mobile-menu-overlay" @click.prevent="$utils.toggleSidebar"></div>
     <router-view></router-view>
 </div>
+<script type="text/javascript">
+    window.FILES_PATH = '{{ config('lfm.url_prefix') }}';
+</script>
 <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
 <script type="text/javascript" src="{{ mix("/admin/js/app.js" )}}"></script>
 </body>
