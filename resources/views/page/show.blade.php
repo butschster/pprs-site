@@ -12,7 +12,7 @@
         <div class="jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
         @endif
             <div class="top-banner__container main-container">
-                <div class="top-banner__text">{{ $banner->content() }}</div>
+                <div class="top-banner__text">{!! $banner->content() !!}</div>
                 <h1 class="top-banner__title">{{ $banner->title() }}</h1>
             </div>
         @if(!$banner->isPage($page->getModel()))
