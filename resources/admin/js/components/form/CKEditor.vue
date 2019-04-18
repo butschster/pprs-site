@@ -51,8 +51,9 @@
                         '/css/app.css'
                     ],
                     stylesSet: [
-                        {name: 'Uppercased', element: 'p;h2;h3;h4', attributes: {class: 'text-uppercase'}},
                         {name: 'Title', element: 'h1', attributes: {class: 'article-text__title'}},
+                        {name: 'Banner strong', element: 'div', attributes: {class: 'top-banner__strong'}},
+                        {name: 'Banner small', element: 'div', attributes: {class: 'top-banner__small'}},
 
                     ],
                     format_tags: 'p;h2;h3;h4;h5;h6',

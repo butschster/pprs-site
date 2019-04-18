@@ -27,8 +27,8 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'nullable|min:3',
-            'color' => 'nullable|string',
+            'title' => 'required|min:3',
+            'color' => 'required|string',
             'parent_id' => ['nullable', Rule::exists('pages', 'id')],
             'banner_id' => ['nullable', Rule::exists('banners', 'id')],
             'slug' => ['nullable', 'min:3', Rule::unique('pages')->ignore($this->route('id'))],

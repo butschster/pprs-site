@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'content' => 'required',
-            'image_uuid' => ['required', Rule::exists('images', 'uuid')],
+            'image_uuid' => ['nullable', Rule::exists('images', 'uuid')],
         ];
     }
 

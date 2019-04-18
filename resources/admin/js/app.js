@@ -31,7 +31,11 @@ global.axios.interceptors.response.use(response => {
 }, error => {
     switch (error.response.status) {
         case 422:
+            toastr['error']('Данные не прошли валидацию!', 'Error')
             store.dispatch('validation/setErrors', error.response.data.errors)
+            break;
+        case 500:
+            toastr['error']('Что-то пошло не так!', 'Error')
             break;
     }
 

@@ -26,7 +26,7 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'content' => 'nullable',
+            'content' => 'required',
             'image_uuid' => ['nullable', Rule::exists('images', 'uuid')],
         ];
     }

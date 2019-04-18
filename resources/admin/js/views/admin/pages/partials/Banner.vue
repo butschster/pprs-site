@@ -1,19 +1,24 @@
 <template>
     <div class="card shadow-lg">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <div class="flex-fill">Главный баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span></div>
+            <div class="flex-fill">Главный баннер <span v-if="!isExists" class="badge badge-warning">Не добавлен</span>
+            </div>
             <Responsive @preview="resizeBanner"/>
         </div>
         <Dropzone id="top_banner" section="banners" @uploaded="fileUploaded" :useCustomSlot="true">
-            <div class="jumbotron rounded-0 top-banner mb-0" :class="bannerSize">
-                <div class="top-banner__container main-container"
-                     :style="{backgroundImage: `url('${banner.image_url}')`}">
+            <div class="jumbotron rounded-0 top-banner mb-0" :class="bannerSize" :style="bannerBackground">
+                <div class="top-banner__container main-container">
                     <div class="top-banner__text" v-html="banner.content"></div>
                     <h1 class="top-banner__title"><a href="#">Section name</a></h1>
                 </div>
+
+                <button v-if="banner.image_uuid" class="btn btn-sm btn-danger position-absolute" type="button"
+                        @click="removeImage" style="top: 20px; right: 20px">
+                    <i class="fa fa-trash fa-fw"></i>
+                </button>
             </div>
         </Dropzone>
-        <CKEditor v-model="banner.content"/>
+        <CKEditor v-model="banner.content" bodyClass="ckeditor top-banner__text"/>
         <FormError field="content"/>
         <div class="card-footer">
             <button class="btn btn-primary" type="button" @click="save">
@@ -113,6 +118,10 @@
                     console.error(e)
                 }
             },
+            removeImage() {
+                this.banner.image_uuid = null
+                this.banner.image_url = null
+            },
             fileUploaded(data, file, dropzone) {
                 this.banner.image_uuid = data.uuid
                 this.banner.image_url = data.url
@@ -123,6 +132,11 @@
             }
         },
         computed: {
+            bannerBackground() {
+                if (this.banner.image_url) {
+                    return {backgroundImage: `url('${this.banner.image_url}')`}
+                }
+            },
             isExists() {
                 return this.banner.id
             },

@@ -23,6 +23,7 @@ Route::namespace('Api\\')->middleware('auth')->group(function () {
     Route::get('banner/{banner}', 'BannersController@show')->name('banner.show');
     Route::post('banner', 'BannersController@store')->name('banner.store');
     Route::put('banner/{banner}', 'BannersController@update')->name('banner.update');
+    Route::post('banner/{banner}/attach', 'BannersController@attach')->name('banner.attach');
     Route::delete('banner/{banner}', 'BannersController@delete')->name('banner.delete');
 
     // Quotes

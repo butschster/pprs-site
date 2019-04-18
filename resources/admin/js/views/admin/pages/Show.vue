@@ -72,6 +72,7 @@
                         <FormError field="meta_description" />
                     </div>
                 </div>
+                <SectionBanner v-model="page" />
                 <div class="card-header text-white bg-primary">
                     Текст
                 </div>
@@ -79,8 +80,6 @@
                     <CKEditor v-model="page.text"/>
                     <FormError field="text"/>
                 </div>
-
-                <SectionBanner v-model="page" />
 
                 <div class="card-footer">
                     <button class="btn btn-primary" type="button" @click="save">
@@ -162,8 +161,8 @@
                 this.loading = true
 
                 try {
-                    const response = await axios.post(`/api/page/${this.id}`, {banner_id})
-                    this.page = response.data.data
+                    const response = await axios.post(`/api/banner/${banner_id}/attach`, {page_id: this.id})
+                    this.loadPage()
 
                     toastr['success']('Баннер прикреплен к странице!', 'Success')
                 } catch (e) {

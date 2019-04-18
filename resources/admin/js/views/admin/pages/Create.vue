@@ -64,6 +64,8 @@
                     <FormError field="meta_description"/>
                 </div>
             </div>
+
+            <SectionBanner v-if="page" v-model="page" />
             <div class="card-header text-white bg-primary">
                 Текст
             </div>
@@ -71,8 +73,6 @@
                 <CKEditor v-model="page.text"/>
                 <FormError field="text"/>
             </div>
-
-            <SectionBanner v-if="page" v-model="page" />
 
             <div class="card-footer">
                 <button class="btn btn-primary" type="button" @click="store">

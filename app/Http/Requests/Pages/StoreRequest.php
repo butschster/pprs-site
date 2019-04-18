@@ -36,10 +36,10 @@ class StoreRequest extends FormRequest
             'meta_title' => 'nullable|string',
             'meta_keywords' => 'nullable|string',
             'meta_description' => 'nullable|string',
-            'section_title' => 'required|string',
-            'section_subtitle' => 'required|string',
-            'section_text' => 'required|string',
-            'section_image_uuid' => ['required', Rule::exists('images', 'uuid')],
+            'section_title' => 'nullable|string',
+            'section_subtitle' => 'nullable|string',
+            'section_text' => 'nullable|string',
+            'section_image_uuid' => ['nullable', Rule::exists('images', 'uuid')],
         ];
     }
 
