@@ -22,8 +22,8 @@
                     <router-link tag="a" class="flex-grow-1" :to="{name: 'page.show', params: {id: item.id }}">
                         <i class="fa fa-chevron-right mr-2" :style="{color: item.color}"></i> {{ item.title }}
                     </router-link>
-                    <router-link tag="a" :to="{name: 'page.create', params: {parent_id: item.id }}" class="btn btn-primary btn-xs">
-                        <i class="fa fa-plus"></i> Добавить
+                    <router-link tag="a" :to="{name: 'page.create', params: {parent_id: item.id }}" class="btn px-2 btn-success btn-xs rounded-circle">
+                        <i class="fa fa-plus"></i>
                     </router-link>
                 </div>
             </div>

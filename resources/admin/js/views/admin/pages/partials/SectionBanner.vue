@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label>Краткое описание</label>
-                <CKEditor v-model="page.section_text"/>
+                <CKEditor v-model="page.section_text" bodyClass="ckeditor banner__text-preview" />
                 <FormError field="section_text"/>
             </div>
         </div>
