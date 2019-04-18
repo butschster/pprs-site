@@ -7,7 +7,7 @@
 @section('banner')
     @if($banner = $page->banner_data)
         @if(!$banner->isPage($page->getModel()))
-        <a href="{{ $banner->url() }}" class="d-block jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
+        <a href="{{ $banner->url() }}" class="jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
         @else
         <div class="jumbotron jumbotron-fluid top-banner" style="background-image: url({{ $banner->imageUrl() }})">
         @endif
