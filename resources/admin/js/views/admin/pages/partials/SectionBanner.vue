@@ -1,10 +1,12 @@
 <template>
     <div>
-        <div class="card-header bg-primary text-white">
-            Секционный баннер
+        <div class="rounded-0 card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <div class="flex-fill">Секционный баннер</div>
+            <Responsive @preview="resizeBanner"/>
         </div>
+
         <Dropzone id="section_banner" section="section_banner" @uploaded="fileUploaded" :useCustomSlot="true" class="card-body">
-            <div class="banner mb-0">
+            <div class="banner mb-0" :class="bannerSize">
                 <h2 class="banner__name-page main-container" :style="{color: page.color }">{{ page.section_title }}</h2>
                 <div class="banner__container" :style="bannerImage">
                     <h2 class="banner__title" :style="{background: page.color}">{{ page.section_subtitle }}</h2>
@@ -36,14 +38,16 @@
     import CKEditor from 'components/form/CKEditor'
     import FormError from 'components/form/FormError'
     import Dropzone from 'components/form/Dropzone'
+    import Responsive from 'components/Responsive'
 
     export default {
         components: {
-            Dropzone, FormError, CKEditor
+            Dropzone, FormError, CKEditor, Responsive
         },
         props: ['value'],
         data() {
             return {
+                bannerSize: 'col-12',
                 page: {
                     color: '',
                     section_title: '',
@@ -70,6 +74,9 @@
                 this.page.section_image_uuid = data.uuid
                 this.page.section_image_url = data.url
                 dropzone.removeAllFiles()
+            },
+            resizeBanner(size) {
+                this.bannerSize = size
             }
         },
         computed: {

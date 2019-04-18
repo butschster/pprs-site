@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use App\Services\TextParser\QuoteParser;
 use Hemp\Presenter\Presentable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Cache;
 use Kalnoy\Nestedset\NodeTrait as NestedSet;
 use Cocur\Slugify\Slugify;
 
@@ -40,6 +42,10 @@ class Page extends Model
             if (empty($page->slug)) {
                 $page->slug = (new Slugify())->slugify($page->title);
             }
+        });
+
+        static::saved(function (Page $page) {
+            Cache::forget('post.text-parsed'.$page->id);
         });
     }
 
@@ -126,6 +132,16 @@ class Page extends Model
         }
 
         return null;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParsedTextAttribute()
+    {
+        return Cache::rememberForever('post.text-parsed'.$this->id, function () {
+            return (new QuoteParser())->parse($this->text);
+        });
     }
 
     /**
