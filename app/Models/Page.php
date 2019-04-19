@@ -40,7 +40,11 @@ class Page extends Model
 
         static::saving(function (Page $page) {
             if (empty($page->slug)) {
-                $page->slug = (new Slugify())->slugify($page->title) . '_' . $page->id;
+                $page->slug = (new Slugify())->slugify($page->title);
+
+                if (Page::where('slug', $page->slug)->exists()) {
+                    $page->slug .= date('His');
+                }
             }
         });
 
@@ -60,6 +64,15 @@ class Page extends Model
         $currentPageSlug = Arr::last(explode('/', $path));
 
         return static::where('slug', $currentPageSlug)->firstOrFail();
+    }
+
+    /**
+     * @param $builder
+     * @return mixed
+     */
+    public function scopeHasSectionImage($builder)
+    {
+        return $builder->whereNotNull('section_image_uuid');
     }
 
     /**
