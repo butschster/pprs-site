@@ -12,6 +12,11 @@ class PagePresenter extends Presenter
      */
     public function getChildren(): Collection
     {
-        return $this->model->descendants->present(static::class);
+        return $this->model
+            ->descendants
+            ->present(static::class)
+            ->filter(function ($page) {
+                return $page->has_section_image;
+            });
     }
 }

@@ -5,7 +5,7 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'Kenya AFA TD');
+set('application', 'PPRS');
 
 // Project repository
 set('repository', 'git@bitbucket.org:idealideas/pprs-site.git');
@@ -22,7 +22,7 @@ set('allow_anonymous_stats', false);
 host('5.188.55.38')
     ->port(22)
     ->user('root')
-    ->identityFile('~/.ssh/tea.key')
+    ->identityFile('~/.ssh/id_rsa')
     ->set('deploy_path', '/var/www');
 
 // Tasks
