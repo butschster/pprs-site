@@ -40,12 +40,12 @@ class Page extends Model
 
         static::saving(function (Page $page) {
             if (empty($page->slug)) {
-                $page->slug = (new Slugify())->slugify($page->title);
+                $page->slug = (new Slugify())->slugify($page->title) . '_' . $page->id;
             }
         });
 
         static::saved(function (Page $page) {
-            Cache::forget('post.text-parsed'.$page->id);
+            Cache::forget('post.text-parsed' . $page->id);
         });
     }
 
@@ -139,7 +139,7 @@ class Page extends Model
      */
     public function getParsedTextAttribute()
     {
-        return Cache::rememberForever('post.text-parsed'.$this->id, function () {
+        return Cache::rememberForever('post.text-parsed' . $this->id, function () {
             return (new QuoteParser())->parse($this->text);
         });
     }
