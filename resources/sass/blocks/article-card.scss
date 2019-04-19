@@ -6,7 +6,8 @@
     padding-right: 0;
     flex-direction: column;
     margin-bottom: 2rem;
-    width: 100%;
+    // width: 100%;
+    flex-wrap: wrap;
 }
 
 @include  media-breakpoint-up(lg) {
@@ -19,6 +20,10 @@
         & .banner__text-preview {
             font-size: 1rem;
             width: 100%;
+        }
+
+        & .card {
+            min-width: 270px;
         }
     }
 }

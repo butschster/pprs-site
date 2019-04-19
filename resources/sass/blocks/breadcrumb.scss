@@ -19,7 +19,7 @@
     position: relative;
 }
 
-@include  media-breakpoint-up(xl) {
+@include  media-breakpoint-up(lg) {
     .breadcrumb {
         display: flex;
         z-index: 20000;

@@ -11,12 +11,12 @@
 <body>
 <div id="app">
     <header class="main-header" :class="{ 'main-header--gray': active }">
-        <div class="breadcrumb__wrapper d-none d-xl-block">
+        <div class="breadcrumb__wrapper d-none d-lg-block">
             <div class="main-container">
                 @yield('breadcrumbs')
             </div>
         </div>
-        <div class="main-container py-4 py-xl-0">
+        <div class="main-container py-4 py-lg-0">
             @include('layout._partials.menu')
         </div>
     </header>

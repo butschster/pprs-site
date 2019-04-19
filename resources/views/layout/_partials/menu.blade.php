@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl main-navbar navbar-light">
+<nav class="navbar navbar-expand-lg main-navbar navbar-light">
     <button class="navbar-toggler main-navbar__toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
         <span class="navbar-toggler-icon"></span>
     </button>
