@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Events\Subscription\Subscribed;
+use App\Listeners\Subscription\SendEmailAboutSubscription;
 use App\Listeners\Subscription\SendSubscriberToMailingService;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -20,7 +21,8 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
         Subscribed::class => [
-            SendSubscriberToMailingService::class
+            SendSubscriberToMailingService::class,
+            //SendEmailAboutSubscription::class
         ],
     ];
 

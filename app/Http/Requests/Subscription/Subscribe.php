@@ -33,19 +33,6 @@ class Subscribe extends FormRequest
     }
 
     /**
-     * Get custom attributes for validator errors.
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-        return [
-            'name' => 'Имя',
-            'email' => 'Адрес электронной почты',
-        ];
-    }
-
-    /**
      * @return Subscription
      */
     public function persist(): Subscription
