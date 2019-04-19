@@ -6,6 +6,7 @@
     padding-right: 0;
     flex-direction: column;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 @include  media-breakpoint-up(lg) {

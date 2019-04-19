@@ -31,7 +31,7 @@ class StoreRequest extends FormRequest
             'color' => 'required|string',
             'parent_id' => ['nullable', Rule::exists('pages', 'id')],
             'banner_id' => ['nullable', Rule::exists('banners', 'id')],
-            'slug' => ['nullable', 'min:3', Rule::unique('pages')],
+            'slug' => ['nullable', 'min:3', Rule::unique('pages', 'slug')],
             'text' => 'nullable|string',
             'meta_title' => 'nullable|string',
             'meta_keywords' => 'nullable|string',
