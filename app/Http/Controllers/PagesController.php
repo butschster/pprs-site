@@ -22,6 +22,12 @@ class PagesController extends Controller
 
         $page = $page->present(PagePresenter::class);
 
-        return view('page.show', compact('page'));
+        if (!$page->isArticle()) {
+            $pages = $page->getChildren()->paginate(5);
+        } else {
+            $pages = null;
+        }
+
+        return view('page.show', compact('page', 'pages'));
     }
 }

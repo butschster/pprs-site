@@ -1,4 +1,3 @@
-
 @foreach($pages as $page)
     @if($page->has_section_image)
         <div class="banner">
@@ -10,3 +9,9 @@
         </div>
     @endif
 @endforeach
+
+@if($pages instanceof \Illuminate\Pagination\LengthAwarePaginator)
+<div class="pagination-banners">
+    {!! $pages->render() !!}
+</div>
+@endif

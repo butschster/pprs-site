@@ -25,7 +25,7 @@
 
 @section('content')
     @if(!$page->isArticle())
-        @include('page._partials.subpages', ['pages' => $page->getChildren()])
+        @include('page._partials.subpages')
     @else
         @include('page._partials.article')
     @endif
