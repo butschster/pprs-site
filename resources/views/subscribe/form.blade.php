@@ -18,8 +18,9 @@
 
 @section('content')
     <div class="subscribe main-container">
-        <p class="subscribe__text">Подпишитесь на рассылку, чтобы не пропустить новости об инновационных методах лечения рассеяного склероза и его формы - первично-прогрессирующего рассеяного склероза.</p>
-        <p class="subscribe__text mb-5">Мы хотим делиться информацией о том, как вести максимально полноценную жизнь каждый день пациентам с этим диагнозом.</p>
+        @if(!session()->has('success'))
+        <p class="subscribe__text">Подпишитесь на рассылку, чтобы не пропустить новости об инновационных методах лечения рассеянного склероза и его особого типа течения - первично-прогрессирующего рассеянного склероза.</p>
+        <p class="subscribe__text mb-5">Мы хотим делиться информацией о том, как вести максимально полноценную жизнь людям с РС каждый день.</p>
 
         <form class="w-100 w-md-80 w-lg-50" method="POST" action="{{ route('subscribe') }}">
             @csrf
@@ -31,7 +32,7 @@
                 </div>
 
                 @if ($errors->has('name'))
-                    <span class="invalid-feedback col-sm-10 col-lg-6 offset-sm-2" role="alert">
+                    <span class="help-text col-sm-10 col-lg-6 offset-sm-2" role="alert">
                         <strong>{{ $errors->first('name') }}</strong>
                     </span>
                 @endif
@@ -44,13 +45,16 @@
                 </div>
 
                 @if ($errors->has('email'))
-                    <span class="invalid-feedback col-sm-10 col-lg-6 offset-sm-2" role="alert">
+                    <span class="help-text col-sm-10 col-lg-6 offset-sm-2" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
-                    @endif
+                @endif
             </div>
 
             <button type="submit" class="btn btn-subscribe col-sm-10 col-lg-6 offset-sm-2">Подписаться на рассылку</button>
         </form>
+        @else
+            <p class="subscribe__text">Спасибо за подписку!</p>
+        @endif
     </div>
 @endsection

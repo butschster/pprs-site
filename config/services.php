@@ -47,5 +47,4 @@ return [
     'unisender' => [
         'key' => env('UNISENDER_KEY'),
     ],
-
 ];

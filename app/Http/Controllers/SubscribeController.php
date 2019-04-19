@@ -24,6 +24,6 @@ class SubscribeController extends Controller
 
         return redirect()
             ->route('subscribe.form')
-            ->with('success', 'Вы успешно подписаны на рассылку новостей');
+            ->with('success', 'Спасибо за подписку!');
     }
 }
