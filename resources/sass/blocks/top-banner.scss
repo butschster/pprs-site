@@ -112,6 +112,7 @@
 @include  media-breakpoint-up(xl) {
     .top-banner {
         min-height: 455px;
+        max-width: 1710px;
 
         &__title,
         &__text {
