@@ -54,12 +54,6 @@
     font-weight: 400;
 }
 
-@include  media-breakpoint-up(md) {
-    .article-text__title {
-        font-size: 2rem;
-    }
-}
-
 @include  media-breakpoint-up(lg) {
     .article-text {
         width: 100%;
@@ -70,9 +64,33 @@
         p {
             font-size: 16px;
         }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        strong {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        ul {
+            li {
+                font-size: 16px;
+            }
+        }
     }
 
     .article-text__description {
         padding-right: 2rem;
+        font-size: 16px;
+    }
+
+    .article-text__title {
+        font-size: 20px;
     }
 }
