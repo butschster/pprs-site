@@ -31,7 +31,7 @@
                     <section class="px-0 px-lg-2 pr-xl-0 col-lg-8  order-1">
                         @yield('content')
                     </section>
-                    <aside class=" px-0 px-lg-2 pl-xl-4 mb-5 mb-lg-0 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
+                    <aside class="px-0 px-lg-2 pl-xl-4 mb-5 mb-lg-0 col-lg-4 sidebar main-sidebar main-container order-3 order-lg-2">
 
                         @if(!request()->routeIs('subscribe.form'))
                             <a href="{{ route('subscribe.form') }}"
@@ -56,7 +56,9 @@
                 </div>
 
                 @if(!request()->routeIs('home'))
-                    @include('layout._partials.random_articles')
+                    <div class="w-100 px-lg-2 order-2 order-lg-3 mb-lg-5">
+                        @include('layout._partials.random_articles')
+                    </div>
                 @endif
             </div>
         </div>
