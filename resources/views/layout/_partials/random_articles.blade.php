@@ -6,7 +6,7 @@
             </h3>
             <a href="{{ $page->url() }}" class="banner__container card-body" style="background-image: url({{ $page->section_image_url }})">
                 <h4 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_subtitle }}</h4>
-                <div class="banner__text-preview card-text main-container px-lg-4">{{ $page->section_text }}</div>
+                <div class="banner__text-preview card-text main-container px-lg-4">{!! $page->section_text !!}</div>
             </a>
         </div>
     @endforeach

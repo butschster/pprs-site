@@ -6,11 +6,6 @@
                 <li class="breadcrumb-item">Главная</li>
                 <li class="breadcrumb-item">Баннеры</li>
             </ol>
-            <div class="page-actions">
-                <router-link :to="{name: 'banner.create'}" class="btn btn-primary">
-                    <i class="fa fa-plus"></i> Добавить
-                </router-link>
-            </div>
         </div>
         <VueElementLoading :active="loading"/>
 

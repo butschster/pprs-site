@@ -5,10 +5,12 @@
 @endsection
 
 @section('banner')
-    <div class="jumbotron jumbotron-fluid top-banner top-banner--main">
+    <div class="jumbotron jumbotron-fluid top-banner top-banner--news">
         <div class="top-banner__container main-container">
-            <strong>Первично-прогрессирующий рассеянный склероз</strong>
-            <div class="top-banner__text">информационный портал для пациентов и их родственников</div>
+            <div class="top-banner__text">
+                <div class="top-banner__strong">Первично-прогрессирующий рассеянный склероз</div>
+                <div class="top-banner__small">информационный портал для пациентов и их родственников</div>
+            </div>
             <h1 class="top-banner__title">Подписка</h1>
         </div>
     </div>
