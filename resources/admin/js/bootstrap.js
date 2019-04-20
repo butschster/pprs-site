@@ -1,6 +1,5 @@
 import VueRouter from 'vue-router'
 import Vuelidate from 'vuelidate'
-import Ls from './services/ls'
 import VDropdown from './components/dropdown/VDropdown'
 import VDropdownItem from './components/dropdown/VDropdownItem'
 import VDropdownDivider from './components/dropdown/VDropdownDivider'
@@ -25,6 +24,7 @@ require('moment/locale/ru')
 global.toastr = require('toastr')
 global._ = require('lodash')
 
+
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
  * using reactive data binding and reusable components. Vue's API is clean
@@ -46,6 +46,15 @@ global.axios = require('axios')
 global.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 }
+
+global.token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+    global.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
 
 /**
  * Custom Directives
