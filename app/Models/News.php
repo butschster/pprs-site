@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Services\TextParser\QuoteParser;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
+use Jenssegers\Date\Date;
 
 class News extends Model
 {
@@ -30,9 +31,12 @@ class News extends Model
         return route('news.show', $this);
     }
 
+    /**
+     * @return mixed|string
+     */
     public function getFormattedDateAttribute()
     {
-        return $this->created_at->locale('ru')->format('d F Y');
+        return Date::make($this->created_at)->format('d M Y');
     }
 
     /**

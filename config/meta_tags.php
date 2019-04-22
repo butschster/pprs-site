@@ -7,7 +7,7 @@ return [
      * Meta title section
      */
     'title' => [
-        'default' => env('APP_NAME'),
+        'default' => 'Первично-прогрессирующий рассеянный склероз',
         'separator' => '-',
         'max_length' => 255,
     ],

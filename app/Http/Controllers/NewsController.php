@@ -11,6 +11,10 @@ class NewsController extends Controller
     {
         $news = News::latest()->paginate(8);
 
+        Meta::prependTitle('Новости')
+            ->setDescription('Новое на портале о ППРС')
+            ->setPaginationLinks($news);
+
         return view('news.index', compact('news'));
     }
 
@@ -20,9 +24,17 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
+        $og = new \Butschster\Head\Packages\Entities\OpenGraphPackage('news');
+        $og->setType('article')
+            ->setSiteName('My awesome site')
+            ->setTitle($news->meta_title)
+            ->setUrl($news->url())
+            ->addImage(asset('images/top-banners-orange-xl-main.png'));
+
         Meta::prependTitle($news->meta_title)
             ->setDescription($news->meta_description)
-            ->setKeywords($news->meta_keywords);
+            ->setKeywords($news->meta_keywords)
+            ->registerPackage($og);
 
         return view('news.show', compact('news'));
     }
