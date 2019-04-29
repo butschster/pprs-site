@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: 0 50%;
     background-repeat: no-repeat;
-    min-height: 375px;
+    min-height: 290px;
     display: flex;
     align-items: center;
 
@@ -53,8 +53,8 @@
     }
 
     &__container {
-        padding-top: 2rem;
-        padding-bottom: 4rem;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -110,7 +110,7 @@
 
 @include  media-breakpoint-up(xl) {
     .top-banner {
-        min-height: 455px;
+        min-height: 342px;
 
         &__title,
         &__text {
