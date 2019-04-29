@@ -26,6 +26,11 @@ class Page extends Model
     protected $guarded = ['_lft', '_rgt'];
 
     /**
+     * @var string
+     */
+    protected $cachedPath;
+
+    /**
      * The "booting" method of the model.
      *
      * @return void
@@ -92,6 +97,10 @@ class Page extends Model
      */
     public function path(): string
     {
+        if ($this->cachedPath) {
+            return $this->cachedPath;
+        }
+
         $paths = [];
 
         foreach ($this->ancestors as $page) {
@@ -100,7 +109,7 @@ class Page extends Model
 
         $paths[] = $this->slug;
 
-        return implode('/', $paths);
+        return $this->cachedPath = implode('/', $paths);
     }
 
     /**

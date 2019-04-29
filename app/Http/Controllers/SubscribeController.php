@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Subscription\Subscribe;
+use Butschster\Head\Facades\Meta;
 
 class SubscribeController extends Controller
 {
@@ -11,6 +12,9 @@ class SubscribeController extends Controller
      */
     public function form()
     {
+        Meta::prependTitle('Подписка на рассылку')
+            ->setDescription('Подпишитесь на информационную рассылку о ППРС');
+
         return view('subscribe.form');
     }
 

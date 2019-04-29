@@ -7,7 +7,7 @@ return [
      * Meta title section
      */
     'title' => [
-        'default' => env('APP_NAME'),
+        'default' => 'Первично-прогрессирующий рассеянный склероз',
         'separator' => '-',
         'max_length' => 255,
     ],
@@ -27,7 +27,7 @@ return [
      */
     'keywords' => [
         'default' => '',
-        'max_length' => 255
+        'max_length' => 255,
     ],
 
     /*
@@ -36,7 +36,7 @@ return [
      * Packages, that should be included everywhere
      */
     'packages' => [
-        // 'jquery', 'bootstrap', ...
+        'favicons',
     ],
 
     'charset' => 'utf-8',

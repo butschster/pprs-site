@@ -30,9 +30,11 @@ class PageRepository
     public function getRandomArticles(): Collection
     {
         return Page::with('parent', 'ancestors', 'section_image')
+            ->withoutGlobalScope('ordering')
             ->whereIsLeaf()
             ->whereNotNull('section_image_uuid')
             ->inRandomOrder()
-            ->take(3)->get();
+            ->take(3)
+            ->get();
     }
 }

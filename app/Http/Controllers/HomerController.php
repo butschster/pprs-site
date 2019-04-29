@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Butschster\Head\Facades\Meta;
 use App\Repositories\PageRepository;
 
 class HomerController extends Controller
@@ -12,6 +13,9 @@ class HomerController extends Controller
      */
     public function show(PageRepository $repository)
     {
+        Meta::prependTitle('Первично-прогрессирующий рассеянный склероз')
+            ->setDescription('Информационный портал о первично прогрессирующем рассеянном склерозе для пациентов и их родственников');
+
         $pages = $repository->getMenu();
 
         return view('home', compact('pages'));

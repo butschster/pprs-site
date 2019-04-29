@@ -16,9 +16,22 @@ class PagesController extends Controller
     {
         $page->load('ancestors');
 
-        Meta::prependTitle($page->meta_title)
+        $og = new \Butschster\Head\Packages\Entities\OpenGraphPackage('article');
+        $og->setType('article')
+            ->setTitle($page->meta_title)
             ->setDescription($page->meta_description)
-            ->setKeywords($page->meta_keywords);
+            ->setUrl($page->url());
+
+        if ($page->has_section_image) {
+            $og->addImage($page->section_image_url);
+        } elseif ($banner = $page->banner_data) {
+            $og->addImage($banner->imageUrl());
+        }
+
+        Meta::setTitle($page->meta_title)
+            ->setDescription($page->meta_description)
+            ->setKeywords($page->meta_keywords)
+            ->registerPackage($og);
 
         $page = $page->present(PagePresenter::class);
 

@@ -62,10 +62,10 @@
         created() {
             this.config.height = this.height
             this.config.bodyClass = this.bodyClass
-            this.config.filebrowserImageBrowseUrl = `/${FILES_PATH}?type=Images&token=${this.token}`
-            this.config.filebrowserImageUploadUrl = `/${FILES_PATH}/upload?type=Images&token=${this.token}`
-            this.config.filebrowserBrowseUrl = `/${FILES_PATH}?type=Files&token=${this.token}`
-            this.config.filebrowserUploadUrl = `/${FILES_PATH}/upload?type=Files&token=${this.token}`
+            this.config.filebrowserImageBrowseUrl = `/${FILES_PATH}?type=Images`
+            //this.config.filebrowserImageUploadUrl = `/${FILES_PATH}/upload?type=Images&_token=${token.content}`
+            this.config.filebrowserBrowseUrl = `/${FILES_PATH}?type=Files`
+            //this.config.filebrowserUploadUrl = `/${FILES_PATH}/upload?type=Files&_token=${token.content}`
 
             this.config = Object.assign(this.config, this.style)
         },
