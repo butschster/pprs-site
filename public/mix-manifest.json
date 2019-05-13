@@ -1,10 +1,6 @@
 {
-    "/admin/js/app.js": "/admin/js/app.js",
-    "/admin/js/app.js.map": "/admin/js/app.js.map",
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/admin/css/laraspace.css": "/admin/css/laraspace.css",
-    "/js/app.js.map": "/js/app.js.map",
-    "/css/app.css.map": "/css/app.css.map",
-    "/admin/css/laraspace.css.map": "/admin/css/laraspace.css.map"
+    "/admin/js/app.js": "/admin/js/app.js?id=1059883bbfa037edc2d6",
+    "/js/app.js": "/js/app.js?id=075246d7ab74a84d12d0",
+    "/css/app.css": "/css/app.css?id=7f105396df4a68015cf1",
+    "/admin/css/laraspace.css": "/admin/css/laraspace.css?id=0b4087827a31c9926285"
 }
