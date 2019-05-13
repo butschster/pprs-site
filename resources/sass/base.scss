@@ -16,6 +16,17 @@ body.ckeditor {
     padding: 20px;
 }
 
+.custom-control-label {
+    &::after, &::before {
+        top: 0.1rem;
+    }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $warning;
+    background-color: $warning;
+}
+
 @include media-breakpoint-up(sm) {
     html {
         font-size: 0.9rem;

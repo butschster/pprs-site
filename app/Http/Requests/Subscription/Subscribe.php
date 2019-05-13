@@ -29,6 +29,7 @@ class Subscribe extends FormRequest
         return [
             'name' => 'required',
             'email' => ['required', 'email', Rule::unique((new Subscription)->getTable())],
+            'agreement' => 'accepted'
         ];
     }
 
