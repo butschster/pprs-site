@@ -1,6 +1,7 @@
 <div class="row mb-2">
     <ol class="col-6 col-lg-8 pr-xl-0 main-footer__nav">
         <a href="{{ route('news.index') }}" class="main-footer__link mr-4">Новости</a>
+        <a href="{{ asset('personal_data_operator_policy.pdf') }}" target="_blank" class="main-footer__link mr-4">Политика по обработке</a>
     </ol>
     <ul class="col-6 col-lg-4 pl-xl-4 social">
         <li class="social__item">
