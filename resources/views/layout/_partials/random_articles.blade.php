@@ -7,7 +7,7 @@
             <a href="{{ $page->url() }}" class="banner__container card-body p-0" style="background-image: url({{ $page->section_image_url }})">
                 <div class="banner__bg-blur">
                     <h4 class="banner__title card-title d-inline-flex w-auto" style="color: white; background: {{ $page->color }}; display: block">{{ $page->section_subtitle }}</h4>
-                    <div class="banner__text-preview card-text main-container px-lg-4">{!! $page->section_text !!}</div>
+                    <div class="banner__text-preview card-text main-container px-lg-4">{!! $page->section_image_text !!}</div>
                 </div>
             </a>
         </div>

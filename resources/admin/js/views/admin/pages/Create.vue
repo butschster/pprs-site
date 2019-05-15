@@ -66,6 +66,14 @@
             </div>
 
             <SectionBanner v-if="page" v-model="page" />
+
+            <div class="card-header text-white bg-primary">
+                Краткое описание
+            </div>
+            <div class="form-group">
+                <CKEditor v-model="page.section_text" />
+                <FormError field="section_text"/>
+            </div>
             <div class="card-header text-white bg-primary">
                 Текст
             </div>
@@ -116,6 +124,7 @@
                     section_subtitle: '',
                     section_text: '',
                     section_image_url: '',
+                    section_image_text: '',
                     section_image_uuid: null
                 },
                 pages: []

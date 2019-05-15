@@ -38,14 +38,13 @@
 
 <script type="text/babel">
     import {required, minLength, email} from 'vuelidate/lib/validators'
-    import Auth from '../../services/auth'
 
     export default {
         data() {
             return {
                 loginData: {
-                    email: 'admin@site.com',
-                    password: 'password',
+                    email: '',
+                    password: '',
                     remember: ''
                 }
             }

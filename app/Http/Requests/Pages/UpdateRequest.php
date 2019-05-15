@@ -40,6 +40,7 @@ class UpdateRequest extends FormRequest
             'section_subtitle' => 'nullable|string',
             'section_text' => 'nullable|string',
             'section_image_uuid' => ['nullable', Rule::exists('images', 'uuid')],
+            'section_image_text' => 'nullable|string',
         ];
     }
 

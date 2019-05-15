@@ -74,6 +74,13 @@
                 </div>
                 <SectionBanner v-model="page" />
                 <div class="card-header text-white bg-primary">
+                    Краткое описание
+                </div>
+                <div class="form-group">
+                    <CKEditor v-model="page.section_text" />
+                    <FormError field="section_text"/>
+                </div>
+                <div class="card-header text-white bg-primary">
                     Текст
                 </div>
                 <div class="form-group">

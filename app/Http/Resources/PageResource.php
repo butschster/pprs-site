@@ -25,11 +25,10 @@ class PageResource extends JsonResource
             'meta_description' => $this->meta_description,
             'banner_id' => $this->banner_id,
             'link' => $this->url(),
-
-
             'has_section_image' => $this->has_section_image,
             'section_image_uuid' => $this->section_image_uuid,
             'section_image_url' => $this->section_image_url,
+            'section_image_text' => $this->section_image_text,
             'section_title' => $this->section_title,
             'section_subtitle' => $this->section_subtitle,
             'section_text' => $this->section_text,

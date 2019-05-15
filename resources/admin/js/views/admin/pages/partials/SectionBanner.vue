@@ -10,7 +10,7 @@
                 <h2 class="banner__name-page main-container" :style="{color: page.color }">{{ page.section_title }}</h2>
                 <div class="banner__container" :style="bannerImage">
                     <h2 class="banner__title" :style="{background: page.color}">{{ page.section_subtitle }}</h2>
-                    <div class="banner__text-preview main-container" v-html="page.section_text"/>
+                    <div class="banner__text-preview main-container" v-html="page.section_image_text"/>
                 </div>
 
                 <button v-if="page.section_image_uuid" class="btn btn-sm btn-danger position-absolute" type="button"
@@ -32,8 +32,8 @@
             </div>
             <div class="form-group">
                 <label>Краткое описание</label>
-                <CKEditor v-model="page.section_text" bodyClass="ckeditor banner__text-preview" />
-                <FormError field="section_text"/>
+                <CKEditor v-model="page.section_image_text" bodyClass="ckeditor banner__text-preview" />
+                <FormError field="section_image_text"/>
             </div>
         </div>
     </div>
@@ -59,6 +59,7 @@
                     section_subtitle: '',
                     section_text: '',
                     section_image_url: '',
+                    section_image_text: '',
                     section_image_uuid: null
                 }
             }
